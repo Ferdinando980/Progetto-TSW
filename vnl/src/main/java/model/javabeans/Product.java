@@ -17,6 +17,34 @@ public class Product {
     public Product(){
     }
 
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setCat(Category cat) {
+        this.cat = cat;
+    }
+
     public Product(String name, float price, String id){
 
         this.name=name;

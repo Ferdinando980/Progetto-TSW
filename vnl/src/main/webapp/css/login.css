@@ -1,0 +1,38 @@
+body{
+    font-family: "Lobster", sans-serif;
+    background-color: #C3B7D8;
+    
+  
+  }
+  
+ .login-container
+{
+    color: white;
+    background-color: #6D3A8C;
+    padding: 50px;
+
+
+    
+    
+}
+
+legend{
+      text-align: center;
+      
+}
+
+.button{
+  background-color: #332620;
+  color: white;
+      font-family: "Lobster", sans-serif;
+  
+}
+
+
+.input{
+  color: white;
+  background-color: #332620;
+  font-family: "Lobster", sans-serif;
+        text-align: center;
+}
+  

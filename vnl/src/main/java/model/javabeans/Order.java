@@ -15,6 +15,26 @@ public class Order {
 
     private Users user;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setDateOfOrder(Date dateOfOrder) {
+        this.dateOfOrder = dateOfOrder;
+    }
+
+    public void setTotAmount(float totAmount) {
+        this.totAmount = totAmount;
+    }
+
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
+    }
+
     public Order(){}
 
     public Order(String id, String status, float totAmount, Users user){
