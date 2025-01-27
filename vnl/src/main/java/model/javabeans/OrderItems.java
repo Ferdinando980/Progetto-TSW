@@ -26,8 +26,12 @@ public class OrderItems {
 
     }
 
-    public void setOrd(Order ord){this.ord=ord;}
-    public void setProd(Product prod){this.prod=prod;}
+    public void setOrd(Order ord){
+        this.ord=ord;
+    }
+    public void setProd(Product prod){
+        this.prod=prod;
+    }
 
     public void setPrice(float price) {
         this.price = price;

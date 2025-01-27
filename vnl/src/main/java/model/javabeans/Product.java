@@ -39,20 +39,36 @@ public class Product {
     }
 
 
-    public void setId(String id){this.id=id;}
+    public void setId(String id){
+        this.id=id;
+    }
 
-    public String getId(){return this.id; }
+    public String getId(){
+        return this.id; 
+    }
 
-    public void setName(String name){this.name=name;}
+    public void setName(String name){
+        this.name=name;
+    }
 
-    public Category getCat(){return this.cat;}
+    public Category getCat(){
+        return this.cat;
+    }
 
-    public void setcat(Category cat){this.cat=cat;}
+    public void setcat(Category cat){
+        this.cat=cat;
+    }
 
-    public String getdesc(){return this.desc; }
+    public String getdesc(){
+        return this.desc;
+     }
 
-    public void setdesc(String desc){this.desc=desc;}
+    public void setdesc(String desc){
+        this.desc=desc;
+    }
 
-    public String getName(){return this.name;}
+    public String getName(){
+        return this.name;
+    }
 
 }

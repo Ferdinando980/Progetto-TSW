@@ -1,12 +1,13 @@
 package model.javabeans;
 
-import java.util.GregorianCalendar;
+
+import java.util.Date;
 
 public class Order {
 
     private String id;
 
-    private GregorianCalendar doo;
+    private Date dateOfOrder;
 
     private String status;
 
@@ -22,22 +23,40 @@ public class Order {
         this.status=status;
         this.totAmount=totAmount;
         this.user=user;
+        this.dateOfOrder= new Date();
 
 
     }
 
-    public String getId(String id){ return this.id;}
-    public void setId(String id){this.id=id;}
 
-    public String getStatus(){return this.status;}
+    public String getId(String id){ 
 
-    public void setStatus(String status){this.status=status;}
+        return this.id;
 
-    public float getTotAmount(){ return this.totAmount;}
+    }
+    public void setId(String id){
 
-    public GregorianCalendar getDoo() {
-        return this.doo;
+        this.id=id;
+
     }
 
-    public void setDoo(GregorianCalendar doo){ this.doo=doo;}
+    public String getStatus(){
+        return this.status;
+    }
+
+    public void setStatus(String status){
+        this.status=status;
+    }
+
+    public float getTotAmount(){ 
+        return this.totAmount;
+    }
+
+    public Date getDateOfOrder() {
+        return this.dateOfOrder;
+    }
+
+    public void setDoo(Date dateOfOrder){ 
+        this.dateOfOrder=dateOfOrder;
+    }
 }
