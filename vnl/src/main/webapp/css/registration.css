@@ -41,8 +41,8 @@ background-color: #FEF6E6;
 }
 
 legend{
-      text-align: center;
-      
+  font-size: 150%;
+  text-align: center;
 }
 label{
     font-weight: normal;
