@@ -1,7 +1,27 @@
 body{
-    font-family: "Lobster", sans-serif;
-    background-color: #C3B7D8;
+
+  background-color: #C3B7D8;
   
+
+}
+
+*{
+   font-family: "Lobster", sans-serif;
+}
+
+.login-container
+{
+  color: white;
+  background-color: #6D3A8C;
+  padding: 50px;
   
-  }
-  
+}
+
+.button:hover {
+background-color: #4A3A2D;
+}
+
+
+.input:hover{
+background-color: #4A3A2D;
+}

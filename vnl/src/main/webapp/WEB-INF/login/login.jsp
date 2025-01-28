@@ -15,27 +15,34 @@
         <form action="/login.jsp" method="POST" class="login-form">
             <fieldset>
                 <legend>Login</legend>
-                <div class="form-group">
-                    <label for="Username">Username:</label><br>
-                    <input type="text" id="Username" name="Username" required placeholder="Inserisci Username"
-                        class="input"><br>
 
-                    <label for="Password">Password:</label><br>
-                    <input type="password" id="Password" name="Password" required placeholder="Inserisci Password"
-                        class="input"><br>
+                <div class="form-container">
+              
+                    <div class="form-group">
+                        <label for="Username">Username:</label>
+                        <input type="text" id="Username" name="Username" required placeholder="Inserisci Username"
+                            class="input">
+                    </div>
+
+               
+                    <div class="form-group">
+                        <label for="Password">Password:</label>
+                        <input type="password" id="Password" name="Password" required placeholder="Inserisci Password"
+                            class="input">
+                    </div>
                 </div>
 
+       
                 <div class="form-actions">
                     <input type="button" id="button" value="Registrati" onclick="location.href='/registrazione.jsp'"
                         class="button">
-
                     <input type="submit" value="Login" class="button">
                 </div>
 
             </fieldset>
         </form>
-
     </div>
 </body>
+
 
 </html>

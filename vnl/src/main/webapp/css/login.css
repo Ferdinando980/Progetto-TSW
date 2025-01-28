@@ -1,38 +1,66 @@
-body{
-    font-family: "Lobster", sans-serif;
-    background-color: #C3B7D8;
-    
-  
-  }
-  
- .login-container
-{
-    color: white;
-    background-color: #6D3A8C;
-    padding: 50px;
-
-
-    
-    
+.login-container {
+  color: #FEF6E6;
+  background-color: #6D3A8C;
+  padding: 50px;
+  border-radius: 10px;
 }
 
-legend{
-      text-align: center;
-      
+legend {
+  text-align: center;
+  font-size: 150%;
+
 }
 
-.button{
+fieldset {
+  border-radius: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+
+
+
+}
+
+
+
+
+.input {
+  color: #FEF6E6;
   background-color: #332620;
-  color: white;
-      font-family: "Lobster", sans-serif;
-  
+  text-align: center;
+  border-radius: 10px;
+  width: 220px;
+  height: 30px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+
 }
 
 
-.input{
-  color: white;
+
+
+.button {
   background-color: #332620;
-  font-family: "Lobster", sans-serif;
-        text-align: center;
+  color: #FEF6E6;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+
 }
-  
+
+.form-actions {
+  text-align: right;
+
+}
