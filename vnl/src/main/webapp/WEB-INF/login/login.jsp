@@ -11,20 +11,22 @@
 </head>
 
 <body>
+
+    <jsp:include page="header.jsp"></jsp:include>
     <div class="login-container">
         <form action="/login.jsp" method="POST" class="login-form">
             <fieldset>
                 <legend>Login</legend>
 
                 <div class="form-container">
-              
+
                     <div class="form-group">
                         <label for="Username">Username:</label>
                         <input type="text" id="Username" name="Username" required placeholder="Inserisci Username"
                             class="input">
                     </div>
 
-               
+
                     <div class="form-group">
                         <label for="Password">Password:</label>
                         <input type="password" id="Password" name="Password" required placeholder="Inserisci Password"
@@ -32,7 +34,7 @@
                     </div>
                 </div>
 
-       
+
                 <div class="form-actions">
                     <input type="button" id="button" value="Registrati" onclick="location.href='/registrazione.jsp'"
                         class="button">
@@ -42,6 +44,7 @@
             </fieldset>
         </form>
     </div>
+    <jsp:include page="footer.jsp"></jsp:include>
 </body>
 
 
