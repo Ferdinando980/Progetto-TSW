@@ -20,20 +20,19 @@
                     <label for="Email">Email:</label><br>
                     <input type="text" id="Email" name="Email" required placeholder="Inserisci Email. ."class="input"><br>
                     <label for="DataDinascita">Data di nascita:</label><br>
-                    <input type="date" id="DataDinascita" name="DataDinascita" class="input"><br>
+                    <input type="date" id="DataDiNascita" name="DataDiNascita" class="input"><br>
                        <label for="NumerodiTelefono">Numero di telefono:</label><br>
-                    <input type="tel" id="NumerodiTelefono" name="NumerodiTelefono" class="input"><br>
+                    <input type="tel" id="NumeroDiTelefono" name="NumeroDiTelefono" class="input"><br>
 
                     <label for="Password">Password:</label><br>
                     <input type="password" id="Password" name="Password" required placeholder="Inserisci Password. ."class="input"><br>
                     <label for="ConfermaPassword">Conferma Password:</label><br>
-                    <input type="password" id="Password" name="Password" required placeholder="Conferma Password. ." class="input"><br>
+                    <input type="password" id="CPassword" name="CPassword" required placeholder="Conferma Password. ." class="input"><br>
              
 
                 </div>
 
                 <div class="form-actions">
-        
                     <input type="submit" value="Registrati" class="button">
                 </div>
 

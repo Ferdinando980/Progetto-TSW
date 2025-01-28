@@ -1,0 +1,7 @@
+model\javabeans\Order.class
+model\javabeans\Product.class
+model\javabeans\OrderItems.class
+model\javabeans\Category.class
+model\javabeans\Users.class
+model\javabeans\Cart.class
+model\QueryPool.class

@@ -6,7 +6,7 @@ import java.util.Map;
 public class Cart {
     private int cartID;
     private int userID;
-    private Map<String, Long> mao= new HashMap();
+    private Map<String, Long> mao= new HashMap<>();
     private Date createdAt;
     private Date updatedAt;
     public int getCartID() {
