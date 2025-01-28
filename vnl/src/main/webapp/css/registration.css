@@ -1,0 +1,72 @@
+*{
+    font-family: "Lobster", sans-serif;
+
+}
+
+
+body{
+  
+    background-color: #C3B7D8;
+    
+  
+  }
+
+  
+ .registration-container
+{
+    color: #332620;
+   
+
+    padding: 50px;
+
+    letter-spacing: 2px;
+
+
+
+    
+}
+
+.biglabel{
+     font-size: large;
+    font-weight:bold;
+   background-color: #6D3A8C;
+  border-radius: 10px;
+  color:#FEF6E6;
+
+}
+fieldset{
+  border-radius: 10px;
+background-color: #FEF6E6;
+
+}
+
+legend{
+  font-size: 150%;
+  text-align: center;
+}
+label{
+    font-weight: normal;
+    letter-spacing: normal;
+    margin-top: 5px;
+  }
+  
+  .button{
+    border-radius: 10px;
+    background-color: #332620;
+    color: #FEF6E6;
+    font-size: large;
+    margin-top: 20px;
+  
+      
+  }
+  
+  
+  .input{
+    border-radius: 10px;
+    color: #FEF6E6;
+    background-color: #332620;
+    margin-top: 5px;
+    text-align: center;
+    font-size: large;
+  }
+    
