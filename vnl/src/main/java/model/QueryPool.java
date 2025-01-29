@@ -15,13 +15,13 @@ public class QueryPool {
                 }
                 queries.loadFromXML(inputStream);
                 if (queries.isEmpty()) {
-                    System.out.println("Properties queries not loaded");
+                    System.out.println("Query non caricate dal file xml");
                 } else {
-                    //queries.forEach((key, value) -> System.out.println(key + ": " + value));
-                    System.out.println("Properties queries loaded successfully");
+            
+                    System.out.println("Query caricate dal file xml");
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }
         return queries.getProperty(queryId);
