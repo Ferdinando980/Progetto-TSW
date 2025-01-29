@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import model.javabeans.Users;
 
@@ -79,16 +81,17 @@ public class UsersDao extends AbstractDAO{
         }
 
         public Users doRetrieveById(String id){
+            Users user= null;
                 
             try (Connection connection = getConnection();
                  PreparedStatement ps = prepareStatement(connection,"GET_USER_BY_ID" )){
     
                 ps.setString(1, id);
                 ResultSet result=  ps.executeQuery();
-                Users user= new Users();
+             
 
-                while( result.next()){
-                       
+                if(result.next()){
+                 user= new Users();   
                 user.setUserId(result.getString("user_id"));
                 user.setEmail(result.getString("email"));
                 user.setPassword(result.getString("password_hash"));
@@ -108,7 +111,37 @@ public class UsersDao extends AbstractDAO{
 
 
         }
-    }
+
+        public List<Users> doRetrieveAll(){
+            List<Users> usersList = new ArrayList<>();
+
+            try (Connection connection = getConnection();
+            PreparedStatement ps = prepareStatement(connection,"GET_ALL_USERS" )){
+
+            ResultSet result= ps.executeQuery();
+            while(result.next()){
+                Users user = new Users();
+                result.getString("id");
+                        result.getString("username");
+                        result.getString("password");
+                        result.getString("email");
+                        result.getDate("data_di_nascita");
+                        result.getString("numero_di_telefono");
+                
+                usersList.add(user);
+
+            }
+
+                
+            }
+            catch(SQLException e){
+                System.out.println(e.getMessage());
+            }
+
+            return usersList;
+        }
+        }
+     
 
 
         
