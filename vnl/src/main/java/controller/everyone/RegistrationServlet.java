@@ -7,8 +7,9 @@ import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import model.javabeans.Users;
 import model.dao.UsersDao;
@@ -42,8 +43,26 @@ public class RegistrationServlet extends HttpServlet {
             // debug System.out.println("Errore di validazione: " + e.getMessage());
             return;
         }
-        // aggiungere check
+
+
+
+        // aggiungere check TODO 
         service.doSave(ReqUser);
+        // aggiungere check TODO 
+
+        HttpSession session = request.getSession();
+
+        Map<String, String> userData = new HashMap<>();
+        String isLogged = "true";
+        //TODO sarebbe meglio prendere il dato restituito dal database, così hai anahce l'id, ora l'id è vuoto, ha senso mettere l'id, senò da ricercare in futuro//
+        userData.put("Username", reqUser.getUsername());
+        userData.put("Email", reqUser.getEmail());
+        userData.put("nTelefono", reqUser.getNumeroDiTelefono());
+        userData.put("IsLogged", isLogged);
+
+        session.setAttribute("UserData", userData);
+
+        response.sendRedirect("home.jsp");
 
         
 

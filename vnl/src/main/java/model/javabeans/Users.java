@@ -35,6 +35,8 @@ public class Users {
 
         this.numeroDiTelefono=numeroDiTelefono;
 
+        this.tipo="user";
+
     }
 
     public Users(String username, String password, String email, LocalDate dataDiNascita, String numeroDiTelefono){
@@ -50,6 +52,7 @@ public class Users {
         this.dataDiNascita = dataDiNascita;
 
         this.numeroDiTelefono=numeroDiTelefono;
+        this.tipo="user";
 
     }
 
