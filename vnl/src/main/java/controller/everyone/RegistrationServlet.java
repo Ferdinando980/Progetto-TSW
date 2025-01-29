@@ -5,9 +5,14 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 import model.javabeans.Users;
 import model.dao.UsersDao;
+import model.dao.Eccezioni.ValidException;
 
 @WebServlet(name = "Registrazione", value = "/Registrazione")
 public class RegistrationServlet extends HttpServlet {
@@ -16,12 +21,14 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        Users reqUser = new Users(
+        throws ServletException, IOException {
+            String dateString = request.getParameter("date");
+             LocalDate date = LocalDate.parse(dateString);
+              Users reqUser = new Users(
                 request.getParameter("Username"),
                 request.getParameter("Password"),
                 request.getParameter("Email"),
-                request.getParameter("DataDiNascita"),
+                date,
                 request.getParameter("NumeroDiTelefono"));
 
         String passwordCheck = request.getParameter("CPassword");
@@ -29,38 +36,65 @@ public class RegistrationServlet extends HttpServlet {
 
         ;
 
-        if (!validateInputs(reqUser, passwordCheck)) {
-            // error(request, response, "Alcuni campi sono vuoti o inseriti in modo
-            // errato");
+        try {
+            validateInputs(reqUser, passwordCheck);
+        } catch (ValidException e) {
+            // debug System.out.println("Errore di validazione: " + e.getMessage());
             return;
         }
-
+        // aggiungere check
         service.doSave(ReqUser);
+
+        
 
     }
 
-    private boolean validateInputs(Users user, String passwordCheck) {
+    private boolean emailInUso(String email) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'emailInUso'");
+    }
+
+    private boolean usernameInUso(String username) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'usernameInUso'");
+    }
+
+    private void validateInputs(Users user, String passwordCheck) {
+        List<String> errors = new ArrayList<>();
+
         if (user.getEmail() == null || user.getEmail().isEmpty() || !isValidEmail(user.getEmail())) {
-            return false;
+            errors.add("Email inserita in modo errato");
         }
-        if (user.getDataDiNascita() == null || !isValidDDataDiNascita(user.getDataDiNascita())) {
-            return false;
+        if (user.getDataDiNascita() == null ) {
+            errors.add("Data di nascita non valida");
         }
         if (user.getNumeroDiTelefono() == null || user.getNumeroDiTelefono().isEmpty()
                 || !isValidPhone(user.getNumeroDiTelefono())) {
-            return false;
+            errors.add("Numero di telefono inserito in modo errato");
         }
         if (user.getPassword() == null || user.getPassword().isEmpty()) {
-            return false;
+            errors.add("Password vuota");
         }
         if (!user.getPassword().equals(passwordCheck) || !isValidPassword(user.getPassword())) {
-            return false;
+            errors.add("Le password non corrispondono o non soddisfano i criteri di validità");
+        }
+        if (user.getUsername() == null || user.getUsername().isEmpty() || !isValidUsername(user.getUsername())) {
+            errors.add("Username non valido");
         }
 
-        if (user.getUsername() == null || !user.getUsername().isEmpty() || !isValidUsername(user.getUsername())) {
-            return false;
+        if (usernameInUso(user.getUsername())) {
+            errors.add("Username Già In Uso");
+
         }
-        return true;
+
+        if (emailInUso(user.getEmail())) {
+            errors.add("Email già in uso");
+
+        }
+
+        if (!errors.isEmpty()) {
+            throw new ValidException(errors);
+        }
     }
 
     private boolean isValidUsername(String username) {
@@ -86,11 +120,7 @@ public class RegistrationServlet extends HttpServlet {
                 && password.matches(".*[A-Z].*") && password.matches(".*[a-z].*")
                 && password.matches(".*[0-9].*") && password.matches(".*[!@#$%^&*()].*");
 
-        
     }
 
-    private boolean isValidDDataDiNascita(String password){
-        return true;
-        //TODO//
-    }
+
 }
