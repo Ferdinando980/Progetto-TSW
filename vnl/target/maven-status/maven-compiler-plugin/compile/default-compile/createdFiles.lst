@@ -1,0 +1,13 @@
+model\dao\Eccezioni\ValidException.class
+model\javabeans\Order.class
+model\javabeans\OrderItems.class
+model\javabeans\Category.class
+model\dao\UsersDao.class
+controller\everyone\RegistrationServlet.class
+model\javabeans\Users.class
+model\javabeans\Cart.class
+model\QueryPool.class
+model\javabeans\Product.class
+model\DBManager.class
+model\dao\AbstractDAO.class
+controller\everyone\LoginServlet.class

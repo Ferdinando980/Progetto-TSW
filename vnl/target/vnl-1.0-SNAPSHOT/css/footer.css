@@ -1,0 +1,16 @@
+.footer,
+footer * {
+    box-sizing: border-box;
+}
+
+.footer{
+    background: #E5E5E5;
+    height: 80px;
+    width: 1024px;
+    position: relative;
+    font-family: 'Lobster', sans-serif;
+    letter-spacing: 2px;
+    
+
+
+}

@@ -5,7 +5,7 @@
 .sidenav {
   height: 100%; 
   width: 200px; 
-  position: fixed; 
+  position: relative; 
   top: 0; 
   left: 0;
   background-color: #6D3A8C; 

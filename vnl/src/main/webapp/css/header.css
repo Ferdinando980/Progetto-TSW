@@ -11,7 +11,7 @@ header* {
   background: #332620;
   height: 80px;
   width: 100%;
-  position: fixed;
+  position: relative;
   display: flex;
 flex-direction: row;
 justify-content: space-between;

@@ -1,0 +1,63 @@
+* {
+    font-family: "Lobster", sans-serif;
+}
+
+.header,
+header* {
+  box-sizing: border-box;
+  
+}
+.header {
+  background: #332620;
+  height: 80px;
+  width: 100%;
+  position: relative;
+  display: flex;
+flex-direction: row;
+justify-content: space-between;
+ z-index: 2;
+
+
+}
+
+.logo{
+
+    margin:30px;
+}
+
+
+.headerlinks {
+  overflow: hidden;
+  background-color: #FFFAF0;
+}
+.headerlinks a {
+  float: left;
+  display: block;
+  color: rgb(51, 38, 32);
+  text-align: center;
+  padding: 26px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.headerlinks a.active {
+  background-color: #C3B7D8;
+  color: white;
+}
+
+.textbox{
+  padding: 6px;
+  margin-top: 20px;
+  font-size: 17px;
+  border: none;
+
+
+}
+.search-container {
+  float: right;
+  padding: 6px 10px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+

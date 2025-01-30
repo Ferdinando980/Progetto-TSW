@@ -1,5 +1,6 @@
 package controller.everyone;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
@@ -18,14 +19,21 @@ import model.dao.Eccezioni.ValidException;
 @WebServlet(name = "Registrazione", value = "/Registrazione")
 public class RegistrationServlet extends HttpServlet {
 
-    private Users ReqUser;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/registration.jsp");
+        dispatcher.forward(request, response);
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-            String dateString = request.getParameter("date");
-             LocalDate date = LocalDate.parse(dateString);
-              Users reqUser = new Users(
+            throws ServletException, IOException {
+        String dateString = request.getParameter("date");
+        LocalDate date = LocalDate.parse(dateString);
+        Users reqUser = new Users(
                 request.getParameter("Username"),
                 request.getParameter("Password"),
                 request.getParameter("Email"),
@@ -44,17 +52,17 @@ public class RegistrationServlet extends HttpServlet {
             return;
         }
 
-
-
-        // aggiungere check TODO 
-        service.doSave(ReqUser);
-        // aggiungere check TODO 
-
-        HttpSession session = request.getSession();
+        // aggiungere check TODO
+        service.doSave(reqUser);
+        // aggiungere check TODO
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            session.invalidate();
+        }
+        session = request.getSession(true);
 
         Map<String, String> userData = new HashMap<>();
         String isLogged = "true";
-        //TODO sarebbe meglio prendere il dato restituito dal database, così hai anahce l'id, ora l'id è vuoto, ha senso mettere l'id, senò da ricercare in futuro//
         userData.put("Username", reqUser.getUsername());
         userData.put("Email", reqUser.getEmail());
         userData.put("nTelefono", reqUser.getNumeroDiTelefono());
@@ -63,8 +71,6 @@ public class RegistrationServlet extends HttpServlet {
         session.setAttribute("UserData", userData);
 
         response.sendRedirect("home.jsp");
-
-        
 
     }
 
@@ -84,7 +90,7 @@ public class RegistrationServlet extends HttpServlet {
         if (user.getEmail() == null || user.getEmail().isEmpty() || !isValidEmail(user.getEmail())) {
             errors.add("Email inserita in modo errato");
         }
-        if (user.getDataDiNascita() == null ) {
+        if (user.getDataDiNascita() == null) {
             errors.add("Data di nascita non valida");
         }
         if (user.getNumeroDiTelefono() == null || user.getNumeroDiTelefono().isEmpty()
@@ -140,6 +146,5 @@ public class RegistrationServlet extends HttpServlet {
                 && password.matches(".*[0-9].*") && password.matches(".*[!@#$%^&*()].*");
 
     }
-
 
 }

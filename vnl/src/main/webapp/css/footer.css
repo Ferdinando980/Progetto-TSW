@@ -1,5 +1,5 @@
 .footer,
-.footer * {
+footer * {
     box-sizing: border-box;
 }
 
@@ -7,7 +7,7 @@
     background: #E5E5E5;
     height: 80px;
     width: 1024px;
-    position: fixed;
+    position: relative;
     font-family: 'Lobster', sans-serif;
     letter-spacing: 2px;
     
