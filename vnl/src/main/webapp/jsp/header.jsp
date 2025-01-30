@@ -12,7 +12,7 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src="Logo.jpg" alt="Logo">
+            <img src="assets/images/Logo.png" alt="Logo">
         </div>
         <div class="headerlinks">
             <a class="active" href="#home">Home</a>

@@ -16,7 +16,7 @@
         <form action="/registration.jsp" method="POST" class="registration-form">
             <fieldset>
                 <div class="biglabel">
-                    <legend>RegistrazioOOOOne</legend>
+                    <legend>Registrazione</legend>
                 </div>
                 <div class="form-group">
                     <label for="Email">Email:</label><br>
@@ -43,8 +43,10 @@
 
             </fieldset>
         </form>
+
+        
         
     </div>
-
     <jsp:include page="footer.jsp"></jsp:include>
+
 </body>
