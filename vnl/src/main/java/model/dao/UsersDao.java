@@ -101,13 +101,14 @@ public class UsersDao extends AbstractDAO{
            
                 
                 
-                return user;
+               
 
                 
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
-                return null;
             }
+
+            return user;
 
 
         }
@@ -140,7 +141,44 @@ public class UsersDao extends AbstractDAO{
 
             return usersList;
         }
+
+
+
+        public Users doRetrievebyEmail(String email){
+            Users user= null;
+
+            try (Connection connection = getConnection();
+            PreparedStatement ps = prepareStatement(connection,"GET_USER_BY_EMAIL" )){
+
+                ps.setString(1,email);
+
+                ResultSet result=  ps.executeQuery();
+             
+
+                if(result.next()){
+                 user= new Users();   
+                user.setUserId(result.getString("user_id"));
+                user.setEmail(result.getString("email"));
+                user.setPassword(result.getString("password_hash"));
+                user.setDataDiNascita(result.getString("data_di_nascita"));
+                user.setNumeroDiTelefono(result.getString("numero_di_telefono"));
+                }
+
+
+            }
+
+            catch(SQLException e){
+                System.out.println(e.getMessage());
+            }
+
+
+            return user;
+
+
+
+
         }
+    }
      
 
 
