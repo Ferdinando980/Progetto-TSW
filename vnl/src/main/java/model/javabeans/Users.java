@@ -1,7 +1,5 @@
 package model.javabeans;
 
-import java.time.LocalDate;
-
 
 public class Users {
 
@@ -9,7 +7,7 @@ public class Users {
 
     private  String username;
 
-    private LocalDate dataDiNascita;
+    private String dataDiNascita;
 
     private String numeroDiTelefono;
 
@@ -21,7 +19,7 @@ public class Users {
 
     public Users(){}
 
-    public Users(String id, String username, String password, String email, LocalDate dataDiNascita, String numeroDiTelefono){
+    public Users(String id, String username, String password, String email, String dataDiNascita, String numeroDiTelefono){
 
         this.id=id;
 
@@ -39,7 +37,7 @@ public class Users {
 
     }
 
-    public Users(String username, String password, String email, LocalDate dataDiNascita, String numeroDiTelefono){
+    public Users(String username, String password, String email, String dataDiNascita, String numeroDiTelefono){
 
       
 
@@ -58,6 +56,10 @@ public class Users {
 
     public String getUserId(){
         return this.id;
+    }
+    
+    public void setUserId(String id){
+        this.id=id;
     }
 
     public void setUsername(String username){
@@ -84,7 +86,7 @@ public class Users {
         return this.password;
     }
 
-    public void setDataDiNascita(LocalDate dataDiNascita){
+    public void setDataDiNascita(String dataDiNascita){
         this.dataDiNascita=dataDiNascita;
     }
 
@@ -96,7 +98,7 @@ public class Users {
         return this.numeroDiTelefono;
     }
 
-            public LocalDate getDataDiNascita(){
+            public String getDataDiNascita(){
         return this.dataDiNascita;
     }
 

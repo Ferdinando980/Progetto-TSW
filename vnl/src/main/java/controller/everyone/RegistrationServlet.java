@@ -37,7 +37,7 @@ public class RegistrationServlet extends HttpServlet {
                 request.getParameter("Username"),
                 request.getParameter("Password"),
                 request.getParameter("Email"),
-                date,
+                date.toString(),
                 request.getParameter("NumeroDiTelefono"));
 
         String passwordCheck = request.getParameter("CPassword");
