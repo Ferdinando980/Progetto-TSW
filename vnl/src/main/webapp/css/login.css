@@ -20,6 +20,8 @@ fieldset {
 .form-group {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  
   gap: 5px;
   margin-top: 2%;
   margin-bottom: 3%;
@@ -35,7 +37,7 @@ fieldset {
   background-color: #332620;
   text-align: center;
   border-radius: 10px;
-  width: 45%;
+  width: 30%;
   height: 30px;
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
