@@ -2,9 +2,9 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <!-- Users -->
-    <entry key="INSERT_USER">INSERT INTO users (user_id,email,password_hash,data_di_nascita, numero_di_telefono) VALUES (?,?,?,?,?)</entry>
+    <entry key="INSERT_USER">INSERT INTO users (user_id,username,email,password_hash,data_di_nascita, numero_di_telefono) VALUES (?,?,?,?,?,?)</entry>
     <entry key="DELETE_USER">DELETE FROM users WHERE user_id = ?</entry>
-    <entry key="UPDATE_USER">UPDATE users SET   email=?, password=?, data_di_nascita=?, numero_di_telefono=? WHERE id=?</entry>
+    <entry key="UPDATE_USER">UPDATE users SET   email=?,username=?,password=?, data_di_nascita=?, numero_di_telefono=? WHERE id=?</entry>
 
     <entry key="GET_USER_BY_ID">SELECT * FROM users WHERE user_id = ? </entry>
     <entry key="GET_USER_BY_EMAIL">SELECT * FROM users WHERE email = ? </entry>
