@@ -1,11 +1,15 @@
+drop database vnl;
 create database vnl;
 use vnl;
 
 create table users(
 	id varchar(5) primary key,
+    username varchar(20) not null,
     email varchar(40) not null,
     password varchar(50) not null,
-    username varchar(20) not null
+    data_di_nascita date not null,
+	numero_di_telefono varchar(13) not null,
+    tipo varchar(5) not null 
 );
 
 create table ordine(
@@ -17,6 +21,7 @@ create table ordine(
     civico varchar(5) not null,
     cap int not null,
     paese varchar(20) not null,
+    totAmount float default 0,
     foreign key (users) references users(id),
     primary key(id, users)
 );

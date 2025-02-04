@@ -22,33 +22,21 @@ public class Users {
     public Users(String id, String username, String password, String email, String dataDiNascita, String numeroDiTelefono){
 
         this.id=id;
-
         this.username=username;
-
         this.password= password;
-
         this.email=email;
-        
         this.dataDiNascita = dataDiNascita;
-
         this.numeroDiTelefono=numeroDiTelefono;
-
         this.tipo="user";
 
     }
 
     public Users(String username, String password, String email, String dataDiNascita, String numeroDiTelefono){
 
-      
-
         this.username=username;
-
         this.password= password;
-
         this.email=email;
-        
         this.dataDiNascita = dataDiNascita;
-
         this.numeroDiTelefono=numeroDiTelefono;
         this.tipo="user";
 
@@ -90,15 +78,15 @@ public class Users {
         this.dataDiNascita=dataDiNascita;
     }
 
-        public void setNumeroDiTelefono(String numeroDiTelefono){
+    public void setNumeroDiTelefono(String numeroDiTelefono){
         this.numeroDiTelefono=numeroDiTelefono;
     }
 
-        public String getNumeroDiTelefono(){
+    public String getNumeroDiTelefono(){
         return this.numeroDiTelefono;
     }
 
-            public String getDataDiNascita(){
+    public String getDataDiNascita(){
         return this.dataDiNascita;
     }
 
@@ -110,7 +98,6 @@ public class Users {
         this.tipo=tipo;
 
     }
-
 
 }
 
