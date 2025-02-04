@@ -6,14 +6,35 @@ footer * {
 .footer{
     background: #E5E5E5;
     height: 80px;
-    width: 1024px;
+    width: 100%;
+    
     position: relative;
     font-family: 'Lobster', sans-serif;
+    font-size: 100%;
     letter-spacing: 2px;
-    box-sizing: border-box;
+      display: flex;
+        justify-content: center;
+  align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 0 20px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
     
 
 
+}
+.footer a {
+  text-decoration: none;
+  color: #332620;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #7D6BA3;
+}
+.footer-social-media{
+  padding: 0 10px;
+}
+
+.footer-info{
+  padding: 0 10px;
 }
