@@ -72,6 +72,7 @@
   height: 30px;
     cursor: text;
     background-color: #FFFAF0;
+        border-radius: 2%;
 
 
 }
@@ -109,6 +110,7 @@
 
   .textbox {
     width: 100%;
+ 
   }
   .logo {
     width: 50%;  

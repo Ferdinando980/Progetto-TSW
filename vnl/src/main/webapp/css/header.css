@@ -35,9 +35,10 @@
 .headerlinks {
 
   background-color: #FFFAF0;
-  height:74px;
-  margin-top: 2.5px;
+  height:50px;
+  margin-top: 10px;
   border-radius: 10px;
+
 
  
 
@@ -50,28 +51,32 @@
   text-align: center;
   padding: 0 16px;
   text-decoration: none;
-  font-size: 100%;
-  line-height: 75px;
+  font-size: 85%;
+  line-height: 50px;
   border-radius: 10px;
+
+  
 
 }
 
 
-
 .headerlinks a:hover {
   background-color: #C3B7D8;
+   border: 2px solid #332620;
 
 }
 
 .textbox {
   padding: 6px;
   margin-top: 20px;
-  font-size: 17px;
+  font-size: 100%;
   border: none;
   width: 90%;
   height: 30px;
-    cursor: text;
-    background-color: #FFFAF0;
+  cursor: text;
+  background-color: #FFFAF0;
+  border-radius: 2%;
+
 
 
 }
@@ -92,11 +97,13 @@
   .headerlinks {
     display: block;
     text-align: center;
+
   }
 
   .headerlinks a {
     padding: 15px;
     font-size: 100%;
+
   }
 
   .search-container {
@@ -109,6 +116,7 @@
 
   .textbox {
     width: 100%;
+ 
   }
   .logo {
     width: 50%;  
