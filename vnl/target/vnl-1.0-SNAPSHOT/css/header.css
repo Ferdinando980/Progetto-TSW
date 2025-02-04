@@ -1,16 +1,10 @@
 * {
   font-family: "Lobster", sans-serif;
-  margin: none;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.header,
-header* {
-  box-sizing: border-box;
-
-
-}
 
 .header {
   background: #332620;
@@ -23,12 +17,11 @@ header* {
   justify-content: space-between;
   z-index: 2;
   box-shadow: 0 4px 2px -2px gray;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
 
 
 }
+
 
 .logo {
   width: 10%;
@@ -40,23 +33,34 @@ header* {
 
 
 .headerlinks {
-  overflow: hidden;
+
   background-color: #FFFAF0;
+  height:74px;
+  margin-top: 2.5px;
+  border-radius: 10px;
+
+ 
+
 }
 
 .headerlinks a {
-  float: left;
-  display: block;
+
+  display: inline-block;
   color: rgb(51, 38, 32);
   text-align: center;
-  padding: 26px 16px;
+  padding: 0 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 100%;
+  line-height: 75px;
+  border-radius: 10px;
+
 }
 
-.headerlinks a.active {
+
+
+.headerlinks a:hover {
   background-color: #C3B7D8;
-  color: white;
+
 }
 
 .textbox {
@@ -64,17 +68,18 @@ header* {
   margin-top: 20px;
   font-size: 17px;
   border: none;
-  width: 100%;
+  width: 90%;
+  height: 30px;
+    cursor: text;
+    background-color: #FFFAF0;
 
 
 }
 
 .search-container {
-  float: right;
   padding: 6px 10px;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
+  font-size: 100%;
+  
 }
 
 @media (max-width: 768px) {
@@ -91,13 +96,15 @@ header* {
 
   .headerlinks a {
     padding: 15px;
-    font-size: 18px;
+    font-size: 100%;
   }
 
   .search-container {
-    width: 100%;
+    width: 50%;
     text-align: center;
     margin-top: 10px;
+
+
   }
 
   .textbox {
@@ -105,6 +112,6 @@ header* {
   }
   .logo {
     width: 50%;  
-    max-width: 120px;
+    max-width: 100%;
   }
 }

@@ -11,6 +11,8 @@
 
 <body>
     <header class="header">
+
+
         <div class="logo">
             <img src="assets/images/Logo.png" alt="Logo">
         </div>
@@ -22,10 +24,11 @@
         <div class="search-container">
             <form action="">
                 <input class="textbox" type="text" placeholder="Cerca.." name="search">
-                <button type="submit"></button>
             </form>
+        </div>
 
     </header>
 </body>
+
 
 </html>
