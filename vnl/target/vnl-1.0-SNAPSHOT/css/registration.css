@@ -1,7 +1,4 @@
-*{
-    font-family: "Lobster", sans-serif;
 
-}
 
 
 body{
@@ -12,19 +9,7 @@ body{
   }
 
   
- .registration-container
-{
-    color: #332620;
-   
 
-    padding: 50px;
-
-    letter-spacing: 2px;
-
-
-
-    
-}
 
 .biglabel{
      font-size: large;
@@ -36,7 +21,7 @@ body{
 }
 fieldset{
   border-radius: 10px;
-background-color: #FEF6E6;
+background-color: #e5e5e5;
 
 }
 
@@ -69,4 +54,34 @@ label{
     text-align: center;
     font-size: large;
   }
+
+  .registration-container {
+
+
+    width: 90%;
+    margin: 50px auto; 
+    padding: 20px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    letter-spacing: 2px;
+}
     
+  @media (max-width: 480px) {
+    .registration-container {
+        padding: 10px;
+    }
+
+    .biglabel {
+        font-size: 100%;
+    }
+
+    .input, .button {
+        font-size: 100%;
+    }
+
+    fieldset {
+        padding: 10px;
+    }
+
+
+}
