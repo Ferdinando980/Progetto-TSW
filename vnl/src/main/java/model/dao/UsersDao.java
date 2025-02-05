@@ -98,7 +98,7 @@ public class UsersDao extends AbstractDAO{
                 user.setUserId(result.getString("user_id"));
                 user.setUsername(result.getString("username"));
                 user.setEmail(result.getString("email"));
-                user.setPassword(result.getString("password_hash"));
+                user.setPassword(result.getString("password"));
                 user.setDataDiNascita(result.getString("data_di_nascita"));
                     user.setNumeroDiTelefono(result.getString("numero_di_telefono"));
                 }
