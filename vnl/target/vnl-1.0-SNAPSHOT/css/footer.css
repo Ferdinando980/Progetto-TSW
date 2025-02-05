@@ -4,13 +4,13 @@ footer * {
 }
 
 .footer {
-    background: #E5E5E5;
+    background: #000000;
     height: 80px;
     width: 100%;
 
     position: relative;
     flex-shrink: 0;
-
+    border-top: #E5E5E5 3px solid;
     font-size: 100%;
     letter-spacing: 2px;
     display: flex;
@@ -20,14 +20,14 @@ footer * {
     padding: 0 20px;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
     flex-direction: row;
-
-
+   
+    color: #E5E5E5;
 
 }
 
 .footer a {
     text-decoration: none;
-    color: #332620;
+    color: #E5E5E5;
     font-weight: bold;
     transition: color 0.3s ease;
     

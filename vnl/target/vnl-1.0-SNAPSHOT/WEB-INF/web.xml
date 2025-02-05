@@ -5,7 +5,7 @@
                              https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
 
-   
+
     <servlet>
         <servlet-name>Registrazione</servlet-name>
         <servlet-class>controller.everyone.RegistrationServlet</servlet-class>
@@ -16,5 +16,10 @@
         <servlet-name>Registrazione</servlet-name>
         <url-pattern>/Registrazione</url-pattern>
     </servlet-mapping>
+
+    
+    <welcome-file-list>
+     <welcome-file>homepage.jsp</welcome-file> 
+    </welcome-file-list>
 
 </web-app>

@@ -1,6 +1,5 @@
 .login-container {
   color: #FEF6E6;
-  background-color: #6D3A8C;
   padding: 2%;
   border-radius: 10px;
   height: 100vh;
@@ -10,14 +9,18 @@
 
 legend {
   text-align: center;
-  font-size: 100%;
+  font-size: 150%;
 
 }
 
+body{
+  background: linear-gradient(180deg,#6D3A8C 5%,#010913  67%);
+}
+
+
 fieldset {
   border-radius: 10px;
-  height: 90vh;
-
+  background-color: #6D3A8C;;
 
 }
 

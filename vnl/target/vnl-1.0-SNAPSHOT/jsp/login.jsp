@@ -13,6 +13,8 @@
 <body>
 
     <jsp:include page="header.jsp"></jsp:include>
+
+    
     <div class="login-container">
         <form action="/login.jsp" method="POST" class="login-form">
             <fieldset>
