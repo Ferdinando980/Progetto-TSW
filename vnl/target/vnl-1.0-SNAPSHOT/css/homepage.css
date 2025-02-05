@@ -1,0 +1,32 @@
+.banner{
+    background: url('../images/banner.jpg') center/cover no-repeat;
+     color: #FFFAF0;
+     padding: 20px;
+     text-align: center;
+     height: 300px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     position: relative;
+ }
+ 
+ .navbar{
+   display: flex;
+     justify-content: center;
+     gap: 20px;
+     position: absolute;
+     top: 10px;
+     width: 100%;
+     
+ }
+ 
+ .banner-content h1 {
+     font-size: 2rem;
+     margin-bottom: 10px;
+     color: #FFFAF0;
+ }
+ 
+ .info-section {
+     background-color: #C3B7D8; 
+     padding: 30px;
+ }
