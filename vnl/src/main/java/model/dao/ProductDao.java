@@ -12,8 +12,16 @@ public class ProductDao extends AbstractDAO{
         try (Connection connection = getConnection();
              PreparedStatement ps= prepareStatement(connection, "INSERT_USER")){
 
-            ps.setString(1, product.getProductId());
-
+            ps.setString(1, product.getId());
+            ps.setFloat(2, product.getPrezzo());
+            ps.setString(3, product.getDescrizione());
+            ps.setString(4, product.getCondizione());
+            ps.setString(5, product.getTipo());
+            ps.setString(6, product.getMarca());
+            ps.setString(7, product.getModello());
+            ps.setString(8, product.getNomeVnl());
+            ps.setString(9, product.getArtista());
+            ps.setString(10, product.getGenere());
 
 
 
