@@ -4,6 +4,7 @@ model\javabeans\OrderItems.class
 model\javabeans\Category.class
 model\dao\UsersDao.class
 controller\everyone\RegistrationServlet.class
+model\dao\ProductDao.class
 model\javabeans\Users.class
 model\javabeans\Cart.class
 model\QueryPool.class
