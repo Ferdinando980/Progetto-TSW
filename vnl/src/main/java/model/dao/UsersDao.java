@@ -44,7 +44,7 @@ public class UsersDao extends AbstractDAO{
         public boolean doUpdate(Users user){
 
             try (Connection connection = getConnection();
-            PreparedStatement ps= prepareStatement(connection, "INSERT_USER")){
+            PreparedStatement ps= prepareStatement(connection, "UPDATE_USER")){
 
                 ps.setString(2, user.getUsername());
                 ps.setString(3, user.getEmail());
@@ -98,7 +98,7 @@ public class UsersDao extends AbstractDAO{
                 user.setUserId(result.getString("user_id"));
                 user.setUsername(result.getString("username"));
                 user.setEmail(result.getString("email"));
-                user.setPassword(result.getString("password_hash"));
+                user.setPassword(result.getString("password"));
                 user.setDataDiNascita(result.getString("data_di_nascita"));
                     user.setNumeroDiTelefono(result.getString("numero_di_telefono"));
                 }
@@ -161,9 +161,9 @@ public class UsersDao extends AbstractDAO{
 
                 if(result.next()){
                  user= new Users();   
-                user.setUserId(result.getString("user_id"));
+                user.setUserId(result.getString("id"));
                 user.setEmail(result.getString("email"));
-                user.setPassword(result.getString("password_hash"));
+                user.setPassword(result.getString("password"));
                 user.setDataDiNascita(result.getString("data_di_nascita"));
                 user.setNumeroDiTelefono(result.getString("numero_di_telefono"));
                 }
