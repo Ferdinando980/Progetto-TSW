@@ -18,7 +18,7 @@ public class UsersDao extends AbstractDAO{
 
            
                 ps.setString(1, user.getUserId());
-                ps.setString(2, user.getUserame());
+                ps.setString(2, user.getUsername());
                 ps.setString(3, user.getEmail());
                 ps.setString(4, user.getPassword());
                 ps.setString(5, user.getDataDiNascita());
@@ -46,7 +46,7 @@ public class UsersDao extends AbstractDAO{
             try (Connection connection = getConnection();
             PreparedStatement ps= prepareStatement(connection, "INSERT_USER")){
 
-                ps.setString(2, user.getUserame());
+                ps.setString(2, user.getUsername());
                 ps.setString(3, user.getEmail());
                 ps.setString(4, user.getPassword());
                 ps.setString(5, user.getDataDiNascita());
