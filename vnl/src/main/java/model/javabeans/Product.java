@@ -3,100 +3,109 @@ package model.javabeans;
 public class Product {
 
     private String id;
+    private float prezzo;
+    private String descrizione;
+    private String condizione;
+    private String tipo;
+    private String marca;
+    private String modello;
+    private String nomeVnl;
+    private String artista;
+    private String genere;
 
-    private String name;
-
-    private String desc;
-
-    private float price;
-
-    private String status;
-
-    private Category cat;
-
-    public Product(){
+    public String getId() {
+        return id;
     }
 
-    public String getDesc() {
-        return desc;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public float getPrezzo() {
+        return prezzo;
     }
 
-    public float getPrice() {
-        return price;
+    public void setPrezzo(float prezzo) {
+        this.prezzo = prezzo;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
+    public String getDescrizione() {
+        return descrizione;
     }
 
-    public String getStatus() {
-        return status;
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public String getCondizione() {
+        return condizione;
     }
 
-    public void setCat(Category cat) {
-        this.cat = cat;
+    public void setCondizione(String condizione) {
+        this.condizione = condizione;
     }
 
-    public Product(String name, float price, String id){
-
-        this.name=name;
-        this.price=price;
-        this.id=id;
-        this.desc="";
-        this.status="Unknown";
-        this.cat=new Category();
-
-    }
-    public Product(String name, String desc, float price, String status, Category cat, String id){
-
-        this.id=id;
-        this.name=name;
-        this.desc=desc;
-        this.price=price;
-        this.status=status;
-        this.cat=cat;
-
+    public String getTipo() {
+        return tipo;
     }
 
-
-    public void setId(String id){
-        this.id=id;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public String getId(){
-        return this.id; 
+    public String getMarca() {
+        return marca;
     }
 
-    public void setName(String name){
-        this.name=name;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
-    public Category getCat(){
-        return this.cat;
+    public String getModello() {
+        return modello;
     }
 
-    public void setcat(Category cat){
-        this.cat=cat;
+    public void setModello(String modello) {
+        this.modello = modello;
     }
 
-    public String getdesc(){
-        return this.desc;
-     }
-
-    public void setdesc(String desc){
-        this.desc=desc;
+    public String getNomeVnl() {
+        return nomeVnl;
     }
 
-    public String getName(){
-        return this.name;
+    public void setNomeVnl(String nomeVnl) {
+        this.nomeVnl = nomeVnl;
     }
 
+    public String getArtista() {
+        return artista;
+    }
+
+    public void setArtista(String artista) {
+        this.artista = artista;
+    }
+
+    public String getGenere() {
+        return genere;
+    }
+
+    public void setGenere(String genere) {
+        this.genere = genere;
+    }
+
+    public Product() {
+    }
+
+    public Product(String id, float prezzo, String descrizione, String condizione, String tipo, String marca, String modello, String nomeVnl, String artista, String genere) {
+        this.id = id;
+        this.prezzo = prezzo;
+        this.descrizione = descrizione;
+        this.condizione = condizione;
+        this.tipo = tipo;
+        this.marca = marca;
+        this.modello = modello;
+        this.nomeVnl = nomeVnl;
+        this.artista = artista;
+        this.genere = genere;
+    }
 }
