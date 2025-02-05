@@ -1,88 +1,115 @@
+body {
 
+  background-color: #C3B7D8;
 
-
-body{
-  
-    background-color: #C3B7D8;
-    
-  
-  }
-
-  
-
-
-.biglabel{
-     font-size: large;
-    font-weight:bold;
-   background-color: #6D3A8C;
-  border-radius: 10px;
-  color:#FEF6E6;
-
-}
-fieldset{
-  border-radius: 10px;
-background-color: #e5e5e5;
 
 }
 
-legend{
+
+
+
+.biglabel {
+  font-size: 150%;
+  font-weight: bold;
+  background-color: #6D3A8C;
+  border-radius: 10px;
+  color: #FEF6E6;
+
+}
+
+fieldset {
+  border-radius: 10px;
+  background-color: #e5e5e5;
+
+
+}
+
+legend {
   font-size: 150%;
   text-align: center;
 }
-label{
-    font-weight: normal;
-    letter-spacing: normal;
-    margin-top: 5px;
-  }
-  
-  .button{
-    border-radius: 10px;
-    background-color: #332620;
-    color: #FEF6E6;
-    font-size: large;
-    margin-top: 20px;
-  
-      
-  }
-  
-  
-  .input{
-    border-radius: 10px;
-    color: #FEF6E6;
-    background-color: #332620;
-    margin-top: 5px;
-    text-align: center;
-    font-size: large;
-  }
 
-  .registration-container {
-
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: 50px auto; 
-    padding: 20px;
-    background-color: #e5e5e5;
-    border-radius: 10px;
-    letter-spacing: 2px;
+label {
+  font-size: 100%;
+  letter-spacing: normal;
+  margin-top: 5px;
 }
-    
-  @media (max-width: 480px) {
-    .registration-container {
-        padding: 10px;
-    }
 
-    .biglabel {
-        font-size: 100%;
-    }
+.button {
+  border-radius: 10px;
+  background-color: #332620;
+  color: #FEF6E6;
+  font-size: 100%;
+  margin-top: 20px;
 
-    .input, .button {
-        font-size: 100%;
-    }
+  
 
-    fieldset {
-        padding: 10px;
-    }
+
+}
+
+.button:hover {
+  cursor: pointer;
+  
+
+
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  gap: 5px;
+  margin-top: 2%;
+}
+
+
+
+.input {
+  border-radius: 10px;
+  width: 30%;
+  color: #FEF6E6;
+  background-color: #332620;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 100%;
+  max-width: 90%;
+}
+
+.registration-container {
+
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  min-height: 100vh;
+
+
+}
+
+
+
+@media (max-width: 480px) {
+  .registration-container {
+    padding: 10px;
+  }
+
+  .biglabel {
+    font-size: 100%;
+  }
+
+  .input,
+  .button {
+    font-size: 100%;
+  }
+
+  fieldset {
+    padding: 10px;
+  }
 
 
 }

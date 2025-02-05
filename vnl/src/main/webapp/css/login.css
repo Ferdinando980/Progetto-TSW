@@ -3,7 +3,8 @@
   background-color: #6D3A8C;
   padding: 2%;
   border-radius: 10px;
-
+  height: 100vh;
+  margin-bottom: 20px;
 
 }
 
@@ -15,13 +16,16 @@ legend {
 
 fieldset {
   border-radius: 10px;
+  height: 90vh;
+
+
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+  height: auto;
   gap: 5px;
   margin-top: 2%;
   margin-bottom: 3%;
@@ -38,11 +42,11 @@ fieldset {
   text-align: center;
   border-radius: 10px;
   width: 30%;
-  height: 30px;
+  height: auto;
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
-
+  max-width: 90%;
 
 }
 
@@ -54,7 +58,7 @@ fieldset {
   color: #FEF6E6;
   border-radius: 10px;
   width: 25%;
-  height: 50px;
+  height: auto;
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
