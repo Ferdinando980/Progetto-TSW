@@ -44,7 +44,7 @@ public class UsersDao extends AbstractDAO{
         public boolean doUpdate(Users user){
 
             try (Connection connection = getConnection();
-            PreparedStatement ps= prepareStatement(connection, "INSERT_USER")){
+            PreparedStatement ps= prepareStatement(connection, "UPDATE_USER")){
 
                 ps.setString(2, user.getUsername());
                 ps.setString(3, user.getEmail());
