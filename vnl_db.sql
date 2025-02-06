@@ -9,7 +9,6 @@ create table users(
     password varchar(50) not null,
     data_di_nascita date not null,
 	numero_di_telefono varchar(30) not null,
-    nazione varchar(20) not null,
     tipo varchar(5) not null 
 );
 
@@ -46,6 +45,8 @@ create table OP(
 	ordine_id varchar(5),
     ordine_users varchar(5),
     prodotto varchar(5),
+    quantita int not null,
+    prezzo float not null,
     foreign key (ordine_id, ordine_users) references ordine(id, users),
     foreign key (prodotto) references prodotto(id),
     primary key(ordine_id, ordine_users, prodotto)

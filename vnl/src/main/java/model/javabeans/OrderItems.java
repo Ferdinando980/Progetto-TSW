@@ -2,67 +2,64 @@ package model.javabeans;
 
 public class OrderItems {
 
-    private Order ord;
+    private String ordine_id;
 
-    private Product prod;
+    private String ordine_users;
 
-    private String id;
+    private String prodotto;
 
-    private int quantity;
+    private int quantita;
 
-    private float price;
+    private float prezzo;
 
-    public OrderItems(){
-
+    public OrderItems() {
     }
 
-    public OrderItems(Order ord, Product prod, String id, int quantity, float price){
-
-        this.ord=ord;
-        this.prod=prod;
-        this.id=id;
-        this.quantity=quantity;
-        this.price=price;
-
+    public OrderItems(String ordine_users, String ordine_id, String prodotto, int quantita, float prezzo) {
+        this.ordine_users = ordine_users;
+        this.ordine_id = ordine_id;
+        this.prodotto = prodotto;
+        this.quantita = quantita;
+        this.prezzo = prezzo;
     }
 
-    public void setOrd(Order ord){
-        this.ord=ord;
-    }
-    public void setProd(Product prod){
-        this.prod=prod;
+    public String getOrdine_id() {
+        return ordine_id;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
+    public void setOrdine_id(String ordine_id) {
+        this.ordine_id = ordine_id;
     }
 
-    public float getPrice() {
-        return this.price;
+    public String getOrdine_users() {
+        return ordine_users;
     }
 
-    public Order getOrd() {
-        return this.ord;
+    public void setOrdine_users(String ordine_users) {
+        this.ordine_users = ordine_users;
     }
 
-    public int getQuantity() {
-        return this.quantity;
+    public String getProdotto() {
+        return prodotto;
     }
 
-    public Product getProd() {
-        return this.prod;
+    public void setProdotto(String prodotto) {
+        this.prodotto = prodotto;
     }
 
-    public String getId() {
-        return this.id;
+    public int getQuantita() {
+        return quantita;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setQuantita(int quantita) {
+        this.quantita = quantita;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public float getPrezzo() {
+        return prezzo;
     }
 
+    public void setPrezzo(float prezzo) {
+        this.prezzo = prezzo;
+    }
 }
