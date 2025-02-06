@@ -37,7 +37,6 @@
                              <div class="nazione">
                                 <label for="Nazione">Nazione:</label><br>
                                 <select id="Nazione" name="Nazione" required>
-                                    <option value="">+39</option>
                                 </select>
                             </div>
                                   <div class="labelAndInputPhone">
@@ -57,11 +56,12 @@
                     
                 </fieldset>
             </form>
+            
         </div>
     </main>
 
     <jsp:include page="footer.jsp"></jsp:include>
-
+    <script src="script/regioni.js"></script>
 </body>
 
 </html>
