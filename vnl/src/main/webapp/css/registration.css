@@ -1,5 +1,4 @@
 
-
 body {
   background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
 }
@@ -37,14 +36,16 @@ label {
     width: 100%;
 }
 
-.phoneGroup{
+.phoneGroup {
   display: flex;
-  gap: 5%;
+  align-items: center;
+  gap: 4%;
   margin-bottom: 2%;
-
-  
-  
+  width: 100%;
+  margin-top: 2.5%;
+  margin-bottom: 3.6%;
 }
+
 .button:hover {
   background-color: #C3B7D8;
 }
@@ -71,27 +72,21 @@ label {
 }
 
 
-.labelAndInputPhone{
-  width: 100%;
-  display:flex;
-
-      align-items:center;
-
-    margin-right: 20%;
-
-    padding: 10px;
-    gap: 2%;
- 
-
-  
+.labelAndInputPhone {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
-.nazione{
-  display:flex;
-         flex-direction:row;
-   align-items: center;
-   gap: 0.5%;
+.input[type="tel"]{
+margin-left: 2%;
+}
 
+.nazione {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5%;
 }
 
 select{

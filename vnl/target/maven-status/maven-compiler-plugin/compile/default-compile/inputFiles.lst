@@ -3,6 +3,7 @@ C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\controller\everyone\LoginServl
 C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\controller\everyone\RegistrationServlet.java
 C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\dao\AbstractDAO.java
 C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\dao\Eccezioni\ValidException.java
+C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\dao\OrderDao.java
 C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\dao\ProductDao.java
 C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\dao\UsersDao.java
 C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\DBManager.java

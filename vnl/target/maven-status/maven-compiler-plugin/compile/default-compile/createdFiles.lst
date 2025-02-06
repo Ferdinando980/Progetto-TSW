@@ -1,3 +1,4 @@
+model\dao\OrderDao.class
 model\dao\Eccezioni\ValidException.class
 model\javabeans\Order.class
 model\javabeans\OrderItems.class
