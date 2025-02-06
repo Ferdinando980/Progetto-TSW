@@ -8,7 +8,8 @@ create table users(
     email varchar(40) not null,
     password varchar(50) not null,
     data_di_nascita date not null,
-	numero_di_telefono varchar(13) not null,
+	numero_di_telefono varchar(30) not null,
+    nazione varchar(20) not null,
     tipo varchar(5) not null 
 );
 
