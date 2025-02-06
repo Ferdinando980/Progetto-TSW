@@ -1,38 +1,27 @@
+
+
 body {
-
-  background-color: #C3B7D8;
-
-
-}
-
-
-
-
-.biglabel {
-  font-size: 150%;
-  font-weight: bold;
-  background-color: #6D3A8C;
-  border-radius: 10px;
-  color: #FEF6E6;
-
+  background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
 }
 
 fieldset {
   border-radius: 10px;
-  background-color: #e5e5e5;
-
-
+  background-color: #6D3A8C;
+  border: solid 3px #FEF6E6;
+  padding: 20px;
 }
 
 legend {
   font-size: 150%;
   text-align: center;
+  color: #FEF6E6;
 }
 
 label {
   font-size: 100%;
   letter-spacing: normal;
-  margin-top: 5px;
+  color: #FEF6E6;
+  white-space: nowrap
 }
 
 .button {
@@ -41,61 +30,109 @@ label {
   color: #FEF6E6;
   font-size: 100%;
   margin-top: 20px;
-
-  
-
-
-}
-
-.button:hover {
+  padding: 10px 20px;
+  border: none;
   cursor: pointer;
-  
-
-
+  transition: background-color 0.3s ease;
+    width: 100%;
 }
 
-.form-group{
+.phoneGroup{
+  display: flex;
+  gap: 5%;
+  margin-bottom: 2%;
+
+  
+  
+}
+.button:hover {
+  background-color: #C3B7D8;
+}
+
+.form-group {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: auto;
-  gap: 5px;
   margin-top: 2%;
+  
 }
-
-
 
 .input {
   border-radius: 10px;
-  width: 30%;
+  width: 100%;
   color: #FEF6E6;
   background-color: #332620;
-  margin-top: 5px;
   text-align: center;
+  transition: background-color 1s ease;
   font-size: 100%;
-  max-width: 90%;
+  padding: 10px;
+  border: 2px solid #6D3A8C;
+
+}
+
+
+.labelAndInputPhone{
+  width: 100%;
+  display:flex;
+
+      align-items:center;
+
+    margin-right: 20%;
+
+    padding: 10px;
+    gap: 2%;
+ 
+
+  
+}
+
+.nazione{
+  display:flex;
+         flex-direction:row;
+   align-items: center;
+   gap: 0.5%;
+
+}
+
+select{
+     background-color: #332620;
+       transition: background-color 1s ease;
+         border-radius: 10px;
+         color: #FEF6E6;
+         font-size:100%;
+         padding:2%;
+           border: 2px solid #6D3A8C;
+      
+    
+
+   
+          align-content: center;
+}
+input:hover{
+    background-color: #C3B7D8;
+}
+select:hover{
+    background-color: #C3B7D8;
 }
 
 .registration-container {
-
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 50px auto;
+  width: 70%;
+  align-self: center;
+  margin: auto;
   padding: 20px;
-  background-color: #e5e5e5;
   border-radius: 10px;
   letter-spacing: 2px;
   min-height: 100vh;
-
-
 }
 
-
-
+  
+  
 @media (max-width: 480px) {
   .registration-container {
     padding: 10px;
+    width: 90%;
   }
 
   .biglabel {
@@ -111,5 +148,9 @@ label {
     padding: 10px;
   }
 
+  .button {
+    padding: 10px;
+  }
+  
 
 }
