@@ -24,34 +24,37 @@
                     </div>
 
                     <div class="form-group">
-
                         <label for="Username">Username:</label><br>
-                        <input type="text" id="Username" name="Username" required placeholder="Inserisci Username..."
-                            class="input"><br>
-
+                        <input type="text" id="Username" name="Username" required placeholder="Inserisci Username..." class="input"><br>
+                    
                         <label for="Email">Email:</label><br>
-                        <input type="text" id="Email" name="Email" required placeholder="Inserisci Email..."
-                            class="input"><br>
+                        <input type="email" id="Email" name="Email" required placeholder="Inserisci Email..." class="input"><br>
+                    
                         <label for="DataDiNascita">Data di nascita:</label><br>
                         <input type="date" id="DataDiNascita" name="DataDiNascita" class="input"><br>
-                        <div class = "nazione">
-                        <label for="Nazione">Nazione:</label><br>
-
+                    
+                        <div class="phoneGroup">
+                             <div class="nazione">
+                                <label for="Nazione">Nazione:</label><br>
+                                <select id="Nazione" name="Nazione" required>
+                                    <option value="">+39</option>
+                                </select>
+                            </div>
+                                  <div class="labelAndInputPhone">
+                            <label for="NumeroDiTelefono">Numero di telefono:</label><br>
+                            <input type="tel" id="NumeroDiTelefono" name="NumeroDiTelefono" class="input" minlength="10" maxlength="15" required><br>
+                            </div>
                         </div>
-                        <select id="Nazione" name="Nazione" required>
-                        <label for="NumeroDiTelefono">Numero di telefono:</label><br>
-                        <input type="tel" id="NumeroDiTelefono" name="NumeroDiTelefono" class="input" minlength="14"><br>
-
+                    
                         <label for="Password">Password:</label><br>
-                        <input type="password" id="Password" name="Password" required
-                            placeholder="Inserisci Password..." class="input"><br>
+                        <input type="password" id="Password" name="Password" required placeholder="Inserisci Password..." class="input"><br>
+                    
                         <label for="CPassword">Conferma Password:</label><br>
-                        <input type="password" id="CPassword" name="CPassword" required
-                            placeholder="Conferma Password..." class="input"><br>
-
-                        
+                        <input type="password" id="CPassword" name="CPassword" required placeholder="Conferma Password..." class="input"><br>
+                    
                         <input type="submit" value="Registrati" class="button">
                     </div>
+                    
                 </fieldset>
             </form>
         </div>

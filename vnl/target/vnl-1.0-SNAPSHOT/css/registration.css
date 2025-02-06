@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+
 
 body {
   background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
@@ -23,6 +21,7 @@ label {
   font-size: 100%;
   letter-spacing: normal;
   color: #FEF6E6;
+  white-space: nowrap
 }
 
 .button {
@@ -35,8 +34,17 @@ label {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+    width: 100%;
 }
 
+.phoneGroup{
+  display: flex;
+  gap: 5%;
+  margin-bottom: 2%;
+
+  
+  
+}
 .button:hover {
   background-color: #C3B7D8;
 }
@@ -46,6 +54,7 @@ label {
   flex-direction: column;
   justify-content: center;
   margin-top: 2%;
+  
 }
 
 .input {
@@ -54,10 +63,56 @@ label {
   color: #FEF6E6;
   background-color: #332620;
   text-align: center;
-  transition: background-color 0.3s ease;
+  transition: background-color 1s ease;
   font-size: 100%;
   padding: 10px;
   border: 2px solid #6D3A8C;
+
+}
+
+
+.labelAndInputPhone{
+  width: 100%;
+  display:flex;
+
+      align-items:center;
+
+    margin-right: 20%;
+
+    padding: 10px;
+    gap: 2%;
+ 
+
+  
+}
+
+.nazione{
+  display:flex;
+         flex-direction:row;
+   align-items: center;
+   gap: 0.5%;
+
+}
+
+select{
+     background-color: #332620;
+       transition: background-color 1s ease;
+         border-radius: 10px;
+         color: #FEF6E6;
+         font-size:100%;
+         padding:2%;
+           border: 2px solid #6D3A8C;
+      
+    
+
+   
+          align-content: center;
+}
+input:hover{
+    background-color: #C3B7D8;
+}
+select:hover{
+    background-color: #C3B7D8;
 }
 
 .registration-container {
@@ -72,6 +127,8 @@ label {
   min-height: 100vh;
 }
 
+  
+  
 @media (max-width: 480px) {
   .registration-container {
     padding: 10px;
@@ -94,4 +151,6 @@ label {
   .button {
     padding: 10px;
   }
+  
+
 }
