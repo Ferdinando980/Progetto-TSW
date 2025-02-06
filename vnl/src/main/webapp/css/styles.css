@@ -1,6 +1,6 @@
 body{
 
-  background-color: ##FEF6E6;
+  background-color: #FEF6E6;
 
   margin: 0;
   padding: 0;
@@ -25,7 +25,8 @@ background-color: #4A3A2D;
 
 
 .mainpage{
-
+  position:relative;
+  top:40px;
   background-color: #C3B7D8;
   width:100%;
   height:100%

@@ -18,9 +18,9 @@
 
 <div class="mainpage">
     <nav class="navbar">
-        <div class="nav-item">Vinili</div>
-        <div class="nav-item">Giradischi</div>
-        <div class="nav-item">Compact Disc</div>
+        <div class="nav-item" onclick="currentSlide(1)">Vinili</div>
+        <div class="nav-item" onclick="currentSlide(2)">CD</div>
+        <div class="nav-item" onclick="currentSlide(3)">Giradischi</div>
     </nav> 
 
     <div class="slideshow-container">
@@ -29,6 +29,8 @@
             
                     <div class="slide">
                         <img src="assets/images/banner1.jpg" alt="Banner 1" style="width:100%"> 
+                        <div class="textTitle">Miao</div>
+                        <div class="text">Miaomiao</div>
                     </div>
                     <div class="slide">
                         <img src="assets/images/banner2.jpg" alt="Banner 2" style="width:100%">
