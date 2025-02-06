@@ -1,11 +1,9 @@
 package model.dao;
 
 import model.javabeans.Product;
-import model.javabeans.Users;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.List;
 
 public class ProductDao extends AbstractDAO{
 
