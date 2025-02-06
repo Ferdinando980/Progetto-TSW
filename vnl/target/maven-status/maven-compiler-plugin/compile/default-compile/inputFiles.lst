@@ -4,6 +4,7 @@ C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\controller\everyone\Registrati
 C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\dao\AbstractDAO.java
 C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\dao\Eccezioni\ValidException.java
 C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\dao\OrderDao.java
+C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\dao\OrderItemsDao.java
 C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\dao\ProductDao.java
 C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\dao\UsersDao.java
 C:\Users\rivys\TSW\Progetto-TSW\vnl\src\main\java\model\DBManager.java

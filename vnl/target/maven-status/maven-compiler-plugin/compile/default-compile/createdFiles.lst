@@ -14,3 +14,4 @@ model\javabeans\Product.class
 model\DBManager.class
 model\dao\AbstractDAO.class
 controller\everyone\LoginServlet.class
+model\dao\OrderItemsDao.class

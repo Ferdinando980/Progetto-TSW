@@ -17,7 +17,7 @@
     <main>
         <div class="registration-container">
 
-            <form action="/registration.jsp" method="POST" class="registration-form">
+            <form action="Registrazione" method="POST" class="registration-form">
                 <fieldset>
                     <div class="biglabel">
                         <legend>Registrazione</legend>
