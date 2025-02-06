@@ -15,13 +15,15 @@ create table users(
 create table ordine(
 	id varchar(5),
     users varchar(5),
+    stato varchar(10) not null,
+    dataOrdine date not null,
+    totAmount float default 0,
     nome varchar(20) not null,
     cognome varchar(20) not null,
     via varchar(40) not null,
     civico varchar(5) not null,
     cap int not null,
     paese varchar(20) not null,
-    totAmount float default 0,
     foreign key (users) references users(id),
     primary key(id, users)
 );
