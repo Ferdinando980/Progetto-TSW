@@ -34,8 +34,13 @@
                             class="input"><br>
                         <label for="DataDiNascita">Data di nascita:</label><br>
                         <input type="date" id="DataDiNascita" name="DataDiNascita" class="input"><br>
+                        <div class = "nazione">
+                        <label for="Nazione">Nazione:</label><br>
+
+                        </div>
+                        <select id="Nazione" name="Nazione" required>
                         <label for="NumeroDiTelefono">Numero di telefono:</label><br>
-                        <input type="tel" id="NumeroDiTelefono" name="NumeroDiTelefono" class="input"><br>
+                        <input type="tel" id="NumeroDiTelefono" name="NumeroDiTelefono" class="input" minlength="14"><br>
 
                         <label for="Password">Password:</label><br>
                         <input type="password" id="Password" name="Password" required
