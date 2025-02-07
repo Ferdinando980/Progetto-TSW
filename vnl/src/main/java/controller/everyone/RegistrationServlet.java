@@ -31,14 +31,22 @@ public class RegistrationServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         String dateString = request.getParameter("date");
+
+        String nazione = request.getParameter("Nazione");   
+
+
+        String ntelefono = request.getParameter("NumeroDiTelefono");
+        ntelefono = "+" + nazione + ntelefono;
+        System.out.println("ntelefono: " + ntelefono);
         LocalDate date = LocalDate.parse(dateString);
         Users reqUser = new Users(
                 request.getParameter("Username"),
                 request.getParameter("Password"),
                 request.getParameter("Email"),
                 date.toString(),
-                request.getParameter("NumeroDiTelefono"));
+                ntelefono);
 
         String passwordCheck = request.getParameter("CPassword");
         UsersDao service = new UsersDao();
@@ -70,7 +78,7 @@ public class RegistrationServlet extends HttpServlet {
 
         session.setAttribute("UserData", userData);
 
-        response.sendRedirect("home.jsp");
+        response.sendRedirect("Homepage.jsp");
 
     }
 
