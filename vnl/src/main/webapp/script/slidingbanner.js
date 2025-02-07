@@ -1,5 +1,7 @@
+
 let slideIndex=1;
 showSlide(slideIndex);
+
 
 setInterval(function() {
     moveSlideShow(1);
@@ -30,13 +32,13 @@ for(i=0; i<x.length; i++){
 }
 
 for (i = 0; i < nav.length; i++) {
-    nav[i].className = nav[i].className.replace(" active", "");
+    nav[i].className = nav[i].className.replace(" navActive", "");
   }
 
 
 x[slideIndex - 1].style.display="block";
 
-nav[slideIndex-1].className += " active";
+nav[slideIndex-1].className += " navActive";
 
 
 

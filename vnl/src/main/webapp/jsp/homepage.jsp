@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/homepage.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/homepage.css">
   
     <title>HomePage</title>
 </head>
@@ -26,18 +26,20 @@
     <div class="slideshow-container">
     
         
-            
-                    <div class="slide">
+         
+                    <div class="slide fade">
                         <img src="assets/images/banner1.jpg" alt="Banner 1" style="width:100%"> 
                         <div class="textTitle">Miao</div>
                         <div class="text">Miaomiao</div>
                     </div>
-                    <div class="slide">
+                    <div class="slide fade">
                         <img src="assets/images/banner2.jpg" alt="Banner 2" style="width:100%">
                     </div>
-                    <div class="slide">
+                    <div class="slide fade">
                         <img src="assets/images/banner3.jpg" alt="Banner 3" style="width:100%">
                     </div>
+                      
+        
                     <a class="prev" onclick="moveSlideShow(-1)">&#10094;</a>
                     <a class="next" onclick="moveSlideShow(1)">&#10095;</a>
         
@@ -47,11 +49,16 @@
         
     </div>
 
-    <section class="info-section">
-    <div class="info-grid">
+   
 
-    </div>
-</section>
+
+    <div class="info-grid">
+        <div class="infotextTitle">About Us</div>
+        <div class="infotext">
+            <p>Miao</p>
+            <p>MiaoMiao</p>
+        </div>
+       
 </div>
 
 </div>

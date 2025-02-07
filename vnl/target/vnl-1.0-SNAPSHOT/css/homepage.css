@@ -1,21 +1,34 @@
+body{
+  height:2500px;
+}
+
 .slideshow-container {
   max-width: 120%;
   position: relative;
   margin: auto;
+  overflow: hidden; 
+  white-space: nowrap;
+
 }
 
 
 
-.slide{
 
-  display:none;
-  position: relative;
+  .slide {
+    flex: 0 0 100vw;
+    position: relative;
+}
+.slides-track {
+  display: flex;
+  transition: transform 1s ease-in-out;
 }
 
-.slide img{
-  width:100%;
-  height:auto;
+
+.slide img {
+  width: 100%;
+  height: auto;
 }
+
 
 
 
@@ -37,17 +50,27 @@
 .nav-item{
 
 cursor: pointer;
-
+padding:1.5%;
 color:#6D3A8C;
 
 }
 
-.active, .nav-item:hover{
+.navActive, .nav-item:hover{
 cursor:pointer;
 background-color: #332620;
 color:#FEF6E6 ;
 border-radius:8px;
 
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 
 
@@ -108,4 +131,32 @@ border-radius:8px;
   font-size: 150%;
   text-shadow: 10px 10px 10px rgb(28 20 25);
 
+}
+
+.info-grid{
+display: flex;
+  align-items: flex-start;
+  gap: 20px; 
+  color:#332620;
+  
+}
+
+ 
+.infotextTitle{
+
+font-weight: bold;
+  font-size: 350%;
+  padding-top:10%;
+
+}
+
+.infotext{
+  
+display: flex;
+  flex-direction: column;
+  font-size: 200%;
+  padding-top:10%;
+  gap: 10px;
+  text-align:right;
+  padding-left:20%;
 }
