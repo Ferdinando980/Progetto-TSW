@@ -183,14 +183,40 @@ public class UsersDao extends AbstractDAO{
 
             return user;
 
+        }
+
+        public Users doRetrievebyUsername(String username){
+            Users user= null;
+
+            try (Connection connection = getConnection();
+            PreparedStatement ps = prepareStatement(connection,"GET_USER_BY_USERNAME" )){
+
+                ps.setString(1,username);
+
+                ResultSet result=  ps.executeQuery();
 
 
+                if(result.next()){
+                    user= new Users();
+                    user.setUserId(result.getString("id"));
+                    user.setUsername(result.getString("username"));
+                    user.setEmail(result.getString("email"));
+                    user.setPassword(result.getString("password"));
+                    user.setDataDiNascita(result.getString("data_di_nascita"));
+                    user.setNumeroDiTelefono(result.getString("numero_di_telefono"));
+                    user.setTipo(result.getString("tipo"));
+                }
+
+
+            }
+
+            catch(SQLException e){
+                System.out.println(e.getMessage());
+            }
+
+
+            return user;
 
         }
+
     }
-     
-
-
-        
-    
-    
