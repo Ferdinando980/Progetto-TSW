@@ -11,6 +11,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,19 +36,20 @@ public class RegistrationServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String dateString = request.getParameter("date");
+        String dateString = request.getParameter("DataDiNascita");
 
         String nazione = request.getParameter("Nazione");
-
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String ntelefono = request.getParameter("NumeroDiTelefono");
         ntelefono = "+" + nazione + ntelefono;
 
-        LocalDate date = LocalDate.parse(dateString);
+        LocalDate date = LocalDate.parse(dateString, formatter);
+        String formattedDate = date.toString();
         Users reqUser = new Users(
                 request.getParameter("Username"),
                 request.getParameter("Password"),
                 request.getParameter("Email"),
-                date.toString(),
+                formattedDate,
                 ntelefono);
 
         String passwordCheck = request.getParameter("CPassword");
@@ -56,7 +58,7 @@ public class RegistrationServlet extends HttpServlet {
         ;
 
         try {
-            validateInputs(reqUser, passwordCheck);
+            validateInputs(reqUser, passwordCheck, service);
             reqUser.setPassword(toHash(reqUser.getPassword()));
         } catch (ValidException e) {
             // debug System.out.println("Errore di validazione: " + e.getMessage());
@@ -67,26 +69,25 @@ public class RegistrationServlet extends HttpServlet {
 
         if (success) {
 
-
-      
-
             response.sendRedirect("Login.jsp");
 
         }
 
     }
 
-    private boolean emailInUso(String email) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'emailInUso'");
+    private boolean emailInUso(String email, UsersDao service) throws ValidException {
+        if (service.doRetrievebyEmail(email) != null)
+            return true;
+        return false;
     }
 
-    private boolean usernameInUso(String username) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'usernameInUso'");
+    private boolean usernameInUso(String username, UsersDao service) throws ValidException {
+        if (service.doRetrievebyUsername(username) != null)
+            return true;
+        return false;
     }
 
-    private void validateInputs(Users user, String passwordCheck) {
+    private void validateInputs(Users user, String passwordCheck, UsersDao service) {
         List<String> errors = new ArrayList<>();
 
         if (user.getEmail() == null || user.getEmail().isEmpty() || !isValidEmail(user.getEmail())) {
@@ -109,12 +110,12 @@ public class RegistrationServlet extends HttpServlet {
             errors.add("Username non valido");
         }
 
-        if (usernameInUso(user.getUsername())) {
+        if (usernameInUso(user.getUsername(), service)) {
             errors.add("Username Già In Uso");
 
         }
 
-        if (emailInUso(user.getEmail())) {
+        if (emailInUso(user.getEmail(), service)) {
             errors.add("Email già in uso");
 
         }
