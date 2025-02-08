@@ -1,6 +1,8 @@
 package controller.everyone;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -37,5 +39,24 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("user", user);
         }
 
+
+
+        /* /     //check per vedere se l'ugente è già loggato e si sta registrando, in quel caso invalido la sessione e loggo l'utente registrato
+            HttpSession session = request.getSession(false);
+            if (session != null) {
+                session.invalidate();
+            }
+            session = request.getSession(true);
+
+            Map<String, String> userData = new HashMap<>();
+            String isLogged = "true";
+            userData.put("Username", reqUser.getUsername());
+            userData.put("Email", reqUser.getEmail());
+            userData.put("nTelefono", reqUser.getNumeroDiTelefono());
+            userData.put("IsLogged", isLogged);
+
+            session.setAttribute("UserData", userData);
+
+            */
     }
 }

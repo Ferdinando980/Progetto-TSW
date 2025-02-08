@@ -6,6 +6,10 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
 import java.io.IOException;
+import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,7 +27,6 @@ public class RegistrationServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-
         RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/registration.jsp");
         dispatcher.forward(request, response);
     }
@@ -34,12 +37,11 @@ public class RegistrationServlet extends HttpServlet {
 
         String dateString = request.getParameter("date");
 
-        String nazione = request.getParameter("Nazione");   
-
+        String nazione = request.getParameter("Nazione");
 
         String ntelefono = request.getParameter("NumeroDiTelefono");
         ntelefono = "+" + nazione + ntelefono;
-        System.out.println("ntelefono: " + ntelefono);
+
         LocalDate date = LocalDate.parse(dateString);
         Users reqUser = new Users(
                 request.getParameter("Username"),
@@ -55,30 +57,22 @@ public class RegistrationServlet extends HttpServlet {
 
         try {
             validateInputs(reqUser, passwordCheck);
+            reqUser.setPassword(toHash(reqUser.getPassword()));
         } catch (ValidException e) {
             // debug System.out.println("Errore di validazione: " + e.getMessage());
             return;
         }
 
-        // aggiungere check TODO
-        service.doSave(reqUser);
-        // aggiungere check TODO
-        HttpSession session = request.getSession(false);
-        if (session != null) {
-            session.invalidate();
+        boolean success = service.doSave(reqUser);
+
+        if (success) {
+
+
+      
+
+            response.sendRedirect("Login.jsp");
+
         }
-        session = request.getSession(true);
-
-        Map<String, String> userData = new HashMap<>();
-        String isLogged = "true";
-        userData.put("Username", reqUser.getUsername());
-        userData.put("Email", reqUser.getEmail());
-        userData.put("nTelefono", reqUser.getNumeroDiTelefono());
-        userData.put("IsLogged", isLogged);
-
-        session.setAttribute("UserData", userData);
-
-        response.sendRedirect("Homepage.jsp");
 
     }
 
@@ -155,4 +149,17 @@ public class RegistrationServlet extends HttpServlet {
 
     }
 
+    private String toHash(String password) {
+        StringBuilder hashString = new StringBuilder();
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-512");
+            byte[] hash = digest.digest(password.getBytes(StandardCharsets.UTF_8));
+            for (byte b : hash) {
+                hashString.append(String.format("%02x", b));
+            }
+        } catch (NoSuchAlgorithmException e) {
+            System.err.println(e);
+        }
+        return hashString.toString();
+    }
 }

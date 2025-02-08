@@ -3,12 +3,12 @@ package model.dao;
 import model.javabeans.OrderItems;
 import java.sql.*;
 
-public class OrderItemsDao extends AbstractDAO{
+public class OrderItemsDao extends AbstractDAO {
 
-    public boolean doSave(OrderItems orderItems){
+    public boolean doSave(OrderItems orderItems) {
 
         try (Connection connection = getConnection();
-             PreparedStatement ps= prepareStatement(connection, "INSERT_ORDERITEMS")){
+                PreparedStatement ps = prepareStatement(connection, "INSERT_ORDERITEMS")) {
 
             ps.setString(1, orderItems.getOrdine_id());
             ps.setString(2, orderItems.getOrdine_users());
@@ -16,8 +16,8 @@ public class OrderItemsDao extends AbstractDAO{
             ps.setInt(4, orderItems.getQuantita());
             ps.setFloat(5, orderItems.getPrezzo());
 
-            int rowsAffected=  ps.executeUpdate();
-            return rowsAffected>0;
+            int rowsAffected = ps.executeUpdate();
+            return rowsAffected > 0;
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -27,33 +27,33 @@ public class OrderItemsDao extends AbstractDAO{
 
     }
 
-    public boolean doUpdate(OrderItems orderItems){
+    public boolean doUpdate(OrderItems orderItems) {
 
         try (Connection connection = getConnection();
-             PreparedStatement ps = prepareStatement(connection, "UPDATE_ORDERITEMS")){
+                PreparedStatement ps = prepareStatement(connection, "UPDATE_ORDERITEMS")) {
 
             ps.setInt(4, orderItems.getQuantita());
             ps.setFloat(5, orderItems.getPrezzo());
 
-            int rowsAffected=  ps.executeUpdate();
-            return rowsAffected>0;
+            int rowsAffected = ps.executeUpdate();
+            return rowsAffected > 0;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return false;
         }
     }
 
-    public boolean delete(OrderItems orderItems){
+    public boolean delete(OrderItems orderItems) {
 
         try (Connection connection = getConnection();
-             PreparedStatement ps = prepareStatement(connection, "DELETE_ORDERITEMS")){
+                PreparedStatement ps = prepareStatement(connection, "DELETE_ORDERITEMS")) {
 
             ps.setString(1, orderItems.getOrdine_id());
             ps.setString(2, orderItems.getOrdine_users());
             ps.setString(3, orderItems.getProdotto());
 
-            int rowsAffected=  ps.executeUpdate();
-            return rowsAffected>0;
+            int rowsAffected = ps.executeUpdate();
+            return rowsAffected > 0;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             return false;
@@ -63,25 +63,27 @@ public class OrderItemsDao extends AbstractDAO{
     public OrderItems doRetrieveByKey(String ordine_id, String ordine_users, String prodotto) {
 
         try (Connection connection = getConnection();
-             PreparedStatement ps = prepareStatement(connection, "GET_ORDERITEMS_BY_ORDER")){ {
+                PreparedStatement ps = prepareStatement(connection, "GET_ORDERITEMS_BY_ORDER")) {
+            {
 
-            ps.setString(1, ordine_id);
-            ps.setString(2, ordine_users);
-            ps.setString(3, prodotto);
+                ps.setString(1, ordine_id);
+                ps.setString(2, ordine_users);
+                ps.setString(3, prodotto);
 
-            ResultSet rs = ps.executeQuery();
+                ResultSet rs = ps.executeQuery();
 
-            if (rs.next()) {
+                if (rs.next()) {
 
-                OrderItems orderItems = new OrderItems();
+                    OrderItems orderItems = new OrderItems();
 
-                orderItems.setOrdine_id(rs.getString("ordine_id"));
-                orderItems.setOrdine_users(rs.getString("ordine_users"));
-                orderItems.setProdotto(rs.getString("prodotto"));
-                orderItems.setQuantita(rs.getInt("quantita"));
-                orderItems.setPrezzo(rs.getFloat("prezzo"));
+                    orderItems.setOrdine_id(rs.getString("ordine_id"));
+                    orderItems.setOrdine_users(rs.getString("ordine_users"));
+                    orderItems.setProdotto(rs.getString("prodotto"));
+                    orderItems.setQuantita(rs.getInt("quantita"));
+                    orderItems.setPrezzo(rs.getFloat("prezzo"));
 
-                return orderItems;
+                    return orderItems;
+                }
             }
 
         } catch (SQLException e) {
