@@ -1,5 +1,6 @@
 body{
-  height:2500px;
+  min-height:100vh;
+  height:auto;
 }
 
 .slideshow-container {
@@ -160,3 +161,9 @@ display: flex;
   text-align:right;
   padding-left:20%;
 }
+@media only screen and (max-width: 500px) {
+  .text { font-size: 12px; }
+  .textTitle{font-size:15px}   
+  .infotextTitle{font-size: 20px;}
+  .infotext{font-size:15px;}
+        }

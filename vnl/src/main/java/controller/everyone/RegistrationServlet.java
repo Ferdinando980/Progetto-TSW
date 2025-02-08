@@ -8,13 +8,14 @@ import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 
 import model.javabeans.Users;
 import model.dao.UsersDao;
 import model.dao.Eccezioni.ValidException;
-import model.util.Utils; 
+import model.util.Utils;
 
 @WebServlet(name = "Registrazione", value = "/Registrazione")
 public class RegistrationServlet extends HttpServlet {
@@ -35,10 +36,15 @@ public class RegistrationServlet extends HttpServlet {
         String nazione = request.getParameter("Nazione");
         String ntelefono = request.getParameter("NumeroDiTelefono");
         ntelefono = "+" + nazione + ntelefono;
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate date = LocalDate.parse(dateString, formatter);
-        String formattedDate = date.toString();
+        String formattedDate = "";
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            LocalDate date = LocalDate.parse(dateString, formatter);
+            formattedDate = date.toString();
+        } catch (DateTimeParseException e) {
+            System.out.println("Invalid date format: " + dateString); // or use logging
+            // Optionally, handle the error (e.g., show a user-friendly message)
+        }
 
         Users reqUser = new Users(
                 request.getParameter("Username"),
@@ -52,7 +58,7 @@ public class RegistrationServlet extends HttpServlet {
 
         try {
             validateInputs(reqUser, passwordCheck, service);
-            reqUser.setPassword(Utils.toHash(reqUser.getPassword())); 
+            reqUser.setPassword(Utils.toHash(reqUser.getPassword()));
         } catch (ValidException e) {
             return;
         }
