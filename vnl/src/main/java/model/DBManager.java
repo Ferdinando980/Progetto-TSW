@@ -22,7 +22,7 @@ public class DBManager {
         if (ds == null) {
             PoolProperties properties = new PoolProperties();
             properties.setDriverClassName("com.mysql.cj.jdbc.Driver");
-            properties.setUrl("jdbc:mysql://localhost:3306/learn_hub?serverTimezone=" + TimeZone.getDefault().getID());
+            properties.setUrl("jdbc:mysql://localhost:3306/vnl?serverTimezone=" + TimeZone.getDefault().getID());
             properties.setUsername("root");
             properties.setPassword("Ciao98");
             properties.setMaxActive(100);
