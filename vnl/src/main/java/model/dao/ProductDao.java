@@ -80,7 +80,7 @@ public class ProductDao extends AbstractDAO{
         Product product = null;
 
         try (Connection connection = getConnection();
-             PreparedStatement ps = prepareStatement(connection,"GET_PRODUC_BY_ID" )){
+             PreparedStatement ps = prepareStatement(connection,"GET_PRODUCT_BY_ID" )){
 
             ps.setString(1, id);
             ResultSet result=  ps.executeQuery();

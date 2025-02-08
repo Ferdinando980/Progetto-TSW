@@ -63,7 +63,7 @@ public class OrderItemsDao extends AbstractDAO{
     public OrderItems doRetrieveByKey(String ordine_id, String ordine_users, String prodotto) {
 
         try (Connection connection = getConnection();
-             PreparedStatement ps = prepareStatement(connection, "SELECT_ORDERITEMS")) {
+             PreparedStatement ps = prepareStatement(connection, "GET_ORDERITEMS_BY_ORDER")){ {
 
             ps.setString(1, ordine_id);
             ps.setString(2, ordine_users);
