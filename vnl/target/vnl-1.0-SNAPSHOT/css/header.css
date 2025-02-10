@@ -60,6 +60,11 @@
   border-radius: 5px;
 }
 
+.profile{
+  width: 10%;
+  max-width: 150px;
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -95,4 +100,10 @@
     width: 50%;
     max-width: 100%;
   }
+
+  .profile{
+    width: 50%;
+    max-width: 100%;
+  }
+
 }

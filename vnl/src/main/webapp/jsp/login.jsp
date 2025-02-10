@@ -38,7 +38,7 @@
 
 
                 <div class="form-actions">
-                    <input type="button" id="button" value="Registrati" onclick="location.href='/registrazione.jsp'"
+                    <input type="button" id="button" value="Registrati" onclick="location.href='Registrazione'"
                         class="button">
                     <input type="submit" value="Login" class="button">
                 </div>
