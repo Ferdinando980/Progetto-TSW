@@ -67,7 +67,10 @@ public class RegistrationServlet extends HttpServlet {
         } catch (ValidException e) {
             System.out.println(e.getErrorMessages());
             request.setAttribute("errorMessages", e.getErrorMessages());
-            return;
+ 
+        
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/registration.jsp");
+            dispatcher.forward(request, response);
         }
 
         boolean success = service.doSave(reqUser);
