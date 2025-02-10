@@ -9,36 +9,43 @@ import model.javabeans.Users;
 
 public class UsersDao extends AbstractDAO{
 
-        public boolean doSave(Users user){
-            try (Connection connection = getConnection();
-            PreparedStatement ps= prepareStatement(connection, "INSERT_USER")){
-
-           
-                ps.setString(1, user.getUserId());
-                ps.setString(2, user.getUsername());
-                ps.setString(3, user.getEmail());
-                ps.setString(4, user.getPassword());
-                ps.setDate(5, (Date) user.getDataDiNascita());
-                ps.setString(6, user.getNumeroDiTelefono());
-                ps.setString(7, user.getTipo());
-     
-
-        
-                int rowsAffected=  ps.executeUpdate();
-                return rowsAffected>0;
-                
-                
-            } catch (SQLException e) {
-                System.out.println(e.getMessage());
-                return false;
-            
-            }
-     
-            
-
-
+    public boolean doSave(Users user) {
+        try (Connection connection = getConnection();
+             PreparedStatement ps = prepareStatement(connection, "INSERT_USER")) {
+    
+            // Debug: stampa dei valori
+            System.out.println("Connessione al database: " + connection);
+            System.out.println("SQL: INSERT_USER");
+            System.out.println("userId: " + user.getUserId());
+            System.out.println("username: " + user.getUsername());
+            System.out.println("email: " + user.getEmail());
+            System.out.println("password: " + user.getPassword());
+            System.out.println("dataDiNascita: " + user.getDataDiNascita());
+            System.out.println("numeroDiTelefono: " + user.getNumeroDiTelefono());
+            System.out.println("tipo: " + user.getTipo());
+    
+            ps.setString(1, user.getUserId());
+            ps.setString(2, user.getUsername());
+            ps.setString(3, user.getEmail());
+            ps.setString(4, user.getPassword());
+            ps.setDate(5, user.getDataDiNascita());
+            ps.setString(6, user.getNumeroDiTelefono());
+            ps.setString(7, user.getTipo());
+    
+            // Debug: controlla lo statement
+            System.out.println("PreparedStatement: " + ps);
+    
+            int rowsAffected = ps.executeUpdate();
+            System.out.println("Righe modificate: " + rowsAffected);
+    
+            return rowsAffected > 0;
+    
+        } catch (SQLException e) {
+            System.out.println("Errore SQL: " + e.getMessage());
+            e.printStackTrace(); // Fornisce maggiori dettagli sull'errore
+            return false;
         }
-
+    }
         public boolean doUpdate(Users user){
 
             try (Connection connection = getConnection();

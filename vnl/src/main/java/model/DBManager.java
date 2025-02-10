@@ -20,12 +20,7 @@ public class DBManager {
 
     public static Connection getConnection() throws SQLException {
         if (ds == null) {
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver");  // Explicitly load the driver
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException("MySQL JDBC Driver not found", e);
-            }
-    
+
             PoolProperties properties = new PoolProperties();
             properties.setDriverClassName("com.mysql.cj.jdbc.Driver");
             properties.setUrl("jdbc:mysql://localhost:3306/vnl?serverTimezone=" + TimeZone.getDefault().getID());
