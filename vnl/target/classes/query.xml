@@ -2,42 +2,39 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <!-- Users -->
-    <entry key="INSERT_USER">INSERT INTO users (id, username, email, password, data_di_nascita, numero_di_telefono, tipo) VALUES (?,?,?,?,?,?,'user')</entry>
+    <entry key="INSERT_USER">INSERT INTO users (username, email, password, data_di_nascita, numero_di_telefono, tipo) VALUES (?,?,?,?,?,?)</entry>
     <entry key="DELETE_USER">DELETE FROM users WHERE id = ?</entry>
-    <entry key="UPDATE_USER">UPDATE users SET email=?,username=?,password=?, data_di_nascita=?, numero_di_telefono=? WHERE id=?</entry>
-    <entry key="GET_USER_BY_ID">SELECT * FROM users WHERE id = ? </entry>
-    <entry key="GET_USER_BY_EMAIL">SELECT * FROM users WHERE email = ? </entry>
+    <entry key="UPDATE_USER">UPDATE users SET email=?, username=?, password=?, data_di_nascita=?, numero_di_telefono=? WHERE id=?</entry>
+    <entry key="GET_USER_BY_ID">SELECT * FROM users WHERE id = ?</entry>
+    <entry key="GET_USER_BY_EMAIL">SELECT * FROM users WHERE email = ?</entry>
     <entry key="GET_ALL_USERS">SELECT * FROM users</entry>
-    <entry key="GET_USER_BY_USERNAME">SELECT * FROM users WHERE username = ?"></entry>
-
+    <entry key="GET_USER_BY_USERNAME">SELECT * FROM users WHERE username = ?</entry>
 
     <!-- Products -->
-    <entry key="INSERT_PRODUCT">INSERT INTO prodotto (id, prezzo, descrizione, condizione, tipo, marca, modello, nome_vnl, artista, genere) VALUES (?,?,?,?,?,?,?,?,?,?)</entry>
-    <entry key="UPDATE_PRODUCT">UPDATE prodotto SET prezzo=?, descrizione=?, condizione=?, tipo=?, marca=?, modello=?, nome_vnl=?, artista=?, genere=? WHERE id = ?</entry>
-    <entry key="UPDATE_PRODUCT_PRICE">UPDATE prodotto SET prezzo = ? WHERE id = ?</entry>
-    <entry key="DELETE_PRODUCT">DELETE FROM prodotto WHERE id= ?</entry>
-    <entry key="GET_ALL_PRODUCTS">SELECT * FROM prodotto"></entry>
-    <entry key="GET_PRODUCT_BY_ID">SELECT * FROM prodotto WHERE id = ?</entry>
-    <entry key="GET_PRODUCT_BY_GENERE">SELECT * FROM prodotto WHERE genere=?"></entry>
-    <entry key="GET_PRODUCT_BY_ARTIST">SELECT * FROM prodotto WHERE artista=?"></entry>
-    <entry key="GET_PRODUCT_BY_BRAND">SELECT * FROM prodotto WHERE marca=?"></entry>
-    <entry key="GET_PRODUCT_BY_NAME">SELECT * FROM prodotto WHERE nome_vnl=?"></entry>
-    <entry key="GET_PRODUCT_BY_MODEL">SELECT * FROM prodotto WHERE modello=?"></entry>
-
+    <entry key="INSERT_PRODUCT">INSERT INTO prodotto (prezzo, descrizione, condizione, tipo, marca, modello, nomeVnl, artista, genere) VALUES (?,?,?,?,?,?,?,?,?)</entry>
+    <entry key="UPDATE_PRODUCT">UPDATE prodotto SET prezzo=?, descrizione=?, condizione=?, tipo=?, marca=?, modello=?, nomeVnl=?, artista=?, genere=? WHERE id=?</entry>
+    <entry key="UPDATE_PRODUCT_PRICE">UPDATE prodotto SET prezzo=? WHERE id=?</entry>
+    <entry key="DELETE_PRODUCT">DELETE FROM prodotto WHERE id=?</entry>
+    <entry key="GET_ALL_PRODUCTS">SELECT * FROM prodotto</entry>
+    <entry key="GET_PRODUCT_BY_ID">SELECT * FROM prodotto WHERE id=?</entry>
+    <entry key="GET_PRODUCT_BY_GENERE">SELECT * FROM prodotto WHERE genere=?</entry>
+    <entry key="GET_PRODUCT_BY_ARTIST">SELECT * FROM prodotto WHERE artista=?</entry>
+    <entry key="GET_PRODUCT_BY_BRAND">SELECT * FROM prodotto WHERE marca=?</entry>
+    <entry key="GET_PRODUCT_BY_NAME">SELECT * FROM prodotto WHERE nomeVnl=?</entry>
+    <entry key="GET_PRODUCT_BY_MODEL">SELECT * FROM prodotto WHERE modello=?</entry>
 
     <!-- Orders -->
-    <entry key="INSERT_ORDER">INSERT INTO ordine (id, users, stato, dataOrdine, totAmount, nome, cognome, via, civico, cap, paese) VALUES (?,?,?,?,?,?,?,?,?,?)</entry>
+    <entry key="INSERT_ORDER">INSERT INTO ordine (users, stato, dataOrdine, totAmount, nome, cognome, via, civico, cap, paese) VALUES (?,?,?,?,?,?,?,?,?,?)</entry>
     <entry key="UPDATE_ORDER_STATUS">UPDATE ordine SET stato=? WHERE id=?</entry>
     <entry key="DELETE_ORDER">DELETE FROM ordine WHERE id=?</entry>
-    <entry key="GET_ALL_ORDERS">SELECT * FROM ordine></entry>
-    <entry key="GET_ORDERS_BY_USER">SELECT * FROM ordine where users=?</entry>
-    <entry key="GET_ORDERS_BY_STATO">SELECT * FROM ordine where stato=?"></entry>
+    <entry key="GET_ALL_ORDERS">SELECT * FROM ordine</entry>
+    <entry key="GET_ORDERS_BY_USER">SELECT * FROM ordine WHERE users=?</entry>
+    <entry key="GET_ORDERS_BY_STATO">SELECT * FROM ordine WHERE stato=?</entry>
 
     <!-- OrderItems -->
-    <entry key="INSERT_ORDER_ITEM">INSERT INTO ordine_prodotto (ordine_id, ordine_users, prodotto, quantita, prezzo) VALUES (?,?,?,?,?)"></entry>
-    <entry key="UPDATE_ORDER_ITEM">UPDATE ordine_prodotto SET quantita=?, prezzo=? WHERE ordine_id=? AND ordine_users=? AND prodotto=?"></entry>
-    <entry key="DELETE_ORDER_ITEM">DELETE FROM ordine_prodotto WHERE ordine_id=? AND ordine_users=? AND prodotto=?"></entry>
-    <entry key="GET_ALL_ORDER_ITEMS">SELECT * FROM ordine_prodotto"></entry>
-    <entry key="GET_ORDER_ITEMS_BY_ORDER">SELECT * FROM ordine_prodotto WHERE ordine_id=? AND ordine_users=?"></entry>
-
+    <entry key="INSERT_ORDER_ITEM">INSERT INTO OP (ordine_id, ordine_users, prodotto, quantita, prezzo) VALUES (?,?,?,?,?)</entry>
+    <entry key="UPDATE_ORDER_ITEM">UPDATE OP SET quantita=?, prezzo=? WHERE ordine_id=? AND ordine_users=? AND prodotto=?</entry>
+    <entry key="DELETE_ORDER_ITEM">DELETE FROM OP WHERE ordine_id=? AND ordine_users=? AND prodotto=?</entry>
+    <entry key="GET_ALL_ORDER_ITEMS">SELECT * FROM OP</entry>
+    <entry key="GET_ORDER_ITEMS_BY_ORDER">SELECT * FROM OP WHERE ordine_id=? AND ordine_users=?</entry>
 </properties>

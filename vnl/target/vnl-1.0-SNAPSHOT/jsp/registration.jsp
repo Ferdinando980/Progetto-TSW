@@ -17,6 +17,14 @@
     <main>
         <div class="registration-container">
 
+            <c:if test="${not empty errors}">
+                <div class="error-container">
+                    <c:forEach items="${errors}" var="error">
+                        <div class="error-message">${error}</div>
+                    </c:forEach>
+                </div>
+            </c:if>
+        
             <form action="Registrazione" method="POST" class="registration-form">
                 <fieldset>
                     <div class="biglabel">

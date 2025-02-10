@@ -17,6 +17,8 @@
     <main>
         <div class="registration-container">
 
+     
+        
             <form action="Registrazione" method="POST" class="registration-form">
                 <fieldset>
                     <div class="biglabel">

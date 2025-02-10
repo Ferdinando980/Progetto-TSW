@@ -1,20 +1,22 @@
-drop database vnl;
+drop database if exists vnl;
 create database vnl;
 use vnl;
 
+-- Updated users table with auto-incremented id
 create table users(
-	id varchar(5) primary key,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     username varchar(20) not null,
     email varchar(40) not null,
-    password varchar(50) not null,
+    password varchar(255) not null,
     data_di_nascita date not null,
-	numero_di_telefono varchar(30) not null,
-    tipo varchar(5) not null 
+    numero_di_telefono varchar(30) not null,
+    tipo varchar(5) not null
 );
 
+-- Updated ordine table with auto-incremented id and users
 create table ordine(
-	id varchar(5),
-    users varchar(5),
+    id INT AUTO_INCREMENT PRIMARY KEY, -- auto-generated id
+    users INT, -- changed to INT to match users(id)
     stato varchar(10) not null,
     dataOrdine date not null,
     totAmount float default 0,
@@ -25,11 +27,12 @@ create table ordine(
     cap int not null,
     paese varchar(20) not null,
     foreign key (users) references users(id),
-    primary key(id, users)
+    unique key (id, users)  -- Add the composite index for foreign key reference
 );
 
+-- Updated prodotto table with auto-incremented id
 create table prodotto(
-	id varchar(5) primary key,
+    id INT AUTO_INCREMENT PRIMARY KEY, -- auto-generated id
     prezzo float not null,
     descrizione varchar(50) not null,
     condizione varchar(5) not null,
@@ -41,10 +44,11 @@ create table prodotto(
     genere varchar(20)
 );
 
+-- Updated OP table with auto-incremented ordine_id and ordine_users
 create table OP(
-	ordine_id varchar(5),
-    ordine_users varchar(5),
-    prodotto varchar(5),
+    ordine_id INT, 
+    ordine_users INT,
+    prodotto INT,
     quantita int not null,
     prezzo float not null,
     foreign key (ordine_id, ordine_users) references ordine(id, users),

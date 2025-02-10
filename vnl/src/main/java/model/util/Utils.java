@@ -16,7 +16,7 @@ public class Utils {
 
 
     public static boolean isValidPhone(String numeroTel) {
-        String phoneRegex = "^[0-9]{3} [0-9]{3} [0-9]{4}$";
+        String phoneRegex = "^\\+?[0-9]{0,3} ?[0-9]{3} ?[0-9]{3} ?[0-9]{4}$";
         return numeroTel != null && numeroTel.matches(phoneRegex);
     }
 

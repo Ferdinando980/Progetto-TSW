@@ -10,7 +10,6 @@ model\dao\ProductDao.class
 model\javabeans\Users.class
 model\javabeans\Cart.class
 model\QueryPool.class
-model\testd.class
 model\javabeans\Product.class
 model\DBManager.class
 model\dao\AbstractDAO.class
