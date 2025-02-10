@@ -48,6 +48,7 @@
 
 .search-container {
   font-size: 100%;
+  padding: 10px;
 }
 
 .textbox {
@@ -63,6 +64,17 @@
 .profile{
   width: 10%;
   max-width: 150px;
+}
+.cart{
+  width: 10%;
+  max-width: 150px;
+}
+
+.RightSection{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -102,6 +114,11 @@
   }
 
   .profile{
+    width: 50%;
+    max-width: 100%;
+  }
+
+  .cart{
     width: 50%;
     max-width: 100%;
   }

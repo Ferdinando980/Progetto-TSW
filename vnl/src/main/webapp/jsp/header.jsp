@@ -21,16 +21,23 @@
             <a href="#about">About</a>
             <a href="#contact">Contact Us</a>
         </div>
-        <div class="search-container">
-            <form action="">
-                <input class="textbox" type="text" placeholder="Cerca.." name="search">
-            </form>
-        </div>
 
-        <div class="profile">
-            <a href="Login">
-                <img src="assets/images/profilo.png"  alt="Profilo">
-            </a>
+        <div class="RightSection">
+            <div class="search-container">
+                <form action="">
+                    <input class="textbox" type="text" placeholder="Cerca.." name="search">
+                </form>
+            </div>
+            <div class="Cart">
+                <a href="Cart">
+                    <img src="assets/images/cart.png"  alt="Carrello">
+                </a>
+            </div>
+            <div class="profile">
+                <a href="Login">
+                    <img src="assets/images/profilo.png"  alt="Profilo">
+                </a>
+            </div>
         </div>
 
     </header>
