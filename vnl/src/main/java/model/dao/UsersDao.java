@@ -47,7 +47,7 @@ public class UsersDao extends AbstractDAO{
                 ps.setString(2, user.getUsername());
                 ps.setString(3, user.getEmail());
                 ps.setString(4, user.getPassword());
-                ps.setString(5, user.getDataDiNascita());
+                ps.setDate(5, (Date) user.getDataDiNascita());
                 ps.setString(6, user.getNumeroDiTelefono());
                 ps.setString(7, user.getTipo());
      
@@ -98,7 +98,7 @@ public class UsersDao extends AbstractDAO{
                 user.setUsername(result.getString("username"));
                 user.setEmail(result.getString("email"));
                 user.setPassword(result.getString("password"));
-                user.setDataDiNascita(result.getString("data_di_nascita"));
+                user.setDataDiNascita(result.getDate("data_di_nascita"));
                 user.setNumeroDiTelefono(result.getString("numero_di_telefono"));
                 user.setTipo(result.getString("tipo"));
                 }
@@ -165,7 +165,7 @@ public class UsersDao extends AbstractDAO{
                     user.setUserId(result.getString("id"));
                     user.setEmail(result.getString("email"));
                     user.setPassword(result.getString("password"));
-                    user.setDataDiNascita(result.getString("data_di_nascita"));
+                    user.setDataDiNascita(result.getDate("data_di_nascita"));
                     user.setNumeroDiTelefono(result.getString("numero_di_telefono"));
                     user.setTipo(result.getString("tipo"));
                 }
@@ -199,7 +199,7 @@ public class UsersDao extends AbstractDAO{
                     user.setUsername(result.getString("username"));
                     user.setEmail(result.getString("email"));
                     user.setPassword(result.getString("password"));
-                    user.setDataDiNascita(result.getString("data_di_nascita"));
+                    user.setDataDiNascita(result.getDate("data_di_nascita"));
                     user.setNumeroDiTelefono(result.getString("numero_di_telefono"));
                     user.setTipo(result.getString("tipo"));
                 }

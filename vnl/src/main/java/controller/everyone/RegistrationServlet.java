@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -36,14 +37,17 @@ public class RegistrationServlet extends HttpServlet {
         String nazione = request.getParameter("Nazione");
         String ntelefono = request.getParameter("NumeroDiTelefono");
         ntelefono = "+" + nazione + ntelefono;
-        String formattedDate = "";
+        Date formattedDate = null;
+
+
         try {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             LocalDate date = LocalDate.parse(dateString, formatter);
-            formattedDate = date.toString();
+
+            formattedDate = Date.valueOf(date);
         } catch (DateTimeParseException e) {
-            System.out.println("Invalid date format: " + dateString); // or use logging
-            // Optionally, handle the error (e.g., show a user-friendly message)
+            System.out.println("Invalid date format: " + dateString); 
+
         }
 
         Users reqUser = new Users(
@@ -52,6 +56,7 @@ public class RegistrationServlet extends HttpServlet {
                 request.getParameter("Email"),
                 formattedDate,
                 ntelefono);
+                
 
         String passwordCheck = request.getParameter("CPassword");
         UsersDao service = new UsersDao();

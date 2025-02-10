@@ -1,6 +1,5 @@
 package model.javabeans;
 
-
 import java.sql.Date;
 
 public class Users {

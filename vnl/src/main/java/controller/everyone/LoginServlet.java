@@ -43,7 +43,7 @@ public class LoginServlet extends HttpServlet {
             userData.put("Email", user.getEmail());
             userData.put("nTelefono", user.getNumeroDiTelefono());
             userData.put("IsLogged", isLogged);
-            userData.put("DataNascita", user.getDataDiNascita());
+            userData.put("DataNascita", user.getDataDiNascita().toString());
 
             session.setAttribute("UserData", userData);
             RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/homepage.jsp");
