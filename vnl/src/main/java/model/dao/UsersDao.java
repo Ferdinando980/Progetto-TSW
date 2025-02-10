@@ -14,7 +14,6 @@ public class UsersDao extends AbstractDAO{
 
         public boolean doSave(Users user){
 
-            System.out.println("user: Ciaooooooooooooo");
             try (Connection connection = getConnection();
             PreparedStatement ps= prepareStatement(connection, "INSERT_USER")){
 

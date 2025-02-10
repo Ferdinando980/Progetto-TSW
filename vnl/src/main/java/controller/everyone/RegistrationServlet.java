@@ -65,15 +65,15 @@ public class RegistrationServlet extends HttpServlet {
             validateInputs(reqUser, passwordCheck, service);
             reqUser.setPassword(Utils.toHash(reqUser.getPassword()));
         } catch (ValidException e) {
-            request.setAttribute("errors", e.getErrorMessages());
-            request.getRequestDispatcher("/jsp/registration.jsp").forward(request, response);
+            System.out.println(e.getErrorMessages());
+            request.setAttribute("errorMessages", e.getErrorMessages());
             return;
         }
 
         boolean success = service.doSave(reqUser);
 
         if (success) {
-            response.sendRedirect("/Login");
+            response.sendRedirect("/vnl-1.0-SNAPSHOT/Login");
         }
     }
 

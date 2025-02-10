@@ -19,7 +19,7 @@
 
      
         
-            <form action="Registrazione" method="POST" class="registration-form">
+            <form action="Registrazione" method="POST" class="registration-form" onsubmit= "return valideForm()">
                 <fieldset>
                     <div class="biglabel">
                         <legend>Registrazione</legend>
@@ -63,7 +63,10 @@
     </main>
 
     <jsp:include page="footer.jsp"></jsp:include>
-    <script src="script/regioni.js"></script>
+    
+    <script type="text/javascript" src="script/regValidate.js"></script>
+    <script type="text/javascript" src="script/regioni.js"></script>
+
 </body>
 
 </html>
