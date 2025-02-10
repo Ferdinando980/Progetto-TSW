@@ -1,13 +1,15 @@
 package model.javabeans;
 
 
+import java.sql.Date;
+
 public class Users {
 
     private String id;
 
     private  String username;
 
-    private String dataDiNascita;
+    private Date dataDiNascita;
 
     private String numeroDiTelefono;
 
@@ -19,7 +21,7 @@ public class Users {
 
     public Users(){}
 
-    public Users(String id, String username, String password, String email, String dataDiNascita, String numeroDiTelefono){
+    public Users(String id, String username, String password, String email, Date dataDiNascita, String numeroDiTelefono){
 
         this.id=id;
         this.username=username;
@@ -31,7 +33,7 @@ public class Users {
 
     }
 
-    public Users(String username, String password, String email, String dataDiNascita, String numeroDiTelefono){
+    public Users(String username, String password, String email, Date dataDiNascita, String numeroDiTelefono){
 
         this.username=username;
         this.password= password;
@@ -74,7 +76,7 @@ public class Users {
         return this.password;
     }
 
-    public void setDataDiNascita(String dataDiNascita){
+    public void setDataDiNascita(Date dataDiNascita){
         this.dataDiNascita=dataDiNascita;
     }
 
@@ -86,7 +88,7 @@ public class Users {
         return this.numeroDiTelefono;
     }
 
-    public String getDataDiNascita(){
+    public Date getDataDiNascita(){
         return this.dataDiNascita;
     }
 

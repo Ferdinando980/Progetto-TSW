@@ -1,9 +1,6 @@
 package model.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +18,7 @@ public class UsersDao extends AbstractDAO{
                 ps.setString(2, user.getUsername());
                 ps.setString(3, user.getEmail());
                 ps.setString(4, user.getPassword());
-                ps.setString(5, user.getDataDiNascita());
+                ps.setDate(5, (Date) user.getDataDiNascita());
                 ps.setString(6, user.getNumeroDiTelefono());
                 ps.setString(7, user.getTipo());
      
