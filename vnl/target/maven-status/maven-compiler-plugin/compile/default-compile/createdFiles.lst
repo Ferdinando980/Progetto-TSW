@@ -1,8 +1,8 @@
 model\dao\OrderDao.class
-model\dao\Eccezioni\ValidException.class
 model\javabeans\Order.class
 model\javabeans\OrderItems.class
 controller\everyone\HomepageServlet.class
+model\Eccezioni\ValidException.class
 model\javabeans\Category.class
 model\dao\UsersDao.class
 controller\everyone\RegistrationServlet.class
@@ -10,6 +10,7 @@ model\dao\ProductDao.class
 model\javabeans\Users.class
 model\javabeans\Cart.class
 model\QueryPool.class
+model\testd.class
 model\javabeans\Product.class
 model\DBManager.class
 model\dao\AbstractDAO.class

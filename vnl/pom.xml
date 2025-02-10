@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
@@ -61,6 +61,13 @@
             <artifactId>tomcat-jdbc</artifactId>
             <version>10.1.19</version>
         </dependency>
+
+  <dependency>
+        <groupId>com.mysql</groupId>
+        <artifactId>mysql-connector-j</artifactId>
+        <version>9.2.0</version>
+    </dependency>
+
     </dependencies>
 
     <repositories>
@@ -69,7 +76,6 @@
             <url>https://repo.maven.apache.org/maven2</url>
         </repository>
     </repositories>
-
 
 
     <build>

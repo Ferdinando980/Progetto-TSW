@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.javabeans.Users;
+import model.Eccezioni.ValidException;
 import model.dao.UsersDao;
-import model.dao.Eccezioni.ValidException;
 import model.util.Utils;
 
 @WebServlet(name = "Registrazione", value = "/Registrazione")
