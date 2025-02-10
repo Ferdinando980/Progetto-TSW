@@ -27,6 +27,12 @@
             </form>
         </div>
 
+        <div class="profile">
+            <a href="Login">
+                <img src="assets/images/profilo.png"  alt="Profilo">
+            </a>
+        </div>
+
     </header>
 </body>
 
