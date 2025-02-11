@@ -19,7 +19,7 @@
 
      
         
-            <form action="Registrazione" method="POST" class="registration-form" onsubmit= "return valideForm()">
+            <form action="Registrazione" method="POST" class="registration-form" onsubmit= "return validateForm()">
                 <fieldset>
                     <div class="biglabel">
                         <legend>Registrazione</legend>
@@ -27,16 +27,16 @@
 
                     <div class="form-group">
                         <label for="Username">Username:</label><br>
-                        <input type="text" id="Username" name="Username" required placeholder="Inserisci Username..." class="input"><br>
-                        <span id="usernameError" class="error-message"></span> <!-- Aggiunto per il messaggio di errore -->
+                        <input type="text" id="Username" name="Username" value = "${userData.Username}" required placeholder="Inserisci Username..." class="input"><br>
+                        <span id="usernameError" class="error-message"></span>
                     
                         <label for="Email">Email:</label><br>
-                        <input type="email" id="Email" name="Email" required placeholder="Inserisci Email..." class="input"><br>
-                        <span id="emailError" class="error-message"></span> <!-- Aggiunto per il messaggio di errore -->
+                        <input type="email" id="Email" value = "${userData.Email}" name="Email" required placeholder="Inserisci Email..." class="input"><br>
+                        <span id="emailError" class="error-message"></span> 
                     
                         <label for="DataDiNascita">Data di nascita:</label><br>
-                        <input type="date" id="DataDiNascita" name="DataDiNascita" class="input"><br>
-                        <span id="birthDateError" class="error-message"></span> <!-- Aggiunto per il messaggio di errore -->
+                        <input type="date" id="DataDiNascita" value = "${userData.DataDiNascita}" name="DataDiNascita" class="input"><br>
+                        <span id="birthDateError" class="error-message"></span>
                     
                         <div class="phoneGroup">
                             <div class="nazione">
@@ -46,18 +46,17 @@
                             </div>
                             <div class="labelAndInputPhone">
                                 <label for="NumeroDiTelefono">Numero di telefono:</label><br>
-                                <input type="tel" id="NumeroDiTelefono" name="NumeroDiTelefono" class="input" minlength="10" maxlength="15" required><br>
-                                <span id="phoneError" class="error-message"></span> <!-- Aggiunto per il messaggio di errore -->
+                                <input type="tel" id="NumeroDiTelefono" name="NumeroDiTelefono"  value = "${userData.NumeroDiTelefono}" class="input" minlength="10" maxlength="15" required><br>
+                                <span id="phoneError" class="error-message"></span> 
                             </div>
                         </div>
                     
                         <label for="Password">Password:</label><br>
                         <input type="password" id="Password" name="Password" required placeholder="Inserisci Password..." class="input"><br>
-                        <span id="passwordError" class="error-message"></span> <!-- Aggiunto per il messaggio di errore -->
-                    
+                        <span id="passwordError" class="error-message"></span> 
                         <label for="CPassword">Conferma Password:</label><br>
                         <input type="password" id="CPassword" name="CPassword" required placeholder="Conferma Password..." class="input"><br>
-                        <span id="cpasswordError" class="error-message"></span> <!-- Aggiunto per il messaggio di errore -->
+                        <span id="cpasswordError" class="error-message"></span> 
                     
                         <input type="submit" value="Registrati" class="button">
                     </div>
@@ -70,6 +69,17 @@
 
     <jsp:include page="footer.jsp"></jsp:include>
 
+    <script>
+        var errorMessages = [];
+    
+        <c:if test="${not empty errorMessages}">
+            <c:forEach var="error" items="${errorMessages}">
+                errorMessages.push("${error}");
+            </c:forEach>
+        </c:if>
+    </script>
+
+    
     <script type="text/javascript" src="script/regValidate.js"></script>
     <script type="text/javascript" src="script/regioni.js"></script>
 

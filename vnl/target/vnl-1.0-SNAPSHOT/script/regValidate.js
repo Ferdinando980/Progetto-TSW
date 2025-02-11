@@ -60,14 +60,33 @@ function validateForm() {
     return true;  
 }
 
-window.onload = function() {
-    if (errorMessages.includes("Username Già In Uso")) {
-        document.getElementById("Username").style.border = "2px solid red";
-        document.getElementById("usernameError").textContent = "L'username inserito è già in uso.";
+window.onload = function () {
+    if (errorMessages.length > 0) {
+        errorMessages.forEach(function (error) {
+            if (error.includes("Username")) {
+                document.getElementById("Username").style.border = "2px solid red";
+                document.getElementById("usernameError").textContent = error;
+            }
+            if (error.includes("Email")) {
+                document.getElementById("Email").style.border = "2px solid red";
+                document.getElementById("emailError").textContent = error;
+            }
+            if (error.includes("Data di nascita")) {
+                document.getElementById("DataDiNascita").style.border = "2px solid red";
+                document.getElementById("birthDateError").textContent = error;
+            }
+            if (error.includes("Numero di telefono")) {
+                document.getElementById("NumeroDiTelefono").style.border = "2px solid red";
+                document.getElementById("phoneError").textContent = error;
+            }
+            if (error.includes("Password")) {
+                document.getElementById("Password").style.border = "2px solid red";
+                document.getElementById("passwordError").textContent = error;
+            }
+            if (error.includes("Le password non corrispondono")) {
+                document.getElementById("CPassword").style.border = "2px solid red";
+                document.getElementById("cpasswordError").textContent = error;
+            }
+        });
     }
-    
-    if (errorMessages.includes("Email già in uso")) {
-        document.getElementById("Email").style.border = "2px solid red";
-        document.getElementById("emailError").textContent = "L'email inserita è già in uso.";
-    }
-}
+};
