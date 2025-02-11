@@ -131,26 +131,55 @@ select:hover{
   
 @media (max-width: 480px) {
   .registration-container {
-    padding: 10px;
-    width: 90%;
+    padding: 5px;  
+    width: 100%;  
+    min-height: auto; 
+    margin: 0; 
+  }
+
+  legend {
+    font-size: 90%;  
+    margin: 0; 
   }
 
   .biglabel {
-    font-size: 100%;
+    font-size: 90%;  
   }
 
   .input,
   .button {
-    font-size: 100%;
+    font-size: 90%;  
+    padding: 8px 16px;  
   }
 
   fieldset {
-    padding: 10px;
+    padding: 8px; 
   }
 
   .button {
-    padding: 10px;
+    padding: 8px 16px; 
   }
-  
 
+  .phoneGroup {
+    flex-direction: column;  
+    gap: 2%;  
+  }
+
+  .input[type="tel"] {
+    margin-left: 0; 
+  }
+
+  select {
+    padding: 1.5%;
+    font-size: 90%; 
+  }
+
+  .labelAndInputPhone {
+    flex-direction: column;  
+  }
+
+  .nazione {
+    gap: 0.25%; 
+  }
 }
+

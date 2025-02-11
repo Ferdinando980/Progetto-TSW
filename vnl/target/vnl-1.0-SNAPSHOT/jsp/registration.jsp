@@ -70,7 +70,9 @@
     <jsp:include page="footer.jsp"></jsp:include>
 
 
-
+    <script>
+        var errorMessages = JSON.parse('<%= request.getAttribute("errorMessages") %>');
+    </script>
 
     <script type="text/javascript" src="script/regValidate.js"></script>
     <script type="text/javascript" src="script/regioni.js"></script>
