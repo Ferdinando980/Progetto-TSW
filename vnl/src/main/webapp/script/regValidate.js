@@ -1,7 +1,6 @@
 function validateForm() {
     var errors = [];
 
-    // Resetting previous errors
     document.querySelectorAll('.error-message').forEach(function(error) {
         error.textContent = '';
         error.style.color = 'red';
@@ -36,13 +35,6 @@ function validateForm() {
         document.getElementById("Password").style.border = "2px solid red";
         document.getElementById("passwordError").textContent = "Le password non corrispondono o non soddisfano i criteri di validità";
         errors.push("Le password non corrispondono o non soddisfano i criteri di validità");
-    }
-
-    var passwordCheck = document.getElementById("CPassword").value;
-    if (password !== passwordCheck) {
-        document.getElementById("CPassword").style.border = "2px solid red";
-        document.getElementById("cpasswordError").textContent = "Le password non corrispondono";
-        errors.push("Le password non corrispondono");
     }
 
     var username = document.getElementById("Username").value;
