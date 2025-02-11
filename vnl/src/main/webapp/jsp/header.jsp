@@ -17,9 +17,9 @@
             <img src="assets/images/Logo.png" alt="Logo">
         </div>
         <div class="headerlinks">
-            <a class="active" href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact Us</a>
+            <a class="active" href="Homepage">Home</a>
+            <a href="Homepage#info-grid" >About</a>
+            <a href="Contact">Contact Us</a>
         </div>
 
         <div class="RightSection">
