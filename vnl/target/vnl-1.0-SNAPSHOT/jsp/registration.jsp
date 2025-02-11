@@ -27,15 +27,15 @@
 
                     <div class="form-group">
                         <label for="Username">Username:</label><br>
-                        <input type="text" id="Username" name="Username" value = "${userData.Username}" required placeholder="Inserisci Username..." class="input"><br>
+                        <input type="text" id="Username" name="Username" value = "${userData.username}" required placeholder="Inserisci Username..." class="input"><br>
                         <span id="usernameError" class="error-message"></span>
                     
                         <label for="Email">Email:</label><br>
-                        <input type="email" id="Email" value = "${userData.Email}" name="Email" required placeholder="Inserisci Email..." class="input"><br>
+                        <input type="email" id="Email" value = "${userData.email}" name="Email" required placeholder="Inserisci Email..." class="input"><br>
                         <span id="emailError" class="error-message"></span> 
                     
                         <label for="DataDiNascita">Data di nascita:</label><br>
-                        <input type="date" id="DataDiNascita" value = "${userData.DataDiNascita}" name="DataDiNascita" class="input"><br>
+                        <input type="date" id="DataDiNascita" value = "${userData.dataDiNascita}" name="DataDiNascita" class="input"><br>
                         <span id="birthDateError" class="error-message"></span>
                     
                         <div class="phoneGroup">
@@ -46,7 +46,7 @@
                             </div>
                             <div class="labelAndInputPhone">
                                 <label for="NumeroDiTelefono">Numero di telefono:</label><br>
-                                <input type="tel" id="NumeroDiTelefono" name="NumeroDiTelefono"  value = "${userData.NumeroDiTelefono}" class="input" minlength="10" maxlength="15" required><br>
+                                <input type="tel" id="NumeroDiTelefono" name="NumeroDiTelefono"  class="input" minlength="10" maxlength="15" required><br>
                                 <span id="phoneError" class="error-message"></span> 
                             </div>
                         </div>
@@ -69,17 +69,9 @@
 
     <jsp:include page="footer.jsp"></jsp:include>
 
-    <script>
-        var errorMessages = [];
-    
-        <c:if test="${not empty errorMessages}">
-            <c:forEach var="error" items="${errorMessages}">
-                errorMessages.push("${error}");
-            </c:forEach>
-        </c:if>
-    </script>
 
-    
+
+
     <script type="text/javascript" src="script/regValidate.js"></script>
     <script type="text/javascript" src="script/regioni.js"></script>
 

@@ -7,7 +7,7 @@ function validateForm() {
     });
 
     var email = document.getElementById("Email").value;
-    var emailRegex = /^[A-Za-z0-9+_.-]+@(.+)$/;
+    var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!email || !email.match(emailRegex)) {
         document.getElementById("Email").style.border = "2px solid red";
         document.getElementById("emailError").textContent = "Email inserita in modo errato";
@@ -53,6 +53,9 @@ function validateForm() {
 }
 
 window.onload = function () {
+
+    var errorMessages = JSON.parse(errorMessages);
+
     if (errorMessages.length > 0) {
         errorMessages.forEach(function (error) {
             if (error.includes("Username")) {
@@ -62,22 +65,6 @@ window.onload = function () {
             if (error.includes("Email")) {
                 document.getElementById("Email").style.border = "2px solid red";
                 document.getElementById("emailError").textContent = error;
-            }
-            if (error.includes("Data di nascita")) {
-                document.getElementById("DataDiNascita").style.border = "2px solid red";
-                document.getElementById("birthDateError").textContent = error;
-            }
-            if (error.includes("Numero di telefono")) {
-                document.getElementById("NumeroDiTelefono").style.border = "2px solid red";
-                document.getElementById("phoneError").textContent = error;
-            }
-            if (error.includes("Password")) {
-                document.getElementById("Password").style.border = "2px solid red";
-                document.getElementById("passwordError").textContent = error;
-            }
-            if (error.includes("Le password non corrispondono")) {
-                document.getElementById("CPassword").style.border = "2px solid red";
-                document.getElementById("cpasswordError").textContent = error;
             }
         });
     }
