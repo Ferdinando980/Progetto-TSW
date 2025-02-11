@@ -22,12 +22,12 @@
         <servlet-class>controller.everyone.LoginServlet</servlet-class>
     </servlet>
 
-        <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
 
-        <servlet>
+    <servlet>
         <servlet-name>Homepage</servlet-name>
         <servlet-class>controller.everyone.HomepageServlet</servlet-class>
     </servlet>
@@ -41,5 +41,35 @@
     <welcome-file-list>
      <welcome-file>homepage.jsp</welcome-file> 
     </welcome-file-list>
+
+    <servlet>
+        <servlet-name>Vinili</servlet-name>
+        <servlet-class>controller.everyone.ViniliServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Vinili</servlet-name>
+        <url-pattern>/Vinili</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CD</servlet-name>
+        <servlet-class>controller.everyone.CDServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CD</servlet-name>
+        <url-pattern>/CD</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Giradischi</servlet-name>
+        <servlet-class>controller.everyone.GiradischiServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Giradischi</servlet-name>
+        <url-pattern>/Giradischi</url-pattern>
+    </servlet-mapping>
 
 </web-app>
