@@ -24,42 +24,35 @@
     </nav> 
 
     <div class="slideshow-container">
-    
-        
-         
-                    <div class="slide fade">
-                        <img src="assets/images/banner1.jpg" alt="Banner 1" style="width:100%"> 
-                        <div class="textTitle">Miao</div>
-                        <div class="text">Miaomiao</div>
-                    </div>
-                    <div class="slide fade">
-                        <img src="assets/images/banner2.jpg" alt="Banner 2" style="width:100%">
-                    </div>
-                    <div class="slide fade">
-                        <img src="assets/images/banner3.jpg" alt="Banner 3" style="width:100%">
-                    </div>
-                      
-        
-                    <a class="prev" onclick="moveSlideShow(-1)">&#10094;</a>
-                    <a class="next" onclick="moveSlideShow(1)">&#10095;</a>
-        
 
-          
-    
-        
+        <div class="slide fade">
+            <a href="Vinili">
+                <img src="assets/images/banner1.jpg" alt="Banner 1" style="width:100%">
+            </a>
+        </div>
+        <div class="slide fade">
+            <a href="CD">
+                <img src="assets/images/banner2.jpg" alt="Banner 2" style="width:100%">
+            </a>
+        </div>
+        <div class="slide fade">
+            <a href="Giradischi">
+                <img src="assets/images/banner3.jpg" alt="Banner 3" style="width:100%">
+            </a>
+        </div>
+
+        <a class="prev" onclick="moveSlideShow(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlideShow(1)">&#10095;</a>
+
     </div>
 
-   
-
-
-    <div class="info-grid">
+    <div id="info-grid" class="info-grid">
         <div class="infotextTitle">About Us</div>
         <div class="infotext">
             <p>Miao</p>
             <p>MiaoMiao</p>
         </div>
-       
-</div>
+    </div>
 
 </div>
 
