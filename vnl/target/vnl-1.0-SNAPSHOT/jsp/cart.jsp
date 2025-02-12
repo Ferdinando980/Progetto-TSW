@@ -1,4 +1,7 @@
 <%@ page import="java.util.List" %>
+<%@ page import="model.javabeans.OrderItems" %>
+<%@ page import="model.javabeans.Product" %>
+<%@ page import="model.dao.ProductDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,12 +15,26 @@
     <h1>Carrello</h1>
     <ul>
         <%
-            List<String> carrello = (List<String>) session.getAttribute("cart");
-            if (carrello != null && !carrello.isEmpty()) {
-                for (String prodotto : carrello) {
-                    out.println("<li>" + prodotto + "</li>");
+            List<OrderItems> cart = (List<OrderItems>) session.getAttribute("cart");
+            if (cart != null && !cart.isEmpty()) {
+                for (OrderItems orderItems : cart) {
+                    ProductDao productDao = new ProductDao();
+                    Product product=productDao.doRetrieveById(orderItems.getProdotto());
+
+                    if (product.getTipo().equalsIgnoreCase("vinili")){
+                        out.println("<li>" + product.getNomeVnl() + "</li>");
+                        out.println("<li>" + orderItems.getQuantita() + "</li>");
+                        out.println("<li>" + orderItems.getPrezzo() + "</li>");
+                    }
+                    else if(product.getTipo().equalsIgnoreCase("giradischi")){
+                        out.println("<li>" + product.getMarca() + "</li>");
+                        out.println("<li>" + orderItems.getQuantita() + "</li>");
+                        out.println("<li>" + orderItems.getPrezzo() + "</li>");
+                    }
+
                 }
                 out.println("<a href=\"Acquisto\">Procedi con l'acquito</a>");
+
             } else {
                 out.println("<p>Il carrello è vuoto</p>");
             }
