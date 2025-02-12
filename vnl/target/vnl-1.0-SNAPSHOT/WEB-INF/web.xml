@@ -5,6 +5,10 @@
                              https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
 
+<context-param>
+    <param-name>jakarta.servlet.jsp.el.ignored</param-name>
+    <param-value>false</param-value>
+</context-param>
 
     <servlet>
         <servlet-name>Registrazione</servlet-name>
@@ -59,6 +63,16 @@
     <servlet-mapping>
         <servlet-name>ListaProdotti</servlet-name>
         <url-pattern>/ListaProdotti</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Cart</servlet-name>
+        <servlet-class>controller.everyone.CartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Cart</servlet-name>
+        <url-pattern>/Cart</url-pattern>
     </servlet-mapping>
 
 </web-app>

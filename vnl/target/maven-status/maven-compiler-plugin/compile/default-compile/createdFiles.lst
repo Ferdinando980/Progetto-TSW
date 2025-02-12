@@ -1,5 +1,6 @@
 model\dao\OrderDao.class
 model\javabeans\Order.class
+controller\everyone\ViniliServlet.class
 model\javabeans\OrderItems.class
 controller\everyone\HomepageServlet.class
 model\Eccezioni\ValidException.class
@@ -11,6 +12,7 @@ model\javabeans\Users.class
 controller\everyone\ProductsListServlet.class
 model\javabeans\Cart.class
 model\QueryPool.class
+controller\everyone\CDServlet.class
 model\javabeans\Product.class
 model\DBManager.class
 controller\everyone\ProductServlet.class
@@ -18,3 +20,4 @@ model\dao\AbstractDAO.class
 controller\everyone\LoginServlet.class
 model\dao\OrderItemsDao.class
 model\util\Utils.class
+controller\everyone\GiradischiServlet.class

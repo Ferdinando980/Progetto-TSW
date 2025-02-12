@@ -1,10 +1,22 @@
 function validateForm() {
     var errors = [];
 
-    document.querySelectorAll('.error-message').forEach(function(error) {
+    document.querySelectorAll('.error-message').forEach(function (error) {
         error.textContent = '';
         error.style.color = 'red';
     });
+
+    var password = document.getElementById("Password").value;
+    var cpassword = document.getElementById("CPassword").value;
+    if (password !== cpassword) {
+        document.getElementById("Password").style.border = "2px solid red";
+        document.getElementById("CPassword").style.border = "2px solid red";
+        document.getElementById("passwordError").textContent = "Le password non corrispondono";
+        document.getElementById("cpasswordError").textContent = "Le password non corrispondono";
+        errors.push("Le password non corrispondono");
+    }
+    
+
 
     var email = document.getElementById("Email").value;
     var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -13,6 +25,7 @@ function validateForm() {
         document.getElementById("emailError").textContent = "Email inserita in modo errato";
         errors.push("Email inserita in modo errato");
     }
+
 
     var birthDate = document.getElementById("DataDiNascita").value;
     if (!birthDate) {
@@ -29,12 +42,12 @@ function validateForm() {
         errors.push("Numero di telefono inserito in modo errato");
     }
 
-    var password = document.getElementById("Password").value;
+
     var passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()]).{6,15}$/;
     if (!password || !password.match(passwordRegex)) {
         document.getElementById("Password").style.border = "2px solid red";
-        document.getElementById("passwordError").textContent = "Le password non corrispondono o non soddisfano i criteri di validità";
-        errors.push("Le password non corrispondono o non soddisfano i criteri di validità");
+        document.getElementById("passwordError").textContent = "La password non soddisfa i criteri di validità";
+        errors.push("La password non soddisfa i criteri di validità");
     }
 
     var username = document.getElementById("Username").value;
@@ -45,17 +58,19 @@ function validateForm() {
         errors.push("Username non valido");
     }
 
+
     if (errors.length > 0) {
-        return false;  
+        return false;
     }
 
-    return true;  
+
+    return true;
 }
+
 
 window.onload = function () {
 
-    var errorMessages = JSON.parse(errorMessages);
-
+    console.log(errorMessages);
     if (errorMessages.length > 0) {
         errorMessages.forEach(function (error) {
             if (error.includes("Username")) {
