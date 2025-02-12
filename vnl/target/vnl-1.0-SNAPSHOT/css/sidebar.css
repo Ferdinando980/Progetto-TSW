@@ -1,9 +1,5 @@
-*{
 
-    font-family: "Lobster", sans-serif;
-}
 .sidenav {
-  height: 100%; 
   width: 200px; 
   position: relative; 
   top: 0; 

@@ -42,38 +42,27 @@
     </servlet-mapping>
 
     
-    <welcome-file-list>
-     <welcome-file>homepage.jsp</welcome-file> 
-    </welcome-file-list>
 
     <servlet>
-        <servlet-name>Vinili</servlet-name>
-        <servlet-class>controller.everyone.ViniliServlet</servlet-class>
+        <servlet-name>Prodotto</servlet-name>
+        <servlet-class>controller.everyone.ProductServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Vinili</servlet-name>
-        <url-pattern>/Vinili</url-pattern>
+        <servlet-name>Prodotto</servlet-name>
+        <url-pattern>/Prodotto</url-pattern>
     </servlet-mapping>
 
+
+
     <servlet>
-        <servlet-name>CD</servlet-name>
-        <servlet-class>controller.everyone.CDServlet</servlet-class>
+        <servlet-name>ListaProdotti</servlet-name>
+        <servlet-class>controller.everyone.ProductsListServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>CD</servlet-name>
-        <url-pattern>/CD</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>Giradischi</servlet-name>
-        <servlet-class>controller.everyone.GiradischiServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>Giradischi</servlet-name>
-        <url-pattern>/Giradischi</url-pattern>
+        <servlet-name>ListaProdotti</servlet-name>
+        <url-pattern>/ListaProdotti</url-pattern>
     </servlet-mapping>
 
     <servlet>
