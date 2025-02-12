@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Carrello</title>
+    <link rel="stylesheet" href="./css/cart.css">
 </head>
 <body>
     <jsp:include page="header.jsp"></jsp:include>
@@ -22,7 +23,10 @@
             }
         %>
     </ul>
-    <a href="Homepage">Continua lo shopping</a>
+    </div>
+
+    <div class="continua">
+        <a href="Homepage">Continua lo shopping</a>
     </div>
 
     <jsp:include page="footer.jsp"></jsp:include>
