@@ -59,11 +59,10 @@
 }
 
 .profile{
-  width: 10%;
   max-width: 150px;
 }
 .cart{
-  width: 10%;
+
   max-width: 150px;
 }
 
@@ -110,12 +109,12 @@
   }
 
   .profile{
-    width: 50%;
+    justify-content:center;
     max-width: 100%;
   }
 
   .cart{
-    width: 50%;
+
     max-width: 100%;
   }
 
@@ -125,6 +124,7 @@
       height: auto;
       padding: 5px 0; 
       gap: 5px; 
+      
     }
   
     .logo {
@@ -156,10 +156,14 @@
       height: 30px; 
     }
   
-    .profile,
+    .profile{
+            align-self:center;
+      
+    }
     .cart {
-      width: 40%;  
+
       max-width: 80px; 
+
     }
   
     .RightSection {
