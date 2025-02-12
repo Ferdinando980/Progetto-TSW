@@ -35,7 +35,6 @@
                         <p><strong>Condition:</strong> <%= product.getCondizione() %></p>
             
                         <%
-                            // Handle different product types
                             String tipo = product.getTipo();
                             if ("vinile".equals(tipo)||"cd".equals(tipo)) {
                         %>

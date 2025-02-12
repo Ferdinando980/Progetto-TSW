@@ -25,7 +25,7 @@ public class DBManager {
             properties.setDriverClassName("com.mysql.cj.jdbc.Driver");
             properties.setUrl("jdbc:mysql://localhost:3306/vnl?serverTimezone=" + TimeZone.getDefault().getID());
             properties.setUsername("root");
-            properties.setPassword("M4w1l3T4nky!!");
+            properties.setPassword("Miao!!");
             properties.setMaxActive(100);
             properties.setMaxIdle(50); 
             properties.setInitialSize(10);
