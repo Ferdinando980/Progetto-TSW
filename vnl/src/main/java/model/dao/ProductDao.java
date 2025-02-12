@@ -1,9 +1,12 @@
 package model.dao;
 
-import model.javabeans.Product;
-
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+
+import model.javabeans.Product;
 
 public class ProductDao extends AbstractDAO{
 
@@ -11,16 +14,16 @@ public class ProductDao extends AbstractDAO{
         try (Connection connection = getConnection();
              PreparedStatement ps= prepareStatement(connection, "INSERT_PRODUCT")){
 
-            ps.setString(1, product.getId());
-            ps.setFloat(2, product.getPrezzo());
-            ps.setString(3, product.getDescrizione());
-            ps.setString(4, product.getCondizione());
-            ps.setString(5, product.getTipo());
-            ps.setString(6, product.getMarca());
-            ps.setString(7, product.getModello());
-            ps.setString(8, product.getNomeVnl());
-            ps.setString(9, product.getArtista());
-            ps.setString(10, product.getGenere());
+    
+            ps.setFloat(1, product.getPrezzo());
+            ps.setString(2, product.getDescrizione());
+            ps.setString(3, product.getCondizione());
+            ps.setString(4, product.getTipo());
+            ps.setString(5, product.getMarca());
+            ps.setString(6, product.getNomeVnl());
+            ps.setString(7, product.getArtista());
+            ps.setString(8, product.getGenere());
+            ps.setString(9, product.getImg());
 
 
 
@@ -41,15 +44,15 @@ public class ProductDao extends AbstractDAO{
         try (Connection connection = getConnection();
              PreparedStatement ps= prepareStatement(connection, "UPDATE_PRODUCT")){
 
-            ps.setFloat(2, product.getPrezzo());
-            ps.setString(3, product.getDescrizione());
-            ps.setString(4, product.getCondizione());
-            ps.setString(5, product.getTipo());
-            ps.setString(6, product.getMarca());
-            ps.setString(7, product.getModello());
-            ps.setString(8, product.getNomeVnl());
-            ps.setString(9, product.getArtista());
-            ps.setString(10, product.getGenere());
+            ps.setFloat(1, product.getPrezzo());
+            ps.setString(2, product.getDescrizione());
+            ps.setString(3, product.getCondizione());
+            ps.setString(4, product.getTipo());
+            ps.setString(5, product.getMarca());
+            ps.setString(6, product.getNomeVnl());
+            ps.setString(7, product.getArtista());
+            ps.setString(8, product.getGenere());
+            ps.setString(9, product.getImg());
 
             int rowsAffected=  ps.executeUpdate();
             return rowsAffected>0;
@@ -64,7 +67,7 @@ public class ProductDao extends AbstractDAO{
         try (Connection connection = getConnection();
              PreparedStatement ps = prepareStatement(connection, "DELETE_PRODUCT")) {
 
-            ps.setString(1, product.getId());
+            ps.setInt(1, product.getId());
 
             int rowsAffected = ps.executeUpdate();
             return rowsAffected > 0;
@@ -88,16 +91,16 @@ public class ProductDao extends AbstractDAO{
 
             if(result.next()){
                 product= new Product();
-                product.setId(result.getNString("id"));
+                product.setId(result.getInt("id"));
                 product.setPrezzo(result.getFloat("prezzo"));
                 product.setDescrizione(result.getString("descrizione"));
                 product.setCondizione(result.getString("condizione"));
                 product.setTipo(result.getString("tipo"));
                 product.setMarca(result.getString("marca"));
-                product.setModello(result.getString("modello"));
-                product.setNomeVnl(result.getString("nome_vnl"));
+                product.setNomeVnl(result.getString("nomeVnl"));
                 product.setArtista(result.getString("artista"));
                 product.setGenere(result.getString("genere"));
+                product.setImg(result.getString("img_path"));
             }
 
         } catch (SQLException e) {
@@ -117,16 +120,16 @@ public class ProductDao extends AbstractDAO{
             while(result.next()){
                 Product product = new Product();
 
-                product.setId(result.getNString("id"));
+                product.setId(result.getInt("id"));
                 product.setPrezzo(result.getFloat("prezzo"));
                 product.setDescrizione(result.getString("descrizione"));
                 product.setCondizione(result.getString("condizione"));
                 product.setTipo(result.getString("tipo"));
                 product.setMarca(result.getString("marca"));
-                product.setModello(result.getString("modello"));
-                product.setNomeVnl(result.getString("nome_vnl"));
+                product.setNomeVnl(result.getString("nomeVnl"));
                 product.setArtista(result.getString("artista"));
                 product.setGenere(result.getString("genere"));
+                product.setImg(result.getString("img_path"));
 
                 productsList.add(product);
 
@@ -137,6 +140,7 @@ public class ProductDao extends AbstractDAO{
         catch(SQLException e){
             System.out.println(e.getMessage());
         }
+        System.out.println("Products retrieved: " + productsList.size());
 
         return productsList;
     }
@@ -152,16 +156,16 @@ public class ProductDao extends AbstractDAO{
             while(result.next()){
                 Product product = new Product();
 
-                product.setId(result.getString("id"));
+                product.setId(result.getInt("id"));
                 product.setPrezzo(result.getFloat("prezzo"));
                 product.setDescrizione(result.getString("descrizione"));
                 product.setCondizione(result.getString("condizione"));
                 product.setTipo(result.getString("tipo"));
                 product.setMarca(result.getString("marca"));
-                product.setModello(result.getString("modello"));
-                product.setNomeVnl(result.getString("nome_vnl"));
+                product.setNomeVnl(result.getString("nomeVnl"));
                 product.setArtista(result.getString("artista"));
                 product.setGenere(result.getString("genere"));
+                product.setImg(result.getString("img_path"));
 
                 productsList.add(product);
             }
@@ -184,16 +188,16 @@ public class ProductDao extends AbstractDAO{
             while(result.next()){
                 Product product = new Product();
 
-                product.setId(result.getString("id"));
+                product.setId(result.getInt("id"));
                 product.setPrezzo(result.getFloat("prezzo"));
                 product.setDescrizione(result.getString("descrizione"));
                 product.setCondizione(result.getString("condizione"));
                 product.setTipo(result.getString("tipo"));
                 product.setMarca(result.getString("marca"));
-                product.setModello(result.getString("modello"));
-                product.setNomeVnl(result.getString("nome_vnl"));
+                product.setNomeVnl(result.getString("nomeVnl"));
                 product.setArtista(result.getString("artista"));
                 product.setGenere(result.getString("genere"));
+                product.setImg(result.getString("img_path"));
 
                 productsList.add(product);
             }
@@ -216,16 +220,16 @@ public class ProductDao extends AbstractDAO{
             while(result.next()){
                 Product product = new Product();
 
-                product.setId(result.getString("id"));
+                product.setId(result.getInt("id"));
                 product.setPrezzo(result.getFloat("prezzo"));
                 product.setDescrizione(result.getString("descrizione"));
                 product.setCondizione(result.getString("condizione"));
                 product.setTipo(result.getString("tipo"));
                 product.setMarca(result.getString("marca"));
-                product.setModello(result.getString("modello"));
-                product.setNomeVnl(result.getString("nome_vnl"));
+                product.setNomeVnl(result.getString("nomeVnl"));
                 product.setArtista(result.getString("artista"));
                 product.setGenere(result.getString("genere"));
+                product.setImg(result.getString("img_path"));
 
                 productsList.add(product);
             }
@@ -249,16 +253,16 @@ public class ProductDao extends AbstractDAO{
 
             if(result.next()){
                 product= new Product();
-                product.setId(result.getNString("id"));
+                product.setId(result.getInt("id"));
                 product.setPrezzo(result.getFloat("prezzo"));
                 product.setDescrizione(result.getString("descrizione"));
                 product.setCondizione(result.getString("condizione"));
                 product.setTipo(result.getString("tipo"));
                 product.setMarca(result.getString("marca"));
-                product.setModello(result.getString("modello"));
-                product.setNomeVnl(result.getString("nome_vnl"));
+                product.setNomeVnl(result.getString("nomeVnl"));
                 product.setArtista(result.getString("artista"));
                 product.setGenere(result.getString("genere"));
+                product.setImg(result.getString("img_path"));
             }
 
         } catch (SQLException e) {
@@ -280,16 +284,16 @@ public class ProductDao extends AbstractDAO{
 
             if(result.next()){
                 product= new Product();
-                product.setId(result.getNString("id"));
+                product.setId(result.getInt("id"));
                 product.setPrezzo(result.getFloat("prezzo"));
                 product.setDescrizione(result.getString("descrizione"));
                 product.setCondizione(result.getString("condizione"));
                 product.setTipo(result.getString("tipo"));
                 product.setMarca(result.getString("marca"));
-                product.setModello(result.getString("modello"));
-                product.setNomeVnl(result.getString("nome_vnl"));
+                product.setNomeVnl(result.getString("nomeVnl"));
                 product.setArtista(result.getString("artista"));
                 product.setGenere(result.getString("genere"));
+                product.setImg(result.getString("img_path"));
             }
 
         } catch (SQLException e) {

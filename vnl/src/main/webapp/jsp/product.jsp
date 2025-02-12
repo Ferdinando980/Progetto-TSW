@@ -14,6 +14,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
+
+
+        <jsp:include page="header.jsp"></jsp:include>
+    
+        <div class="page-container">
+                <jsp:include page="sidebar.jsp"></jsp:include>
+                <div class="mainpage">
+    
+                    <div class="product-container">
+                        <%
+                        Product product = (Product) request.getAttribute("product");
+                        if (product != null) {
+                    %>
+                        <h1>Product Details</h1>
+                        
+                        <p><strong>ID:</strong> <%= product.getId() %></p>
+                        <p><strong>Price:</strong> $<%= product.getPrezzo() %></p>
+                        <p><strong>Description:</strong> <%= product.getDescrizione() %></p>
+                        <p><strong>Condition:</strong> <%= product.getCondizione() %></p>
+            
+                        <%
+                            // Handle different product types
+                            String tipo = product.getTipo();
+                            if ("vinile".equals(tipo)||"cd".equals(tipo)) {
+                        %>
+                            <p><strong>Nome Album:</strong> <%= product.getNomeVnl() %></p>
+                            <p><strong>Artista:</strong> <%= product.getArtista() %></p>
+                            <p><strong>Genere:</strong> <%= product.getGenere() %></p>
+                        <%
+                            } else if ("giradischi".equals(tipo)) { 
+                        %>
+                            <p><strong>Marca:</strong> <%= product.getMarca() %></p>
+                            <p><strong>Modello:</strong> <%= product.getModello() %></p>
+            
+                    <%
+                        } else {
+                    %>
+                        <p>Prodotto non trovato.</p>
+                    <%
+                        }
+                    %>
+                    </div>
+    
+                </div>
+        </div>
+    
+        
+        <jsp:include page="footer.jsp"></jsp:include>
+    
 <script>
     const prodotti = document.getElementById("prodotti");
 

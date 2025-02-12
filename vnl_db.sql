@@ -38,10 +38,10 @@ create table prodotto(
     condizione varchar(5) not null,
     tipo varchar(10) not null,
     marca varchar(20),
-    modello varchar(20),
-    nomeVnl varchar(20),
+    nomeVnl varchar(50),
     artista varchar(50),
-    genere varchar(20)
+    genere varchar(20),
+    img_path varchar(255)
 );
 
 -- Updated OP table with auto-incremented ordine_id and ordine_users

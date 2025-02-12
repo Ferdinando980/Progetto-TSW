@@ -8,10 +8,12 @@ model\dao\UsersDao.class
 controller\everyone\RegistrationServlet.class
 model\dao\ProductDao.class
 model\javabeans\Users.class
+controller\everyone\ProductsListServlet.class
 model\javabeans\Cart.class
 model\QueryPool.class
 model\javabeans\Product.class
 model\DBManager.class
+controller\everyone\ProductServlet.class
 model\dao\AbstractDAO.class
 controller\everyone\LoginServlet.class
 model\dao\OrderItemsDao.class

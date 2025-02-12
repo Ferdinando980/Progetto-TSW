@@ -2,22 +2,22 @@ package model.javabeans;
 
 public class Product {
 
-    private String id;
+    private int id;
     private float prezzo;
     private String descrizione;
     private String condizione;
     private String tipo;
     private String marca;
-    private String modello;
+    private String img;
     private String nomeVnl;
     private String artista;
     private String genere;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -61,12 +61,12 @@ public class Product {
         this.marca = marca;
     }
 
-    public String getModello() {
-        return modello;
+    public String getImg() {
+        return img;
     }
 
-    public void setModello(String modello) {
-        this.modello = modello;
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public String getNomeVnl() {
@@ -96,14 +96,14 @@ public class Product {
     public Product() {
     }
 
-    public Product(String id, float prezzo, String descrizione, String condizione, String tipo, String marca, String modello, String nomeVnl, String artista, String genere) {
+    public Product(int id, float prezzo, String descrizione, String condizione, String tipo, String marca, String img, String nomeVnl, String artista, String genere) {
         this.id = id;
         this.prezzo = prezzo;
         this.descrizione = descrizione;
         this.condizione = condizione;
         this.tipo = tipo;
         this.marca = marca;
-        this.modello = modello;
+        this.img = img;
         this.nomeVnl = nomeVnl;
         this.artista = artista;
         this.genere = genere;
