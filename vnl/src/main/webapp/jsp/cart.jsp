@@ -33,7 +33,7 @@
                     }
 
                 }
-                out.println("<a href=\"Acquisto\">Procedi con l'acquito</a>");
+                out.println("<a href=\"CartOrder\">Procedi con l'acquito</a>");
 
             } else {
                 out.println("<p>Il carrello è vuoto</p>");

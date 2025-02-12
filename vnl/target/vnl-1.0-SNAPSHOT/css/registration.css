@@ -36,6 +36,11 @@ label {
     width: 100%;
 }
 
+.error-message{
+  letter-spacing: 3px;
+
+}
+
 .phoneGroup {
   display: flex;
   align-items: center;

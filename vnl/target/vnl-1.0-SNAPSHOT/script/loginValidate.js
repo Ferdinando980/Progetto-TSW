@@ -41,5 +41,7 @@ document.querySelectorAll("input").forEach(function (input) {
         if (errorElement) {
             errorElement.textContent = "";
         }
+        //TODO RIMUOVERE LA SCRITTA LOGIN FALLITO MENTRE SI STA SCRIVENDO LA PASSWORD NUOVA//
+      
     });
 });

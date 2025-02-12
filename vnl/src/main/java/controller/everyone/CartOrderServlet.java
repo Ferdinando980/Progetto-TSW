@@ -14,6 +14,7 @@ import jakarta.servlet.http.HttpSession;
 import model.dao.OrderDao;
 import model.dao.UsersDao;
 import model.javabeans.Order;
+import model.javabeans.Product;
 import model.javabeans.Users;
 
 
@@ -62,7 +63,7 @@ public class CartOrderServlet extends HttpServlet {
         Users users = (Users)session.getAttribute("users");
         od.setUsers(users.getUserId());
 
-        List<String> carrello = (List<String>) session.getAttribute("cart");
+        List<Product> carrello = (List<Product>) session.getAttribute("cart");
 
         OrderDao odd = new OrderDao();
 
