@@ -1,5 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
-<%@ page import="java.util.HashMap" %>
 <!DOCTYPE html>
 <html lang="it">
     
@@ -32,20 +31,21 @@
                     </div>
 
                     <div class="form-group">
+                                <span id="usernameError" class="error-message"></span>
                         <label for="Username">Username:</label><br>
                         <input type="text" id="Username" name="Username" value="${userData.username}" required
                             placeholder="Inserisci Username..." class="input"><br>
-                        <span id="usernameError" class="error-message"></span>
-
+                   
+         <span id="emailError" class="error-message"></span>
                         <label for="Email">Email:</label><br>
                         <input type="email" id="Email" value="${userData.email}" name="Email" required
                             placeholder="Inserisci Email..." class="input"><br>
-                        <span id="emailError" class="error-message"></span>
-
+               
+        <span id="birthDateError" class="error-message"></span>
                         <label for="DataDiNascita">Data di nascita:</label><br>
                         <input type="date" id="DataDiNascita" value="${userData.dataDiNascita}" name="DataDiNascita"
                             class="input"><br>
-                        <span id="birthDateError" class="error-message"></span>
+                
 
                         <div class="phoneGroup">
                             <div class="nazione">
@@ -54,21 +54,22 @@
                                 </select>
                             </div>
                             <div class="labelAndInputPhone">
+                                             <span id="phoneError" class="error-message"></span>
                                 <label for="NumeroDiTelefono">Numero di telefono:</label><br>
                                 <input type="tel" id="NumeroDiTelefono" name="NumeroDiTelefono" class="input"
                                     minlength="10" maxlength="15" required><br>
-                                <span id="phoneError" class="error-message"></span>
+               
                             </div>
                         </div>
-
+        <span id="passwordError" class="error-message"></span>
                         <label for="Password">Password:</label><br>
                         <input type="password" id="Password" name="Password" required
                             placeholder="Inserisci Password..." class="input"><br>
-                        <span id="passwordError" class="error-message"></span>
+                                  <span id="cpasswordError" class="error-message"></span>
                         <label for="CPassword">Conferma Password:</label><br>
                         <input type="password" id="CPassword" name="CPassword" required
                             placeholder="Conferma Password..." class="input"><br>
-                        <span id="cpasswordError" class="error-message"></span>
+      
 
                         <input type="submit" value="Registrati" class="button">
                     </div>
@@ -82,18 +83,22 @@
     <jsp:include page="footer.jsp"></jsp:include>
 
 
-    <%
  
-        Object errorMessages = request.getAttribute("errorMessages");
-        if (errorMessages == null) {
-        errorMessages = new HashMap<>(); 
-        }
-
-    %>
-
     <script>
-  
-        var errorMessages = ${errorMessages != null ? errorMessages : '{}'};
+
+    var errorMessages = JSON.parse('${errorMessagesJson}');
+            if (errorMessages.length > 0) {
+        errorMessages.forEach(function (error) {
+            if (error.includes("Username")) {
+                document.getElementById("Username").style.border = "2px solid red";
+                document.getElementById("usernameError").textContent = error;
+            }
+            if (error.includes("Email")) {
+                document.getElementById("Email").style.border = "2px solid red";
+                document.getElementById("emailError").textContent = error;
+            }
+        });
+    }
     </script>
 
 

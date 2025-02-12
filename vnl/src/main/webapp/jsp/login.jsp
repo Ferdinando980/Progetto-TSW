@@ -16,7 +16,7 @@
 
     
     <div class="login-container">
-        <form action="/login.jsp" method="POST" class="login-form">
+        <form action="Login" method="POST" class="login-form">
             <fieldset>
                 <legend>Login</legend>
 
