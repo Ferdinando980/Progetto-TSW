@@ -13,8 +13,8 @@ legend {
 
 }
 
-body{
-  background: linear-gradient(180deg,#6D3A8C 5%,#010913  67%);
+body {
+  background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
 }
 
 
@@ -36,6 +36,15 @@ fieldset {
 
 
 
+}
+
+.login-message {
+  color: red;
+  font-size: 100%;
+  padding: 2%;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
 
