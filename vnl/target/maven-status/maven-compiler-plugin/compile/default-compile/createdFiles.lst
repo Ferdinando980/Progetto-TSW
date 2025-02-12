@@ -6,6 +6,7 @@ model\Eccezioni\ValidException.class
 model\javabeans\Category.class
 model\dao\UsersDao.class
 controller\everyone\RegistrationServlet.class
+controller\everyone\LogoutServlet.class
 model\dao\ProductDao.class
 model\javabeans\Users.class
 controller\everyone\ProductsListServlet.class
@@ -15,7 +16,6 @@ model\javabeans\Product.class
 model\DBManager.class
 controller\everyone\CartServlet.class
 controller\everyone\ProductServlet.class
-controller\everyone\CartServlet.class
 model\dao\AbstractDAO.class
 controller\everyone\LoginServlet.class
 model\dao\OrderItemsDao.class

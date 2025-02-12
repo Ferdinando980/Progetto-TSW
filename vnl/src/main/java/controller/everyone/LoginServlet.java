@@ -4,8 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
+
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -22,13 +21,21 @@ import model.util.Utils;
 @WebServlet(name = "Login", value = "/Login")
 public class LoginServlet extends HttpServlet {
     @Override
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+      
+        if (request.getSession().getAttribute("UserData") != null) {
+            response.sendRedirect("/vnl-1.0-SNAPSHOT/Homepage");
+            return; 
+        }
+    
         RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/login.jsp");
         dispatcher.forward(request, response);
     }
 
+
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -39,15 +46,6 @@ public class LoginServlet extends HttpServlet {
         if (Utils.isValidPassword(password) != true || Utils.isValidUsername(username) != true) {
 
  
-            JsonObject errorMessages = new JsonObject();
-            errorMessages.addProperty("error", "Username o Password non validi");
-
-       
-            String errorMessagesJson = new Gson().toJson(errorMessages);
-
-
-            request.setAttribute("errorMessagesJson", errorMessagesJson);
-            System.out.println(errorMessagesJson);
      
             RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/login.jsp");
             dispatcher.forward(request, response);
@@ -68,8 +66,7 @@ public class LoginServlet extends HttpServlet {
             userData.put("DataNascita", user.getDataDiNascita().toString());
 
             session.setAttribute("UserData", userData);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/homepage.jsp");
-            dispatcher.forward(request, response);
+            response.sendRedirect("/vnl-1.0-SNAPSHOT/Homepage");
         } else {
             RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/login.jsp");
             dispatcher.forward(request, response);

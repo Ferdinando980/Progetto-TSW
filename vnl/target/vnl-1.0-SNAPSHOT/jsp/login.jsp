@@ -16,13 +16,14 @@
 
     
     <div class="login-container">
-        <form action="Login" method="POST" class="login-form">
+        <form action="Login" method="POST" class="login-form" onsubmit= "return validateForm()">
             <fieldset>
                 <legend>Login</legend>
 
                 <div class="form-container">
 
                     <div class="form-group">
+                      <span id="usernameError" class="error-message"></span>
                         <label for="Username">Username:</label>
                         <input type="text" id="Username" name="Username" required placeholder="Inserisci Username"
                             class="input">
@@ -30,6 +31,7 @@
 
 
                     <div class="form-group">
+                            <span id="passwordError" class="error-message"></span>
                         <label for="Password">Password:</label>
                         <input type="password" id="Password" name="Password" required placeholder="Inserisci Password"
                             class="input">
@@ -47,6 +49,8 @@
         </form>
     </div>
     <jsp:include page="footer.jsp"></jsp:include>
+
+     <script type="text/javascript" src="script/loginValidate.js"></script>
 </body>
 
 

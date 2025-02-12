@@ -26,6 +26,13 @@ public class RegistrationServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+
+                      
+        if (request.getSession().getAttribute("UserData") != null) {
+            response.sendRedirect("/vnl-1.0-SNAPSHOT/Homepage");
+            return; 
+        }
+        
         RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/registration.jsp");
         dispatcher.forward(request, response);
     }
