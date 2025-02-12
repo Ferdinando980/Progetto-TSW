@@ -8,7 +8,7 @@
     width: 100%;
     align-self: center;
     margin: auto;
-    padding: 20px;
+    padding: 20px 20px;
     border-radius: 10px;
     letter-spacing: 2px;
     min-height: 100vh;
@@ -17,6 +17,16 @@
 .container_cart h1{
     text-align: center;
     margin-bottom: 20px;
+}
+
+.container_cart a{
+    text-align: center;
+    background-color: #6D3A8C;
+    color: white;
+}
+
+.container_cart a:hover{
+    background-color: deeppink;
 }
 
 @media (max-width: 480px) {

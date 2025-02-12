@@ -6,6 +6,7 @@
 </head>
 <body>
     <jsp:include page="header.jsp"></jsp:include>
+
     <div class="container_cart">
     <h1>Carrello</h1>
     <ul>
@@ -15,6 +16,7 @@
                 for (String prodotto : carrello) {
                     out.println("<li>" + prodotto + "</li>");
                 }
+                out.println("<a href=\"Acquisto\">Procedi con l'acquito</a>");
             } else {
                 out.println("<p>Il carrello è vuoto</p>");
             }
