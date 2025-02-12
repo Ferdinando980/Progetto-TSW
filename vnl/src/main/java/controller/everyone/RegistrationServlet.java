@@ -17,6 +17,7 @@ import model.javabeans.Users;
 import model.Eccezioni.ValidException;
 import model.dao.UsersDao;
 import model.util.Utils;
+import com.google.gson.Gson;
 
 @WebServlet(name = "Registrazione", value = "/Registrazione")
 public class RegistrationServlet extends HttpServlet {
@@ -66,7 +67,8 @@ public class RegistrationServlet extends HttpServlet {
             reqUser.setPassword(Utils.toHash(reqUser.getPassword()));
         } catch (ValidException e) {
             System.out.println(e.getErrorMessages());
-            request.setAttribute("errorMessages", e.getErrorMessages());
+            String errorMessagesJson = new Gson().toJson(e.getErrorMessages());
+            request.setAttribute("errorMessagesJson", errorMessagesJson);
             request.setAttribute("userData", reqUser);
  
         
@@ -105,7 +107,7 @@ public class RegistrationServlet extends HttpServlet {
         }
 
         if (usernameInUso(user.getUsername(), service)) {
-            errors.add("Username Già In Uso");
+            errors.add("Username già in uso");
         }
 
         if (emailInUso(user.getEmail(), service)) {

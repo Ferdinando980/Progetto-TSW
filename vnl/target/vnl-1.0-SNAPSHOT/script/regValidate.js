@@ -1,9 +1,14 @@
 function validateForm() {
     var errors = [];
 
+    // Reset messaggi di errore e bordi
     document.querySelectorAll('.error-message').forEach(function (error) {
         error.textContent = '';
         error.style.color = 'red';
+    });
+
+    document.querySelectorAll('input').forEach(function (input) {
+        input.style.removeProperty("border"); // Rimuove il bordo rosso
     });
 
     var password = document.getElementById("Password").value;
@@ -15,8 +20,6 @@ function validateForm() {
         document.getElementById("cpasswordError").textContent = "Le password non corrispondono";
         errors.push("Le password non corrispondono");
     }
-    
-
 
     var email = document.getElementById("Email").value;
     var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -25,7 +28,6 @@ function validateForm() {
         document.getElementById("emailError").textContent = "Email inserita in modo errato";
         errors.push("Email inserita in modo errato");
     }
-
 
     var birthDate = document.getElementById("DataDiNascita").value;
     if (!birthDate) {
@@ -42,7 +44,6 @@ function validateForm() {
         errors.push("Numero di telefono inserito in modo errato");
     }
 
-
     var passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()]).{6,15}$/;
     if (!password || !password.match(passwordRegex)) {
         document.getElementById("Password").style.border = "2px solid red";
@@ -54,33 +55,25 @@ function validateForm() {
     var usernameRegex = /^[a-zA-Z0-9 ]{6,12}$/;
     if (!username || !username.match(usernameRegex)) {
         document.getElementById("Username").style.border = "2px solid red";
-        document.getElementById("usernameError").textContent = "Username non valido";
+        document.getElementById("usernameError").textContent = "Username non valido, deve contenere minimo 6 e massimo 12 caratteri";
         errors.push("Username non valido");
     }
-
 
     if (errors.length > 0) {
         return false;
     }
 
-
     return true;
 }
 
 
-window.onload = function () {
-
-    console.log(errorMessages);
-    if (errorMessages.length > 0) {
-        errorMessages.forEach(function (error) {
-            if (error.includes("Username")) {
-                document.getElementById("Username").style.border = "2px solid red";
-                document.getElementById("usernameError").textContent = error;
-            }
-            if (error.includes("Email")) {
-                document.getElementById("Email").style.border = "2px solid red";
-                document.getElementById("emailError").textContent = error;
-            }
-        });
-    }
-};
+document.querySelectorAll("input").forEach(function (input) {
+    input.addEventListener("input", function () {
+        this.style.removeProperty("border"); 
+        var errorId = this.id + "Error";
+        var errorElement = document.getElementById(errorId);
+        if (errorElement) {
+            errorElement.textContent = ""; 
+        }
+    });
+});

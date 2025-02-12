@@ -28,8 +28,8 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String email = request.getParameter("email");
-        String password = Utils.toHash(request.getParameter("password"));
+        String email = request.getParameter("Email");
+        String password = Utils.toHash(request.getParameter("Password"));
 
         UsersDao service = new UsersDao();
 
