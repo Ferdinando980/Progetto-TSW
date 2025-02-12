@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <script src="script/sidebar.js"></script>
+
   <div class="sidenav">
     <button class="dropdown-btn">Vinili
     </button>
@@ -36,6 +36,7 @@
 
 
   </div>
+  <script src="script/sidebar.js"></script>
 
 
 </body>

@@ -35,12 +35,13 @@
                           for (Product product : products) {
                  %>
                 <li>
+                    <%
+                    String imgPath = product.getImg();
+                    String imgSrc = (imgPath == null || imgPath.trim().isEmpty()) ? "assets/images/pictureplaceholder.jpg" : imgPath;
+                %>
+                <img src="<%= imgSrc %>">
                     <a href="product?id=<%= product.getId() %>">
-                        <%
-                        String imgPath = product.getImg();
-                        String imgSrc = (imgPath == null || imgPath.trim().isEmpty()) ? "assets/images/pictureplaceholder.jpg" : imgPath;
-                    %>
-                    <img src="<%= imgSrc %>" style="max-width: 100%; height: auto;">
+      
                         <strong><%= product.getNomeVnl() %></strong>
                     </a> - $<%= product.getPrezzo() %>
                 </li>
