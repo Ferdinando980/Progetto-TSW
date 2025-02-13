@@ -2,13 +2,15 @@
   
  
   
+    
   .page-container {
-    top:2.5%;
+    position:relative;
+    top:6%;
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    
 }
-
 .Product-list{
   padding:20px;
 }

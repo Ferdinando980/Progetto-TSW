@@ -1,6 +1,5 @@
 package controller.everyone;
 
-    
 import java.io.IOException;
 
 import jakarta.servlet.RequestDispatcher;
