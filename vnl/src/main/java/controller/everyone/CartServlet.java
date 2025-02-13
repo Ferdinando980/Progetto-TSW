@@ -37,7 +37,9 @@ public class CartServlet extends HttpServlet {
             session.setAttribute("cart", carrello);
         }
 
-        String product = request.getParameter("product");
+        String productParam = request.getParameter("product");
+        int product= Integer.parseInt(productParam);
+               
         String quantita = request.getParameter("quantita");
 
         ProductDao productDao = new ProductDao();

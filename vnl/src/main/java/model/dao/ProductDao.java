@@ -79,13 +79,13 @@ public class ProductDao extends AbstractDAO{
 
     }
 
-    public Product doRetrieveById(String id){
+    public Product doRetrieveById(int id){
         Product product = null;
 
         try (Connection connection = getConnection();
              PreparedStatement ps = prepareStatement(connection,"GET_PRODUCT_BY_ID" )){
 
-            ps.setString(1, id);
+            ps.setInt(1, id);
             ResultSet result=  ps.executeQuery();
 
 

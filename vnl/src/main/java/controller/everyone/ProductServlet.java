@@ -3,6 +3,7 @@ package controller.everyone;
     
 import java.io.IOException;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -17,25 +18,37 @@ public class ProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-         String id = request.getParameter("id");
+         String idString = request.getParameter("id");
+    
          Product product= null;
 
-         if (id != null) {
+         if (idString != null) {
             try {
-        
+                int id = Integer.parseInt(idString);
                
                 ProductDao productDAO = new ProductDao();
                 product = productDAO.doRetrieveById(id);
+
+                if (product != null) {
+                    request.setAttribute("product", product);
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/product.jsp");
+                    dispatcher.forward(request, response);
+                }
+                else{
+                    System.out.println("product not found");
+                }
             }
             catch(Exception e){
                 System.out.println(e.getMessage());
                 
 
             }
+      
 
-            request.getRequestDispatcher("/jsp/product.jsp").forward(request, response);
+          
    
     }
+    else{ System.out.println("id not found in the request");}
 }
 }
     

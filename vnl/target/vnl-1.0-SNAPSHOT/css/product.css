@@ -9,10 +9,15 @@
     overflow: hidden;
 }
 
+.Product-list{
+  padding:20px;
+}
+
 ul{
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
   gap:45px;
+  
 }
 
 li{
@@ -20,10 +25,14 @@ li{
   flex-direction:column;
   align-items:center;
   background-color: #f8f9fa;
-  border:30px;
   min-width:100%;
   max-width:175%;
   text-align: center;
+
+}
+
+strong{
+  color:#332620;
 }
 
 a{

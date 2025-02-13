@@ -11,7 +11,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/sidebar.css">
   <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/product.css">
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -25,10 +24,9 @@
     
                     <div class="product-container">
                         <%
-                            String product = (String) request.getAttribute("product");
+                        Product product = (Product) request.getAttribute("product");
                         if (product != null) {
-
-                        }%>
+                    %>
                         <h1>Product Details</h1>
                         
                         <p><strong>ID:</strong> <%= product.getId() %></p>

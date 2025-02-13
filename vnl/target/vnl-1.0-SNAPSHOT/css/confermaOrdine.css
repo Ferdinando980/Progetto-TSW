@@ -1,0 +1,28 @@
+body {
+    background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    min-height: 100vh;
+}
+
+h1,h3{
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+    }
+}
