@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.javabeans.Order;
+import model.dao.ProductDao;
 import model.javabeans.OrderItems;
 import model.javabeans.Product;
 
@@ -37,7 +37,17 @@ public class CartServlet extends HttpServlet {
             session.setAttribute("cart", carrello);
         }
 
-        OrderItems orderItems = request.getParameter("orderItems");
+        String product = request.getParameter("product");
+        String quantita = request.getParameter("quantita");
+
+        ProductDao productDao = new ProductDao();
+        Product p = productDao.doRetrieveById(product);
+
+        OrderItems orderItems = new OrderItems();
+        orderItems.setProdotto(product);
+        orderItems.setQuantita(Integer.parseInt(quantita));
+        orderItems.setPrezzo(p.getPrezzo()*orderItems.getQuantita());
+
         if (orderItems != null) {
             carrello.add(orderItems);
         }
