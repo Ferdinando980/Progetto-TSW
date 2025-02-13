@@ -1,14 +1,14 @@
 function validateForm() {
     var errors = [];
 
-    // Reset messaggi di errore e bordi
+
     document.querySelectorAll('.error-message').forEach(function (error) {
         error.textContent = '';
         error.style.color = 'red';
     });
 
     document.querySelectorAll('input').forEach(function (input) {
-        input.style.removeProperty("border"); // Rimuove il bordo rosso
+        input.style.removeProperty("border"); 
     });
 
     var password = document.getElementById("Password").value;

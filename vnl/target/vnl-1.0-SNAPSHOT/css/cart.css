@@ -29,8 +29,33 @@
     background-color: deeppink;
 }
 
+.continua{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+    margin: auto;
+    padding: 20px 20px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+}
+
+.continua a{
+     text-align: center;
+     background-color: #6D3A8C;
+     color: white;
+ }
+
+.continua a:hover{
+    background-color: deeppink;
+}
+
 @media (max-width: 480px) {
     .container_cart{
+        padding: 10px;
+        width: 90%;
+    }
+    .continua{
         padding: 10px;
         width: 90%;
     }

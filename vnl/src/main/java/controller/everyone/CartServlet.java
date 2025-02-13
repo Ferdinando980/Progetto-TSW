@@ -11,6 +11,9 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import model.dao.ProductDao;
+import model.javabeans.OrderItems;
+import model.javabeans.Product;
 
 @WebServlet(name = "Cart", value = "/Cart")
 public class CartServlet extends HttpServlet {
@@ -27,18 +30,28 @@ public class CartServlet extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession();
-        List<String> carrello = (List<String>) session.getAttribute("cart");
+        List<OrderItems> carrello = (List<OrderItems>) session.getAttribute("cart");
 
         if (carrello == null) {
             carrello = new ArrayList<>();
             session.setAttribute("cart", carrello);
         }
 
-        String prodotto = request.getParameter("prodotto");
-        if (prodotto != null) {
-            carrello.add(prodotto);
+        String product = request.getParameter("product");
+        String quantita = request.getParameter("quantita");
+
+        ProductDao productDao = new ProductDao();
+        Product p = productDao.doRetrieveById(product);
+
+        OrderItems orderItems = new OrderItems();
+        orderItems.setProdotto(product);
+        orderItems.setQuantita(Integer.parseInt(quantita));
+        orderItems.setPrezzo(p.getPrezzo()*orderItems.getQuantita());
+
+        if (orderItems != null) {
+            carrello.add(orderItems);
         }
 
-        response.sendRedirect("cart.jsp");
+        response.sendRedirect("cartOrder.jsp");
     }
 }

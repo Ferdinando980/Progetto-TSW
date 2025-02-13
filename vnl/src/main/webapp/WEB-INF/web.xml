@@ -75,4 +75,14 @@
         <url-pattern>/Cart</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>CartOrder</servlet-name>
+        <servlet-class>controller.everyone.CartOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CartOrder</servlet-name>
+        <url-pattern>/CartOrder</url-pattern>
+    </servlet-mapping>
+
 </web-app>

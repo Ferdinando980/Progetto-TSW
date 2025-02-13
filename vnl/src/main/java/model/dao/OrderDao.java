@@ -12,17 +12,16 @@ public class OrderDao extends AbstractDAO {
         try (Connection connection = getConnection();
              PreparedStatement ps = prepareStatement(connection, "INSERT_ORDER")){
 
-            ps.setString(1, order.getId());
-            ps.setString(2, order.getUsers());
-            ps.setString(3, order.getStato());
-            ps.setDate(4, (Date) order.getDataOrdine());
-            ps.setFloat(5, order.getTotAmount());
-            ps.setString(6, order.getNome());
-            ps.setString(7, order.getCognome());
-            ps.setString(8, order.getVia());
-            ps.setString(9, order.getCivico());
-            ps.setString(10, order.getCap());
-            ps.setString(11, order.getPaese());
+            ps.setString(1, order.getUsers());
+            ps.setString(2, order.getStato());
+            ps.setDate(3, (Date) order.getDataOrdine());
+            ps.setFloat(4, order.getTotAmount());
+            ps.setString(5, order.getNome());
+            ps.setString(6, order.getCognome());
+            ps.setString(7, order.getVia());
+            ps.setString(8, order.getCivico());
+            ps.setString(9, order.getCap());
+            ps.setString(10, order.getPaese());
 
             int rowsAffected = ps.executeUpdate();
             return rowsAffected > 0;
@@ -37,16 +36,16 @@ public class OrderDao extends AbstractDAO {
         try (Connection connection = getConnection();
              PreparedStatement ps = prepareStatement(connection, "UPDATE_ORDER")){
 
-            ps.setString(2, order.getUsers());
-            ps.setString(3, order.getStato());
-            ps.setDate(4, (Date) order.getDataOrdine());
-            ps.setFloat(5, order.getTotAmount());
-            ps.setString(6, order.getNome());
-            ps.setString(7, order.getCognome());
-            ps.setString(8, order.getVia());
-            ps.setString(9, order.getCivico());
-            ps.setString(10, order.getCap());
-            ps.setString(11, order.getPaese());
+            ps.setString(1, order.getUsers());
+            ps.setString(2, order.getStato());
+            ps.setDate(3, (Date) order.getDataOrdine());
+            ps.setFloat(4, order.getTotAmount());
+            ps.setString(5, order.getNome());
+            ps.setString(6, order.getCognome());
+            ps.setString(7, order.getVia());
+            ps.setString(8, order.getCivico());
+            ps.setString(9, order.getCap());
+            ps.setString(10, order.getPaese());
 
             int rowsAffected = ps.executeUpdate();
             return rowsAffected > 0;
