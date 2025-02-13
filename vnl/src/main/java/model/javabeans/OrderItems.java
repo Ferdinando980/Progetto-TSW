@@ -6,7 +6,7 @@ public class OrderItems {
 
     private String ordine_users;
 
-    private String prodotto;
+    private int prodotto;
 
     private int quantita;
 
@@ -15,7 +15,7 @@ public class OrderItems {
     public OrderItems() {
     }
 
-    public OrderItems(String ordine_users, String ordine_id, String prodotto, int quantita, float prezzo) {
+    public OrderItems(String ordine_users, String ordine_id, int prodotto, int quantita, float prezzo) {
         this.ordine_users = ordine_users;
         this.ordine_id = ordine_id;
         this.prodotto = prodotto;
@@ -39,11 +39,11 @@ public class OrderItems {
         this.ordine_users = ordine_users;
     }
 
-    public String getProdotto() {
+    public int getProdotto() {
         return prodotto;
     }
 
-    public void setProdotto(String prodotto) {
+    public void setProdotto(int prodotto) {
         this.prodotto = prodotto;
     }
 

@@ -1,7 +1,11 @@
 package model.dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import model.javabeans.OrderItems;
-import java.sql.*;
 
 public class OrderItemsDao extends AbstractDAO {
 
@@ -12,7 +16,7 @@ public class OrderItemsDao extends AbstractDAO {
 
             ps.setString(1, orderItems.getOrdine_id());
             ps.setString(2, orderItems.getOrdine_users());
-            ps.setString(3, orderItems.getProdotto());
+            ps.setInt(3, orderItems.getProdotto());
             ps.setInt(4, orderItems.getQuantita());
             ps.setFloat(5, orderItems.getPrezzo());
 
@@ -50,7 +54,7 @@ public class OrderItemsDao extends AbstractDAO {
 
             ps.setString(1, orderItems.getOrdine_id());
             ps.setString(2, orderItems.getOrdine_users());
-            ps.setString(3, orderItems.getProdotto());
+            ps.setInt(3, orderItems.getProdotto());
 
             int rowsAffected = ps.executeUpdate();
             return rowsAffected > 0;
@@ -78,7 +82,7 @@ public class OrderItemsDao extends AbstractDAO {
 
                     orderItems.setOrdine_id(rs.getString("ordine_id"));
                     orderItems.setOrdine_users(rs.getString("ordine_users"));
-                    orderItems.setProdotto(rs.getString("prodotto"));
+                    orderItems.setProdotto(rs.getInt("prodotto"));
                     orderItems.setQuantita(rs.getInt("quantita"));
                     orderItems.setPrezzo(rs.getFloat("prezzo"));
 
