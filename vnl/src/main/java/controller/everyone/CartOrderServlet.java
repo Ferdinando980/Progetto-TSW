@@ -12,8 +12,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import model.dao.OrderDao;
+import model.dao.OrderItemsDao;
+import model.dao.ProductDao;
 import model.dao.UsersDao;
 import model.javabeans.Order;
+import model.javabeans.OrderItems;
 import model.javabeans.Product;
 import model.javabeans.Users;
 
@@ -63,17 +66,24 @@ public class CartOrderServlet extends HttpServlet {
         Users users = (Users)session.getAttribute("users");
         od.setUsers(users.getUserId());
 
-        List<Product> carrello = (List<Product>) session.getAttribute("cart");
+        List<OrderItems> carrello = (List<OrderItems>) session.getAttribute("cart");
 
         OrderDao odd = new OrderDao();
-
-
+        OrderItemsDao orderItemsDao = new OrderItemsDao();
 
         try {
 
             odd.doSave(od);
 
             session.removeAttribute("cart");
+            for (int i = 0; i < carrello.size(); i++) {
+                OrderItems orderItems = carrello.get(i);
+
+                orderItems.setOrdine_id(od.getId());
+                orderItems.setOrdine_users(od.getUsers());
+
+                orderItemsDao.doSave(orderItems);
+            }
             response.sendRedirect("/ConfermaOrdine.jsp");
 
         } catch (Exception e) {
