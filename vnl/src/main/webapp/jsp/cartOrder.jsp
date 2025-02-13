@@ -16,7 +16,7 @@
       <legend>Conferma Aquisto</legend>
     </div>
 
-    <form action="CartOrderServlet" method="post">
+    <form action="CartOrder" method="post">
 
       <div class="form-group">
         <label for="nome">Nome:</label>
