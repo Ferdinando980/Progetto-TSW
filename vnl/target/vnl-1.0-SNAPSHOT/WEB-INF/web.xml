@@ -85,4 +85,14 @@
         <url-pattern>/CartOrder</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ConfermaOrdine</servlet-name>
+        <servlet-class>controller.everyone.ConfermaOrdineServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ConfermaOrdine</servlet-name>
+        <url-pattern>/ConfermaOrdine</url-pattern>
+    </servlet-mapping>
+
 </web-app>

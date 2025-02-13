@@ -41,7 +41,7 @@
                 %>
                 <img src="<%= imgSrc %>">
                     <a href="product?id=<%= product.getId() %>">
-      
+
                         <strong><%= product.getNomeVnl() %></strong>
                     </a> - $<%= product.getPrezzo() %>
                 </li>

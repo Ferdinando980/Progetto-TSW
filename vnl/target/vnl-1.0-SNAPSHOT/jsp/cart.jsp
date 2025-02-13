@@ -21,7 +21,7 @@
                     ProductDao productDao = new ProductDao();
                     Product product=productDao.doRetrieveById(orderItems.getProdotto());
 
-                    if (product.getTipo().equalsIgnoreCase("vinili")){
+                    if (product.getTipo().equalsIgnoreCase("vinili") || product.getTipo().equalsIgnoreCase("cd")){
                         out.println("<li>" + product.getNomeVnl() + "</li>");
                         out.println("<li>" + orderItems.getQuantita() + "</li>");
                         out.println("<li>" + orderItems.getPrezzo() + "</li>");
