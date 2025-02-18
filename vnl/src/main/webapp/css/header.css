@@ -116,10 +116,12 @@
   .cart{
 
     max-width: 100%;
+    align-self:center;
   }
 
   @media (max-width: 480px) {
     .header {
+      
       flex-direction: column;  
       height: auto;
       padding: 5px 0; 
@@ -161,7 +163,7 @@
       
     }
     .cart {
-
+      align-self:center;
       max-width: 80px; 
 
     }
