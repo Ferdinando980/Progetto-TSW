@@ -5,7 +5,7 @@
     boolean isLoggedIn = (userData != null && "true".equals(userData.get("IsLogged")));
 %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">

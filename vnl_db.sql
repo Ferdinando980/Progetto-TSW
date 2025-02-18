@@ -85,4 +85,5 @@ INSERT INTO prodotto (prezzo, descrizione, condizione, tipo, marca, nomeVnl, art
 (249.99, 'Giradischi vintage', 'Usato', 'giradischi', 'Technics', 'SL-1200MK2', NULL, NULL, 'assets/product/technics.jpg'),
 (179.99, 'Giradischi professionale', 'Nuovo', 'giradischi', 'Pioneer', 'PLX-500', NULL, NULL, 'assets/product/pioneer.jpg');
 
-
+INSERT INTO users (username,email,password,data_di_nascita,numero_di_telefono,tipo) VALUES
+('ceuto97', 'cerusoantonio97@gmail.com', 'Prova1997!', '1997-07-21', '3806316445','admin');
