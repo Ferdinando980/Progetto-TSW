@@ -34,7 +34,7 @@
                     <input class="textbox" type="text" placeholder="Cerca.." name="search">
                 </form>
             </div>
-            <div class="Cart">
+            <div class="HeaderCart">
                 <a href="Cart">
                     <img src="assets/images/cart.png"  alt="Carrello">
                 </a>

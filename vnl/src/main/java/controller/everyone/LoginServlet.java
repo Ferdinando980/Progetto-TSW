@@ -81,6 +81,7 @@ public class LoginServlet extends HttpServlet {
             userData.put("Email", user.getEmail());
             userData.put("nTelefono", user.getNumeroDiTelefono());
             userData.put("IsLogged", isLogged);
+            userData.put("tipo", user.getTipo());
             userData.put("DataNascita", user.getDataDiNascita().toString());
 
             session.setAttribute("UserData", userData);

@@ -1,3 +1,4 @@
+controller\admin\ErrorPage.class
 model\Eccezioni\ValidException.class
 model\javabeans\Category.class
 controller\everyone\RegistrationServlet.class

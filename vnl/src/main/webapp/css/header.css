@@ -24,7 +24,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  
   padding: 0 10px;
+  
 }
 
 .headerlinks a {
@@ -34,6 +36,7 @@
   padding: 0 16px;
   text-decoration: none;
   font-size: 90%;
+  
   line-height: 50px;
   border-radius: 10px;
 }
@@ -41,12 +44,10 @@
 .headerlinks a:hover {
   background-color: #C3B7D8;
   border: 2px solid #332620;
+  border-radius: 50%;
 }
 
-.search-container {
-  font-size: 100%;
-  padding: 10px;
-}
+
 
 .textbox {
   padding: 6px;
@@ -58,12 +59,8 @@
   border-radius: 5px;
 }
 
-.profile{
-  max-width: 150px;
-  align-self:center;
 
 
-}
 
 .logout-button{
    border-radius: 10px;
@@ -82,17 +79,20 @@
   
 }
 
-
-.cart{
-
-  max-width: 150px;
+.HeaderCart{
+  margin-right: 2.5%
 }
+
+
+
 
 .RightSection{
   display: flex;
   flex-direction: row;
   gap: 5px;
   text-align: center;
+  align-items: center;
+  
 }
 
 @media (max-width: 768px) {
@@ -135,7 +135,7 @@
     max-width: 100%;
   }
 
-  .cart{
+  .HeaderCart{
 
     max-width: 100%;
     align-self:center;
@@ -184,7 +184,7 @@
             align-self:center;
       
     }
-    .cart {
+    .HeaderCart {
       align-self:center;
       max-width: 80px; 
 

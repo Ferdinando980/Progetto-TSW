@@ -3,6 +3,8 @@
 <%@ page import="model.javabeans.Product" %>
 <%@ page import="model.dao.ProductDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<!DOCTYPE html>
 <html>
 <head>
     <title>Carrello</title>
