@@ -21,6 +21,17 @@
         <url-pattern>/Registrazione</url-pattern>
     </servlet-mapping>
 
+       <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>controller.everyone.LogoutServlet</servlet-class>
+    </servlet>
+
+   
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>Login</servlet-name>
         <servlet-class>controller.everyone.LoginServlet</servlet-class>

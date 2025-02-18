@@ -60,7 +60,29 @@
 
 .profile{
   max-width: 150px;
+  align-self:center;
+
+
 }
+
+.logout-button{
+   border-radius: 10px;
+
+
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  width: 120%;
+
+
+}
+
+.logout-button:hover{
+     background-color: #C3B7D8;
+  
+}
+
+
 .cart{
 
   max-width: 150px;
@@ -116,10 +138,12 @@
   .cart{
 
     max-width: 100%;
+    align-self:center;
   }
 
   @media (max-width: 480px) {
     .header {
+      
       flex-direction: column;  
       height: auto;
       padding: 5px 0; 
@@ -161,7 +185,7 @@
       
     }
     .cart {
-
+      align-self:center;
       max-width: 80px; 
 
     }
