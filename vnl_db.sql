@@ -68,7 +68,7 @@ INSERT INTO prodotto (prezzo, descrizione, condizione, tipo, marca, nomeVnl, art
 (18.50, 'Vinile soul', 'Usato', 'vinile', NULL, 'Back to Black', 'Amy Winehouse', 'Soul', 'assets/product/back to black.jpg'),
 (26.99, 'Vinile collezione rap', 'Nuovo', 'vinile', NULL, 'Illmatic', 'Nas', 'Hip-Hop', 'assets/product/illmatic.jpg'),
 (23.99, 'Vinile classico blues', 'Usato', 'vinile', NULL, 'The Essential BB King', 'BB King', 'Blues', 'assets/product/the essential bb king.jpg'),
-(19.50, 'Vinile elettronico', 'Nuovo', 'vinile', NULL, 'Random Access Memories', 'Daft Punk', 'Elettronica', 'assets/product/random access memory.jpg'),
+(19.50, 'Vinile elettronico', 'Nuovo', 'vinile', NULL, 'Random Access Memories', 'Daft Punk', 'Elettronica', 'assets/product/random access memories.jpg'),
 (20.00, 'Vinile alternative rock', 'Nuovo', 'vinile', NULL, 'OK Computer', 'Radiohead', 'Alternative', 'assets/product/ok computer.jpg'),
 
 -- 💿 CD

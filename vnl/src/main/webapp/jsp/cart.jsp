@@ -16,6 +16,7 @@
 
     <div class="container_cart">
     <h1>Carrello</h1>
+
     <ul>
         <%
             List<OrderItems> cart = (List<OrderItems>) session.getAttribute("cart");
@@ -39,7 +40,7 @@
                 out.println("<a href=\"CartOrder\">Procedi con l'acquito</a>");
 
             } else {
-                out.println("<p>Il carrello è vuoto</p>");
+                out.println("<p>Carrello Vuoto</p>");
             }
         %>
     </ul>

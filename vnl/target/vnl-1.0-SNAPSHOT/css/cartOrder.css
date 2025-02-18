@@ -2,14 +2,14 @@ body {
     background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
 }
 
-fieldset {
+.fieldset {
     border-radius: 10px;
     background-color: #6D3A8C;
     border: solid 3px #FEF6E6;
     padding: 20px;
 }
 
-legend {
+.biglabel{
     font-size: 150%;
     text-align: center;
     color: #FEF6E6;
@@ -99,7 +99,7 @@ select:hover{
         margin: 0;
     }
 
-    legend {
+    .biglabel h1 {
         font-size: 90%;
         margin: 0;
     }
