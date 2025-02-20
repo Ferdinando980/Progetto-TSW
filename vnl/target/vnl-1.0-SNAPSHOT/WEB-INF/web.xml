@@ -106,4 +106,13 @@
         <url-pattern>/ConfermaOrdine</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ProfiloOrdini</servlet-name>
+        <servlet-class>controller.everyone.ProfiloOrdiniServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProfiloOrdini</servlet-name>
+        <url-pattern>/ProfiloOrdini</url-pattern>
+    </servlet-mapping>
 </web-app>
