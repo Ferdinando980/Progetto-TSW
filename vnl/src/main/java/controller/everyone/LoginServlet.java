@@ -77,6 +77,7 @@ public class LoginServlet extends HttpServlet {
             Map<String, String> userData = new HashMap<>();
 
             String isLogged = "true";
+            userData.put("UserId", user.getUserId());
             userData.put("Username", user.getUsername());
             userData.put("Email", user.getEmail());
             userData.put("nTelefono", user.getNumeroDiTelefono());

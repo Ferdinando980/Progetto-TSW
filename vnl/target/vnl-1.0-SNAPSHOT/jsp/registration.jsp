@@ -36,12 +36,12 @@
                         <input type="text" id="Username" name="Username" value="${userData.username}" required
                             placeholder="Inserisci Username..." class="input"><br>
                    
-         <span id="emailError" class="error-message"></span>
+                       <span id="emailError" class="error-message"></span>
                         <label for="Email">Email:</label><br>
                         <input type="email" id="Email" value="${userData.email}" name="Email" required
                             placeholder="Inserisci Email..." class="input"><br>
                
-        <span id="birthDateError" class="error-message"></span>
+                       <span id="birthDateError" class="error-message"></span>
                         <label for="DataDiNascita">Data di nascita:</label><br>
                         <input type="date" id="DataDiNascita" value="${userData.dataDiNascita}" name="DataDiNascita"
                             class="input"><br>
@@ -61,17 +61,17 @@
                
                             </div>
                         </div>
-        <span id="passwordError" class="error-message"></span>
+                         <span id="passwordError" class="error-message"></span>
                         <label for="Password">Password:</label><br>
                         <input type="password" id="Password" name="Password" required
                             placeholder="Inserisci Password..." class="input"><br>
-                                  <span id="cpasswordError" class="error-message"></span>
+                        <span id="cpasswordError" class="error-message"></span>
                         <label for="CPassword">Conferma Password:</label><br>
                         <input type="password" id="CPassword" name="CPassword" required
                             placeholder="Conferma Password..." class="input"><br>
       
 
-                        <input type="submit" value="Registrati" class="button">
+                        <input type="submit" value="Modifica Profilo" class="button">
                     </div>
 
                 </fieldset>

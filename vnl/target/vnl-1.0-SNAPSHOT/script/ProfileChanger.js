@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isLoggedIn) {
 
         profileSection.innerHTML = `
-                <a href="Login">
+                <a href="EditProfile">
                 <img src="assets/images/profilo.png" alt="Profilo">
             </a>
             <button class="logout-button" onclick="logout()">Logout</button>
