@@ -3,7 +3,7 @@
   padding: 2%;
   border-radius: 10px;
   height: 100vh;
-  margin-bottom: 20px;
+  margin-bottom: 10%;
 
 }
 
@@ -59,6 +59,7 @@ fieldset {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
   max-width: 90%;
+  
 
 }
 
@@ -75,12 +76,13 @@ fieldset {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 100%;
+
 
 
 }
 
 .form-actions {
   text-align: right;
+  
 
 }

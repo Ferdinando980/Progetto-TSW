@@ -86,6 +86,7 @@ public class LoginServlet extends HttpServlet {
 
             session.setAttribute("UserData", userData);
             response.sendRedirect("/vnl-1.0-SNAPSHOT/Homepage");
+            return; 
         } else {
             JsonObject errorMessages = new JsonObject();
             errorMessages.addProperty("error", "Login Fallito");

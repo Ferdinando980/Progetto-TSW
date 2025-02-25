@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Header</title>
 </head>
 
 <body>
@@ -39,9 +40,7 @@
                     <img src="assets/images/cart.png"  alt="Carrello">
                 </a>
             </div>
-            <div class="profile" id= "profile-section">
-
-            </div>
+            <div class="profile" id= "profile-section"></div>
         </div>
 
     </header>

@@ -16,6 +16,7 @@
 
     <div class="container_cart">
     <h1>Carrello</h1>
+
     <ul>
         <%
             List<OrderItems> cart = (List<OrderItems>) session.getAttribute("cart");

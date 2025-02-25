@@ -51,18 +51,24 @@
         </form>
     </div>
     <jsp:include page="footer.jsp"></jsp:include>
-
 <script>
-var errorMessages = JSON.parse('${errorMessagesJson}');
-if (errorMessages.error) { 
-    if (errorMessages.error.includes("Login")) {
-        document.getElementById("Password").style.border = "3px solid red";
-        document.getElementById("loginError").textContent = "Login Fallito!!";
 
-        
+    var errorMessagesJson = '${errorMessagesJson}';
+
+    if (errorMessagesJson && errorMessagesJson.trim() !== "") {
+        try {
+            var errorMessages = JSON.parse(errorMessagesJson);
+
+            if (errorMessages.error) { 
+                if (errorMessages.error.includes("Login")) {
+                    document.getElementById("Password").style.border = "3px solid red";
+                    document.getElementById("loginError").textContent = "Login Fallito!!";
+                }
+            }
+        } catch (e) {
+            console.error("Errore nel parsing del JSON:", e, "Dati ricevuti:", errorMessagesJson);
+        }
     }
-}
-
 </script>
 
      <script type="text/javascript" src="script/loginValidate.js"></script>

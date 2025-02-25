@@ -7,6 +7,7 @@ model\QueryPool.class
 controller\everyone\CartServlet.class
 controller\everyone\ProductServlet.class
 model\util\Utils.class
+controller\registered\RegistrationServlet.class
 model\dao\OrderDao.class
 model\javabeans\Order.class
 model\javabeans\OrderItems.class
