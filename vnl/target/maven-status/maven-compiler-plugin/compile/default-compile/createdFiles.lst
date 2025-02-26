@@ -1,3 +1,4 @@
+controller\admin\ErrorPage.class
 model\Eccezioni\ValidException.class
 model\javabeans\Category.class
 controller\everyone\RegistrationServlet.class
@@ -5,6 +6,7 @@ model\dao\ProductDao.class
 model\QueryPool.class
 controller\everyone\CartServlet.class
 controller\everyone\ProductServlet.class
+controller\registered\EditServlet.class
 model\util\Utils.class
 model\dao\OrderDao.class
 model\javabeans\Order.class

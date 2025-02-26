@@ -2,10 +2,13 @@
 <%@ page import="model.javabeans.OrderItems" %>
 <%@ page import="model.javabeans.Product" %>
 <%@ page import="model.dao.ProductDao" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Carrello</title>
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/cart.css">
 </head>
 <body>
@@ -13,6 +16,7 @@
 
     <div class="container_cart">
     <h1>Carrello</h1>
+
     <ul>
         <%
             List<OrderItems> cart = (List<OrderItems>) session.getAttribute("cart");
@@ -36,7 +40,7 @@
                 out.println("<a href=\"CartOrder\">Procedi con l'acquito</a>");
 
             } else {
-                out.println("<p>Il carrello è vuoto</p>");
+                out.println("<p>Carrello Vuoto</p>");
             }
         %>
     </ul>

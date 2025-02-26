@@ -77,14 +77,17 @@ public class LoginServlet extends HttpServlet {
             Map<String, String> userData = new HashMap<>();
 
             String isLogged = "true";
+            userData.put("UserId", user.getUserId());
             userData.put("Username", user.getUsername());
             userData.put("Email", user.getEmail());
             userData.put("nTelefono", user.getNumeroDiTelefono());
             userData.put("IsLogged", isLogged);
+            userData.put("tipo", user.getTipo());
             userData.put("DataNascita", user.getDataDiNascita().toString());
 
             session.setAttribute("UserData", userData);
             response.sendRedirect("/vnl-1.0-SNAPSHOT/Homepage");
+            return; 
         } else {
             JsonObject errorMessages = new JsonObject();
             errorMessages.addProperty("error", "Login Fallito");

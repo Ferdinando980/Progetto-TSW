@@ -1,19 +1,20 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Procedi all'acquisto</title>
-    <link rel="stylesheet" href="./css/cartOrder.css">
+  <meta charset="UTF-8">
+  <title>Procedi all'acquisto</title>
+  <link rel="stylesheet" href="./css/cartOrder.css">
 </head>
 <body>
 
-<jsp:include page="header.jsp"></jsp:include>
+  <jsp:include page="header.jsp"></jsp:include>
 
 <div class="container">
 
   <div class="fieldset">
 
     <div class="biglabel">
-      <legend>Conferma Aquisto</legend>
+      <h1>Conferma Aquisto</h1>
     </div>
 
     <form action="CartOrder" method="post">
@@ -26,16 +27,16 @@
         <input type="text" id="cognome" name="cognome" required>
         <br><br>
 
-        <label for="Via">Via:</label>
+        <label>Via:</label>
         <input type="text" id="via" name="via" required>
 
-        <label for="civico">Civico:</label>
+        <label>Civico:</label>
         <input type="text" id="civico" name="civico" required>
 
-        <label for="cap">CAP:</label>
+        <label>CAP:</label>
         <input type="text" id="cap" name="cap" required pattern="[0-9]{5}" title="Inserisci un CAP valido">
 
-        <label for="paese">Paese:</label>
+        <label>Paese:</label>
         <input type="text" id="paese" name="paese" required>
         <br><br>
 
@@ -49,6 +50,7 @@
 
 </div>
 
-<jsp:include page="footer.jsp"></jsp:include>
+  <jsp:include page="footer.jsp"></jsp:include>
+
 </body>
 </html>

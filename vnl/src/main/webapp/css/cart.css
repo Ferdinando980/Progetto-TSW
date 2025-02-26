@@ -1,7 +1,3 @@
-*{
-    font-family: "Lobster", sans-serif;
-}
-
 .container_cart{
     display: flex;
     flex-direction: column;

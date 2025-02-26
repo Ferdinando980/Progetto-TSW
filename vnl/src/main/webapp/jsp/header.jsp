@@ -1,5 +1,11 @@
+<%@ page import="jakarta.servlet.http.HttpSession" %>
+<%@ page import="java.util.HashMap" %>
+<%
+  HashMap<String, String> userData = (HashMap<String, String>) session.getAttribute("UserData");
+    boolean isLoggedIn = (userData != null && "true".equals(userData.get("IsLogged")));
+%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +13,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Header</title>
 </head>
 
 <body>
@@ -28,19 +35,21 @@
                     <input class="textbox" type="text" placeholder="Cerca.." name="search">
                 </form>
             </div>
-            <div class="Cart">
+            <div class="HeaderCart">
                 <a href="Cart">
                     <img src="assets/images/cart.png"  alt="Carrello">
                 </a>
             </div>
-            <div class="profile">
-                <a href="Login">
-                    <img src="assets/images/profilo.png"  alt="Profilo">
-                </a>
-            </div>
+            <div class="profile" id= "profile-section"></div>
         </div>
 
     </header>
+
+    <script>
+    var isLoggedIn = <%= isLoggedIn %>;
+    </script>
+
+        <script type="text/javascript" src="script/ProfileChanger.js"></script>
 </body>
 
 

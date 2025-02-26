@@ -21,6 +21,32 @@
         <url-pattern>/Registrazione</url-pattern>
     </servlet-mapping>
 
+       <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>controller.everyone.LogoutServlet</servlet-class>
+    </servlet>
+
+   
+   
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+
+    
+       <servlet>
+        <servlet-name>EditProfile</servlet-name>
+        <servlet-class>controller.registered.EditServlet</servlet-class>
+    </servlet>
+
+   
+   
+    <servlet-mapping>
+        <servlet-name>EditProfile</servlet-name>
+        <url-pattern>/EditProfile</url-pattern>
+    </servlet-mapping>
+
+
     <servlet>
         <servlet-name>Login</servlet-name>
         <servlet-class>controller.everyone.LoginServlet</servlet-class>
@@ -95,4 +121,13 @@
         <url-pattern>/ConfermaOrdine</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ProfiloOrdini</servlet-name>
+        <servlet-class>controller.everyone.ProfiloOrdiniServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProfiloOrdini</servlet-name>
+        <url-pattern>/ProfiloOrdini</url-pattern>
+    </servlet-mapping>
 </web-app>
