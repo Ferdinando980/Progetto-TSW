@@ -12,8 +12,15 @@
 }
 
 .logo {
-
+  width: 60px;
+  height: auto;
   max-width: 150px;
+
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
 }
 
 .headerlinks {
