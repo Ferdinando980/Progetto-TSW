@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/editProfile.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Login</title>
+    <title>Modifica Profilo</title>
 </head>
 
  <main>
@@ -18,7 +18,8 @@
 
 
 
-            <form action="EditProfile" method="POST" class="registration-form" onsubmit="return validateForm()">
+            <form id="editProfileForm" action="EditProfile" method="POST" class="edit-form">
+
                 <fieldset>
                     <div class="biglabel">
                         <legend>Modifica Profilo</legend>
@@ -66,7 +67,9 @@
       
 
                         <input type="submit" value="Modifica Profilo" class="button">
-                        <span id="SubmitSuccess" class= "success-message"></span>
+                        <span id="SubmitSuccess" class="success-message">
+    ${successMessage != null ? successMessage : ''}
+</span>
                     </div>
 
                 </fieldset>
@@ -77,6 +80,7 @@
 
     <jsp:include page="footer.jsp"></jsp:include>
     <script>
+
 
     var errorMessages = JSON.parse('${errorMessagesJson}');
             if (errorMessages.length > 0) {
@@ -96,7 +100,7 @@
 
 
 
-    <script type="text/javascript" src="script/regValidate.js"></script>
+    <script type="text/javascript" src="script/editValidate.js"></script>
     <script type="text/javascript" src="script/regioni.js"></script>
 
 </body>

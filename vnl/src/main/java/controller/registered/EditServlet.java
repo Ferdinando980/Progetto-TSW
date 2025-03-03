@@ -4,7 +4,7 @@ import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
-import jakarta.validation.constraints.Null;
+
 
 import java.io.IOException;
 import java.sql.Date;
@@ -22,7 +22,7 @@ import model.util.Utils;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
-@WebServlet(name = "EditProfile", value = "/EditProfile")
+@WebServlet(name = "EditProfile", value = "/editProfile")
 public class EditServlet extends HttpServlet {
 
     @Override
@@ -35,7 +35,7 @@ public class EditServlet extends HttpServlet {
             return;
         }
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/EditProfile.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/modificaProfilo.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -108,7 +108,7 @@ public class EditServlet extends HttpServlet {
             request.setAttribute("errorMessagesJson", errorMessagesJson);
             request.setAttribute("userData", reqUser);
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/EditProfile.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/modificaProfilo.jsp");
             dispatcher.forward(request, response);
             return;
         }
@@ -126,12 +126,10 @@ public class EditServlet extends HttpServlet {
             session.setAttribute("UserData", userData);
             
 
-            JsonObject successMessage = new JsonObject();
-            successMessage.addProperty("success", "Profilo aggiornato con successo");
-            String successJson = new Gson().toJson(successMessage);
-            request.setAttribute("successJson", successJson);
+
+            request.setAttribute("successMessage", "Profilo aggiornato con successo");
             
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/EditProfile.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/modificaProfilo.jsp");
             dispatcher.forward(request, response);
         } else {
 
@@ -140,7 +138,7 @@ public class EditServlet extends HttpServlet {
             String errorJson = new Gson().toJson(errorMessage);
             request.setAttribute("errorMessagesJson", errorJson);
             
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/EditProfile.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/modificaProfilo.jsp");
             dispatcher.forward(request, response);
         }
     }

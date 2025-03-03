@@ -1,6 +1,7 @@
-function validateForm() {
-    var errors = [];
+function validateAndSubmitForm(event) {
 
+
+    var errors = [];
 
     document.querySelectorAll('.error-message').forEach(function (error) {
         error.textContent = '';
@@ -64,8 +65,9 @@ function validateForm() {
     }
 
 
-    return true;
+    return true
 }
+
 
 
 document.querySelectorAll("input").forEach(function (input) {

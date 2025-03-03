@@ -8,7 +8,7 @@ function validateForm() {
     });
 
     document.querySelectorAll('input').forEach(function (input) {
-        input.style.removeProperty("border"); 
+        input.style.removeProperty("border");
     });
 
     var password = document.getElementById("Password").value;
@@ -63,17 +63,18 @@ function validateForm() {
         return false;
     }
 
+
     return true;
 }
 
 
 document.querySelectorAll("input").forEach(function (input) {
     input.addEventListener("input", function () {
-        this.style.removeProperty("border"); 
+        this.style.removeProperty("border");
         var errorId = this.id + "Error";
         var errorElement = document.getElementById(errorId);
         if (errorElement) {
-            errorElement.textContent = ""; 
+            errorElement.textContent = "";
         }
     });
 });
