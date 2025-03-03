@@ -86,7 +86,8 @@ public class LoginServlet extends HttpServlet {
             userData.put("DataNascita", user.getDataDiNascita().toString());
 
             session.setAttribute("UserData", userData);
-            response.sendRedirect("/vnl-1.0-SNAPSHOT/Homepage");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/homepage.jsp");
+            dispatcher.forward(request, response);
             return; 
         } else {
             JsonObject errorMessages = new JsonObject();

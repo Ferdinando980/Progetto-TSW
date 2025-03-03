@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/editProfile.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Login</title>
 </head>
@@ -18,7 +18,7 @@
 
 
 
-            <form action="ModificaProfilo" method="POST" class="registration-form" onsubmit="return validateForm()">
+            <form action="EditProfile" method="POST" class="registration-form" onsubmit="return validateForm()">
                 <fieldset>
                     <div class="biglabel">
                         <legend>Modifica Profilo</legend>
@@ -27,17 +27,17 @@
                     <div class="form-group">
                                 <span id="usernameError" class="error-message"></span>
                         <label for="Username">Username:</label><br>
-                        <input type="text" id="Username" name="Username" value="${sessionScope.userData.username}" required
+                        <input type="text" id="Username" name="Username" value="${sessionScope.userData.Username}" required
                             placeholder="Inserisci Username..." class="input"><br>
                    
                         <span id="emailError" class="error-message"></span>
                         <label for="Email">Email:</label><br>
-                        <input type="email" id="Email" value="${sessionScope.userData.email}" name="Email" required
+                        <input type="email" id="Email" value="${sessionScope.userData.Email}" name="Email" required
                             placeholder="Inserisci Email..." class="input"><br>
                
                        <span id="birthDateError" class="error-message"></span>
                         <label for="DataDiNascita">Data di nascita:</label><br>
-                        <input type="date" id="DataDiNascita" value="${sessionScope.userData.dataDiNascita}" name="DataDiNascita"
+                        <input type="date" id="DataDiNascita" value="${sessionScope.userData.DataDiNascita}" name="DataDiNascita"
                             class="input"><br>
                 
 
@@ -90,7 +90,7 @@
                 document.getElementById("emailError").textContent = error;
             }
         });
-    }
+    }   
     </script>
 
 

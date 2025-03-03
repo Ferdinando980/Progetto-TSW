@@ -71,7 +71,7 @@
                             placeholder="Conferma Password..." class="input"><br>
       
 
-                        <input type="submit" value="Modifica Profilo" class="button">
+                        <input type="submit" value="Registrati" class="button">
                     </div>
 
                 </fieldset>

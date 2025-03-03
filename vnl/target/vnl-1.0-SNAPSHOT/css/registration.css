@@ -1,4 +1,3 @@
-
 body {
   background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
 }
@@ -33,10 +32,10 @@ label {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-    width: 100%;
+  width: 100%;
 }
 
-.error-message{
+.error-message {
   letter-spacing: 3px;
 
 }
@@ -60,7 +59,7 @@ label {
   flex-direction: column;
   justify-content: center;
   margin-top: 2%;
-  
+
 }
 
 .input {
@@ -83,8 +82,8 @@ label {
   align-items: center;
 }
 
-.input[type="tel"]{
-margin-left: 2%;
+.input[type="tel"] {
+  margin-left: 2%;
 }
 
 .nazione {
@@ -94,25 +93,27 @@ margin-left: 2%;
   gap: 0.5%;
 }
 
-select{
-     background-color: #332620;
-       transition: background-color 1s ease;
-         border-radius: 10px;
-         color: #FEF6E6;
-         font-size:100%;
-         padding:2%;
-           border: 2px solid #6D3A8C;
-      
-    
+select {
+  background-color: #332620;
+  transition: background-color 1s ease;
+  border-radius: 10px;
+  color: #FEF6E6;
+  font-size: 100%;
+  padding: 2%;
+  border: 2px solid #6D3A8C;
 
-   
-          align-content: center;
+
+
+
+  align-content: center;
 }
-input:hover{
-    background-color: #C3B7D8;
+
+input:hover {
+  background-color: #C3B7D8;
 }
-select:hover{
-    background-color: #C3B7D8;
+
+select:hover {
+  background-color: #C3B7D8;
 }
 
 .registration-container {
@@ -133,58 +134,57 @@ select:hover{
   margin-top: 5px;
 }
 
-  
+
 @media (max-width: 480px) {
   .registration-container {
-    padding: 5px;  
-    width: 100%;  
-    min-height: auto; 
-    margin: 0; 
+    padding: 5px;
+    width: 100%;
+    min-height: auto;
+    margin: 0;
   }
 
   legend {
-    font-size: 90%;  
-    margin: 0; 
+    font-size: 90%;
+    margin: 0;
   }
 
   .biglabel {
-    font-size: 90%;  
+    font-size: 90%;
   }
 
   .input,
   .button {
-    font-size: 90%;  
-    padding: 8px 16px;  
+    font-size: 90%;
+    padding: 8px 16px;
   }
 
   fieldset {
-    padding: 8px; 
+    padding: 8px;
   }
 
   .button {
-    padding: 8px 16px; 
+    padding: 8px 16px;
   }
 
   .phoneGroup {
-    flex-direction: column;  
-    gap: 2%;  
+    flex-direction: column;
+    gap: 2%;
   }
 
   .input[type="tel"] {
-    margin-left: 0; 
+    margin-left: 0;
   }
 
   select {
     padding: 1.5%;
-    font-size: 90%; 
+    font-size: 90%;
   }
 
   .labelAndInputPhone {
-    flex-direction: column;  
+    flex-direction: column;
   }
 
   .nazione {
-    gap: 0.25%; 
+    gap: 0.25%;
   }
 }
-
