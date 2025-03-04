@@ -16,7 +16,7 @@
         <div class="footer-links">
             <a href="/privacy-policy">Privacy Policy</a>
             <a href="/terms-of-service">Terms of Service</a>
-            <a href="/contact">Contact</a>
+            <a href="Contact">Contact</a>
             <a href="https://instagram.com" target="_blank">Instagram</a>
         </div>
 
