@@ -24,25 +24,23 @@
                 for (OrderItems orderItems : cart) {
                     ProductDao productDao = new ProductDao();
                     Product product=productDao.doRetrieveById(orderItems.getProdotto());
+                    %>
+                    <li>
+                        <%
+                            String imgPath = product.getImg();
+                            String imgSrc = (imgPath == null || imgPath.trim().isEmpty()) ? "assets/images/pictureplaceholder.jpg" : imgPath;
+                        %>
+                        <img src="<%= imgSrc %>">
+                        <a href="Prodotto?id=<%= product.getId() %>">
+                            <strong><%= product.getNomeVnl() %></strong>
+                        </a> - $<%= orderItems.getPrezzo() %>
+                        <%= orderItems.getQuantita() %>
+                    </li>
+                <%}
+                %><a href=CartOrder>Procedi con l'acquito</a>
 
-                    if (product.getTipo().equalsIgnoreCase("vinili") || product.getTipo().equalsIgnoreCase("cd")){
-                        out.println("<li>" + product.getNomeVnl() + "</li>");
-                        out.println("<li>" + orderItems.getQuantita() + "</li>");
-                        out.println("<li>" + orderItems.getPrezzo() + "</li>");
-                    }
-                    else if(product.getTipo().equalsIgnoreCase("giradischi")){
-                        out.println("<li>" + product.getMarca() + "</li>");
-                        out.println("<li>" + orderItems.getQuantita() + "</li>");
-                        out.println("<li>" + orderItems.getPrezzo() + "</li>");
-                    }
+            <% } else %>  <p>Carrello Vuoto</p>
 
-                }
-                out.println("<a href=\"CartOrder\">Procedi con l'acquito</a>");
-
-            } else {
-                out.println("<p>Carrello Vuoto</p>");
-            }
-        %>
     </ul>
     </div>
 

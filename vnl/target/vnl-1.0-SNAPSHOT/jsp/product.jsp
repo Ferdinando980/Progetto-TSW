@@ -47,8 +47,7 @@
                     <div class="product-details">
                         <h1> <%= product.getNomeVnl() %></h1>
 
-                        <p><strong>ID:</strong> <%= product.getId() %></p>
-                        <p><strong>Price:</strong> $<%= product.getPrezzo() %></p>
+                        <p><strong>Price:</strong> &euro;<%= product.getPrezzo() %></p>
                         <p><strong>Description:</strong> <%= product.getDescrizione() %></p>
                         <p><strong>Condition:</strong> <%= product.getCondizione() %></p>
 

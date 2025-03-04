@@ -38,12 +38,12 @@
                     String imgPath = product.getImg();
                     String imgSrc = (imgPath == null || imgPath.trim().isEmpty()) ? "assets/images/pictureplaceholder.jpg" : imgPath;
                 %>
-                <img src="<%= imgSrc %>">
                 <a href="Prodotto?id=<%= product.getId() %>">
-
-      
-                        <strong><%= product.getNomeVnl() %></strong>
-                    </a> - $<%= product.getPrezzo() %>
+                    <img src="<%= imgSrc %>">
+                </a>
+                <a href="Prodotto?id=<%= product.getId() %>">
+                    <strong><%= product.getNomeVnl() %></strong>
+                </a>- &euro;<%= product.getPrezzo() %>
                 </li>
     <%
             }
