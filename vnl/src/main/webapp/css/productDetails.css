@@ -20,6 +20,7 @@
 
 .product-image {
     max-width: 70%;
+    max-height: 70%;
     margin: 5%;
     margin-bottom: 5%;
 }

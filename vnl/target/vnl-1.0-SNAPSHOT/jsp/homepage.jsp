@@ -47,10 +47,19 @@
     </div>
 
     <div id="info-grid" class="info-grid">
-        <div class="infotextTitle">About Us</div>
+        <div class="infotextTitle">
+            <h1>About us</h1>
+        </div>
         <div class="infotext">
-            <p>Miao</p>
-            <p>MiaoMiao</p>
+            <p>
+                Siamo un gruppo di ragazzi uniti da una grande passione per la musica e il suono autentico del vinile.
+                Il nostro obiettivo &egrave; portare nelle vostre case l&apos;emozione della musica su supporti fisici, dai
+                <strong>vinili</strong> ai <strong>CD</strong>, fino ai <strong>giradischi</strong> perfetti per ogni ascoltatore.
+            </p>
+            <p>
+                Abbiamo creato questo e-commerce per condividere la nostra passione e offrire una selezione curata di dischi,
+                nuove uscite e grandi classici. Per noi, la musica non &egrave; solo un prodotto, ma un&apos;esperienza da vivere.
+            </p>
         </div>
     </div>
 

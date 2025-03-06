@@ -130,4 +130,15 @@
         <servlet-name>ProfiloOrdini</servlet-name>
         <url-pattern>/ProfiloOrdini</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Contact</servlet-name>
+        <servlet-class>controller.everyone.ContactServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Contact</servlet-name>
+        <url-pattern>/Contact</url-pattern>
+    </servlet-mapping>
+
 </web-app>

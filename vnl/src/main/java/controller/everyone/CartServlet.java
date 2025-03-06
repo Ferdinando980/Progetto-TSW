@@ -55,13 +55,22 @@ public class CartServlet extends HttpServlet {
             }
 
         } else {
-            for (int i=0; i<=carrello.size(); i++) {
+            boolean trovato=false;
+            for (int i=0; i<carrello.size(); i++) {
 
                 if (carrello.get(i).getProdotto() == productID) {
                     int quantitaTot = carrello.get(i).getQuantita()+quantita;
                     carrello.get(i).setQuantita(quantitaTot);
                     carrello.get(i).setPrezzo(p.getPrezzo()* quantitaTot);
+                    trovato=true;
                 }
+            }
+            if (!trovato) {
+                OrderItems orderItems = new OrderItems();
+                orderItems.setProdotto(productID);
+                orderItems.setQuantita(quantita);
+                orderItems.setPrezzo(p.getPrezzo()*orderItems.getQuantita());
+                carrello.add(orderItems);
             }
         }
 
