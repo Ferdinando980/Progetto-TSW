@@ -15,6 +15,7 @@ body {
     width: 100%;
     align-self: center;
     padding: 5%;
+    font-size: 2vw;
     border-radius: 10px;
     border-style: solid;
     border-color: #FEF6E6;
@@ -41,13 +42,13 @@ body {
     color: #FEF6E6;
     background-color: #332620;
     text-align: center;
+    font-size: 1vw;
     border-radius: 10px;
     width: 30%;
-    height: auto;
     border: none;
     text-decoration-line: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 90%;
+    max-width: 30%;
 }
 
 @media (max-width: 768px) {
@@ -57,6 +58,7 @@ body {
 
     .contact-info a{
         padding: 1%;
+        max-width: 100%;
         width: 100%;
     }
 
@@ -69,6 +71,7 @@ body {
 
     .contact-info a{
         padding: 1%;
+        max-width: 100%;
         width: 100%;
     }
 }
