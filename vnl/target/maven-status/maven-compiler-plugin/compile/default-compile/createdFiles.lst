@@ -19,6 +19,7 @@ model\javabeans\Users.class
 controller\everyone\ProductsListServlet.class
 model\javabeans\Cart.class
 model\javabeans\Product.class
+controller\everyone\ContactServlet.class
 model\DBManager.class
 model\dao\AbstractDAO.class
 controller\everyone\LoginServlet.class

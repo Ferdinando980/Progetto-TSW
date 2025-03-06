@@ -21,7 +21,7 @@ function currentSlide(n) {
 function showSlide(n){
 
 let i;
-let x= document.getElementsByClassName("slide");
+let x= document.getElementsByClassName("slide-fade");
 let nav= document.getElementsByClassName("nav-item");
 
 if(n>x.length){slideIndex=1}
