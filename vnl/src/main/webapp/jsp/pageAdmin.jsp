@@ -9,6 +9,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/adminPage.css">
   <title>Admin</title>
 </head>
 
@@ -18,9 +20,8 @@
 
 <div class="container">
 
-  <h1>Admin</h1>
-
   <div class="gestione">
+    <h1>Admin</h1>
     <a href="AggiuntaArticolo">Add Product</a>
     <a href="ModificaArticolo">Update Product</a>
     <a href="GestisciOrdini">Manage Orders</a>
