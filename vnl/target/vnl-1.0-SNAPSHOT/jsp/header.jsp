@@ -23,18 +23,20 @@
         <div class="logo">
             <img src="assets/images/Logo.png" alt="Logo">
         </div>
-        <div class="headerlinks">
-            <a class="active" href="Homepage">Home</a>
-            <a href="Homepage#info-grid" >About</a>
-            <a href="Contact">Contact Us</a>
-        </div>
 
-        <div class="RightSection">
-            <div class="search-container">
+       <div class="search-container">
                 <form action="">
                     <input class="textbox" type="text" placeholder="Cerca.." name="search">
                 </form>
-            </div>
+        </div>
+
+        <div class="RightSection">
+                <div class="headerlinks">
+                    <a class="active" href="Homepage">Home</a>
+                    <a href="Homepage#info-grid" >About</a>
+                    <a href="Contact">Contact Us</a>
+                </div>
+     
             <div class="HeaderCart">
                 <a href="Cart">
                     <img src="assets/images/cart.png"  alt="Carrello">

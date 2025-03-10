@@ -39,6 +39,12 @@ body {
     letter-spacing: 3px;
   
   }
+
+  .submit-message{
+    letter-spacing: 3px;
+    color: green;
+    
+  }
   
   .phoneGroup {
     display: flex;
@@ -136,7 +142,7 @@ body {
   
   
   @media (max-width: 480px) {
-    .registration-container {
+    .Modifica-container {
       padding: 5px;
       width: 100%;
       min-height: auto;
@@ -187,4 +193,6 @@ body {
     .nazione {
       gap: 0.25%;
     }
+
+    
   }
