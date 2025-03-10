@@ -24,16 +24,10 @@ import java.util.Map;
 public class CartOrderServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        if (request.getSession().getAttribute("UserData") != null) {
-            response.sendRedirect("/vnl-1.0-SNAPSHOT/Homepage");
-            return;
-        }
-
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/cartOrder.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/order.jsp");
         dispatcher.forward(request, response);
     }
 

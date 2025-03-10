@@ -27,17 +27,17 @@
 
         <div class="slide-fade">
             <a href="ListaProdotti">
-                <img src="assets/images/banner1.jpg" alt="Banner 1" style="width:100%">
+                <img src="assets/images/banner1.jpg" alt="Banner 1">
             </a>
         </div>
         <div class="slide-fade">
             <a href="ListaProdotti">
-                <img src="assets/images/banner2.jpg" alt="Banner 2" style="width:100%">
+                <img src="assets/images/banner2.jpg" alt="Banner 2">
             </a>
         </div>
         <div class="slide-fade">
             <a href="ListaProdotti">
-                <img src="assets/images/banner3.jpg" alt="Banner 3" style="width:100%">
+                <img src="assets/images/banner3.jpg" alt="Banner 3">
             </a>
         </div>
 

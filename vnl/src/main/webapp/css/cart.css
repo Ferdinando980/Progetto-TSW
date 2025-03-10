@@ -1,46 +1,117 @@
+body{
+    background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
+}
+
 .container_cart{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    align-self: center;
-    margin: auto;
-    padding: 20px 20px;
-    border-radius: 10px;
-    letter-spacing: 2px;
+    width:100%;
     min-height: 100vh;
+    padding-right: 2%;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: #FEF6E6;
+    background: #6D3A8C;
+    border-radius: 10px;
+    padding:1%;
+}
+
+.image{
+    width: 30%;
+}
+
+.image img{
+    width:100%;
+    object-fit: cover;
 }
 
 .container_cart h1{
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.5vw;
+    padding-top: 15px;
+    color: #FEF6E6;
 }
 
-.container_cart a{
+.description{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+    font-size: 1.5vw;
+    margin-left: 5%;
+    color: #FEF6E5;
+}
+
+.description a{
     text-align: center;
-    background-color: #6D3A8C;
-    color: white;
+    background-color: #FEF6E6;
+    border-radius:20px;
+    color: #6D3A8C;
+    width: 30%;
 }
 
-.container_cart a:hover{
+.description a:hover{
+    background-color: deeppink;
+}
+
+.acquisti{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    padding:1%;
+}
+
+.acquisti p{
+    font-size: 1.5vw;
+    color: #FEF6E6;
+}
+
+.procedere{
+    display: flex;
+    width: 50%;
+    border-radius: 20px;
+    padding: 1%;
+
+}
+
+.procedere a{
+    width: 40%;
+    text-align: center;
+    text-decoration-line: none;
+    background-color: #6D3A8C;
+    color: #FEF6E6;
+    border-radius: 20px;
+    font-size: 1.4vw;
+    letter-spacing: 2px;
+    margin-left: auto;
+}
+
+.procedere a:hover{
     background-color: deeppink;
 }
 
 .continua{
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-self: center;
-    margin: auto;
-    padding: 20px 20px;
+    width: 50%;
     border-radius: 10px;
     letter-spacing: 2px;
+    padding: 1%;
 }
 
 .continua a{
-     text-align: center;
-     background-color: #6D3A8C;
-     color: white;
- }
+    width: 40%;
+    text-align: center;
+    text-decoration-line: none;
+    background-color: #6D3A8C;
+    color: #FEF6E6;
+    border-radius: 20px;
+    font-size: 1.4vw;
+    letter-spacing: 2px;
+}
 
 .continua a:hover{
     background-color: deeppink;
@@ -51,8 +122,7 @@
         padding: 10px;
         width: 90%;
     }
-    .continua{
-        padding: 10px;
-        width: 90%;
+    .acquisti{
+        width: 100%;
     }
 }
