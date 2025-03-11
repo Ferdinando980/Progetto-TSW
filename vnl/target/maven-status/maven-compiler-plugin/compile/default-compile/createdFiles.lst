@@ -11,6 +11,7 @@ model\dao\OrderDao.class
 model\javabeans\Order.class
 model\javabeans\OrderItems.class
 controller\everyone\HomepageServlet.class
+controller\admin\PageAdminServlet.class
 model\dao\UsersDao.class
 controller\everyone\LogoutServlet.class
 controller\everyone\ConfermaOrdineServlet.class

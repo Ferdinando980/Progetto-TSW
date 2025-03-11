@@ -15,9 +15,10 @@
     <jsp:include page="header.jsp"></jsp:include>
 
     <div class="container_cart">
-    <h1>Carrello</h1>
 
-    <ul>
+        <h1>Carrello</h1>
+
+        <ul>
         <%
             List<OrderItems> cart = (List<OrderItems>) session.getAttribute("cart");
             if (cart != null && !cart.isEmpty()) {
@@ -30,23 +31,42 @@
                             String imgPath = product.getImg();
                             String imgSrc = (imgPath == null || imgPath.trim().isEmpty()) ? "assets/images/pictureplaceholder.jpg" : imgPath;
                         %>
-                        <img src="<%= imgSrc %>">
-                        <a href="Prodotto?id=<%= product.getId() %>">
-                            <strong><%= product.getNomeVnl() %></strong>
-                        </a> - $<%= orderItems.getPrezzo() %>
-                        <%= orderItems.getQuantita() %>
+                        <div class="image">
+                            <img src="<%= imgSrc %>">
+                        </div>
+                        <div class="description">
+                            <a href="Prodotto?id=<%= product.getId() %>">
+                                <strong><%= product.getNomeVnl() %></strong>
+
+                            </a>
+                            <p>Prezzo: </p>$<%= orderItems.getPrezzo() %>
+                            <p>Quantit&agrave;: </p>
+                            <%= orderItems.getQuantita() %>
+                        </div>
                     </li>
                 <%}
-                %><a href=CartOrder>Procedi con l'acquito</a>
+            }%>
+        </ul>
+
+        <div class="acquisti">
+
+            <% if (cart != null && !cart.isEmpty()) { %>
+
+                <div class="procedere">
+                    <a href=CartOrder>Procedi con l'acquito</a>
+                </div>
 
             <% } else %>  <p>Carrello Vuoto</p>
 
-    </ul>
+            <div class="continua">
+                <a href="Homepage">Continua lo shopping</a>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="continua">
-        <a href="Homepage">Continua lo shopping</a>
-    </div>
+
 
     <jsp:include page="footer.jsp"></jsp:include>
 

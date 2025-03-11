@@ -84,7 +84,8 @@
   border-width: 0px 0px 1px 1px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
-  width: 120%;
+
+  width: 50%;
   height: 25px;
 
 
@@ -92,13 +93,13 @@
 
 .profile {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   align-items: center;
   justify-items: center;
 
 }
 .profile img{
-    width: 85%;
+    width: 80%;
 }
 .HeaderCart img{
   width: 80%;
@@ -178,6 +179,7 @@
     max-width: 100%;
     align-self: center;
   }
+}
 
   @media (max-width: 480px) {
     .header {
@@ -236,6 +238,8 @@
       gap: 5px;
       text-align: center;
     }
+    .logout-button{
+        width: 100%;
+    }
   }
 
-}
