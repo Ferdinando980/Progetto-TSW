@@ -40,12 +40,16 @@ body {
   
   }
 
-  .submit-message{
-    letter-spacing: 3px;
-    color: green;
-    
+  
+  .success-message{
+    color:aliceblue;
+    padding: 0 10px;
+    margin:auto;
+    margin-top: 2%;
+    font-weight: bold;
   }
   
+
   .phoneGroup {
     display: flex;
     align-items: center;

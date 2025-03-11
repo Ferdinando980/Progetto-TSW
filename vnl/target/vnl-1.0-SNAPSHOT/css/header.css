@@ -18,6 +18,11 @@
 
 }
 
+.profile-cart-section{
+  display: flex;
+  flex-direction: row;
+}
+
 .logo img {
   width: 100%;
   height: auto;
@@ -190,6 +195,10 @@
       gap: 5px;
 
     }
+      .profile-cart-section{
+    display: flex;
+    flex-direction: column;
+  }
 
     .logo {
       max-width: 80%;
@@ -232,6 +241,8 @@
       max-width: 80px;
 
     }
+
+
 
     .RightSection {
       flex-direction: column;

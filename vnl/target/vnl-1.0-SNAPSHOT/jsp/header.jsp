@@ -1,8 +1,11 @@
 <%@ page import="jakarta.servlet.http.HttpSession" %>
 <%@ page import="java.util.HashMap" %>
 <%
-  HashMap<String, String> userData = (HashMap<String, String>) session.getAttribute("UserData");
-    boolean isLoggedIn = (userData != null && "true".equals(userData.get("IsLogged")));
+  HashMap<String, String> userData = null;
+  if (session != null) {
+      userData = (HashMap<String, String>) session.getAttribute("UserData");
+  }
+  boolean isLoggedIn = (userData != null && "true".equals(userData.get("IsLogged")));
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,41 +21,38 @@
 
 <body>
     <header class="header">
-
-
         <div class="logo">
             <img src="assets/images/Logo.png" alt="Logo">
         </div>
 
-       <div class="search-container">
-                <form action="">
-                    <input class="textbox" type="text" placeholder="Cerca.." name="search">
-                </form>
+        <div class="search-container">
+            <form action="">
+                <input class="textbox" type="text" placeholder="Cerca.." name="search">
+            </form>
         </div>
 
         <div class="RightSection">
-                <div class="headerlinks">
-                    <a class="active" href="Homepage">Home</a>
-                    <a href="Homepage#info-grid" >About</a>
-                    <a href="Contact">Contact Us</a>
-                </div>
-     
-            <div class="HeaderCart">
-                <a href="Cart">
-                    <img src="assets/images/cart.png"  alt="Carrello">
-                </a>
+            <div class="headerlinks">
+                <a class="active" href="Homepage">Home</a>
+                <a href="Homepage#info-grid">About</a>
+                <a href="Contact">Contact Us</a>
             </div>
-            <div class="profile" id= "profile-section"></div>
+            <div class="profile-cart-section">
+                <div class="HeaderCart">
+                    <a href="Cart">
+                        <img src="assets/images/cart.png" alt="Carrello">
+                    </a>
+                </div>
+                <div class="profile" id="profile-section"></div>
+            </div>
         </div>
-
     </header>
 
     <script>
-    var isLoggedIn = <%= isLoggedIn %>;
+        var isLoggedIn = <%= isLoggedIn ? "true" : "false" %>;
     </script>
 
-        <script type="text/javascript" src="script/ProfileChanger.js"></script>
+    <script type="text/javascript" src="script/ProfileChanger.js"></script>
 </body>
-
 
 </html>
