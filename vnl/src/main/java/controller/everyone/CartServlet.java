@@ -33,7 +33,7 @@ public class CartServlet extends HttpServlet {
         List<OrderItems> carrello = (List<OrderItems>) session.getAttribute("cart");
 
         String action = request.getParameter("action");
-
+       
         int productID = Integer.parseInt(request.getParameter("productID"));
         int quantita = Integer.parseInt(request.getParameter("quantity"));
 
