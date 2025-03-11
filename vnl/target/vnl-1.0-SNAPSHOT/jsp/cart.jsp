@@ -41,8 +41,22 @@
                             </a>
                             <p>Prezzo: </p>$<%= orderItems.getPrezzo() %>
                             <p>Quantit&agrave;: </p>
-                            <%= orderItems.getQuantita() %>
+                            <form action="Cart" method="POST">
+                                <input type="hidden" name="action" value="update">
+                                <input type="hidden" name="productID" value="<%= product.getId() %>">
+                                <input type="number" name="quantity" value="<%= orderItems.getQuantita() %>">
+                                <input type="submit" value="Aggiorna">
+                            </form>
                         </div>
+
+                        <div class="remove">
+                            <form action="Cart" method="POST">
+                                <input type="hidden" name="action" value="remove">
+                                <input type="hidden" name="productID" value="<%= product.getId() %>">
+                                <input type="image" src="./assets/images/cestino.png" alt="Rimuovi">
+                            </form>
+                        </div>
+
                     </li>
                 <%}
             }%>
