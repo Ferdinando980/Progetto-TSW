@@ -56,7 +56,7 @@
                                 <input type="image" src="./assets/images/cestino.png" alt="Rimuovi">
                             </form>
                         </div>
-                        
+
                     </li>
                 <%}
             }%>

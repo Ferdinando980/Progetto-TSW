@@ -34,26 +34,31 @@ public class CartServlet extends HttpServlet {
 
         String action = request.getParameter("action");
 
-
         int productID = Integer.parseInt(request.getParameter("productID"));
         int quantita = Integer.parseInt(request.getParameter("quantity"));
+
         ProductDao productDao = new ProductDao();
         Product p = productDao.doRetrieveById(productID);
 
         if ("update".equals(action)) {
-            int newQuantity = Integer.parseInt(request.getParameter("quantity"));
 
             if (carrello != null) {
-                for (OrderItems item : carrello) {
-                    if (item.getProdotto() == productID) {
-                        item.setQuantita(newQuantity);
+                for (int i=0; i<carrello.size(); i++) {
+                    if (carrello.get(i).getProdotto() == productID) {
+                        carrello.get(i).setQuantita(quantita);
+                        carrello.get(i).setPrezzo(p.getPrezzo()*carrello.get(i).getQuantita());
                         break;
                     }
                 }
             }
         } else if ("remove".equals(action)) {
             if (carrello != null) {
-
+                for (int i=0; i<carrello.size(); i++) {
+                    if (carrello.get(i).getProdotto() == productID) {
+                        carrello.remove(i);
+                        break;
+                    }
+                }
             }
         }else if (carrello == null) {
             carrello = new ArrayList<>();
