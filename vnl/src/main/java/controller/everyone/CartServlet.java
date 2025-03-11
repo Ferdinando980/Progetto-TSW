@@ -32,12 +32,30 @@ public class CartServlet extends HttpServlet {
         HttpSession session = request.getSession();
         List<OrderItems> carrello = (List<OrderItems>) session.getAttribute("cart");
 
+        String action = request.getParameter("action");
+
+
         int productID = Integer.parseInt(request.getParameter("productID"));
         int quantita = Integer.parseInt(request.getParameter("quantity"));
         ProductDao productDao = new ProductDao();
         Product p = productDao.doRetrieveById(productID);
 
-        if (carrello == null) {
+        if ("update".equals(action)) {
+            int newQuantity = Integer.parseInt(request.getParameter("quantity"));
+
+            if (carrello != null) {
+                for (OrderItems item : carrello) {
+                    if (item.getProdotto() == productID) {
+                        item.setQuantita(newQuantity);
+                        break;
+                    }
+                }
+            }
+        } else if ("remove".equals(action)) {
+            if (carrello != null) {
+
+            }
+        }else if (carrello == null) {
             carrello = new ArrayList<>();
             session.setAttribute("cart", carrello);
 
@@ -74,6 +92,7 @@ public class CartServlet extends HttpServlet {
             }
         }
 
+        session.setAttribute("cart", carrello);
         response.sendRedirect("Cart");
     }
 }

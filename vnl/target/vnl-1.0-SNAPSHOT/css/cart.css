@@ -58,6 +58,23 @@ li{
     background-color: deeppink;
 }
 
+.description input{
+    width: 7%;
+    text-align: center;
+}
+
+.remove {
+    display: flex;
+    margin-left: auto;
+    width: 5%;
+    border-radius: 50px;
+}
+
+.remove image{
+    width: 100%;
+    object-fit: cover;
+}
+
 .acquisti{
     display: flex;
     width:100%;
