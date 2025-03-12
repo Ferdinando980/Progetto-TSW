@@ -24,7 +24,7 @@
             if (cart != null && !cart.isEmpty()) {
                 for (OrderItems orderItems : cart) {
                     ProductDao productDao = new ProductDao();
-                    Product product=productDao.doRetrieveById(orderItems.getProdotto());
+                    Product product=productDao.doRetrieveById(Integer.parseInt(orderItems.getProdotto()));
                     %>
                     <li>
                         <%

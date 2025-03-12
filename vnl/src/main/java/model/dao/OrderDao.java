@@ -12,7 +12,7 @@ public class OrderDao extends AbstractDAO {
         try (Connection connection = getConnection();
              PreparedStatement ps = prepareStatement(connection, "INSERT_ORDER")){
 
-            ps.setString(1, order.getUsers());
+            ps.setInt(1, Integer.parseInt(order.getUsers()));
             ps.setString(2, order.getStato());
             ps.setDate(3, (Date) order.getDataOrdine());
             ps.setFloat(4, order.getTotAmount());
@@ -36,7 +36,7 @@ public class OrderDao extends AbstractDAO {
         try (Connection connection = getConnection();
              PreparedStatement ps = prepareStatement(connection, "UPDATE_ORDER")){
 
-            ps.setString(1, order.getUsers());
+            ps.setInt(1, Integer.parseInt(order.getUsers()));
             ps.setString(2, order.getStato());
             ps.setDate(3, (Date) order.getDataOrdine());
             ps.setFloat(4, order.getTotAmount());
@@ -80,6 +80,7 @@ public class OrderDao extends AbstractDAO {
             ResultSet result = ps.executeQuery();
             if(result.next()){
                 order = new Order();
+
                 order.setId(result.getString("id"));
                 order.setUsers(result.getString("users"));
                 order.setStato(result.getString("stato"));
@@ -132,7 +133,7 @@ public class OrderDao extends AbstractDAO {
         ArrayList<Order> ordersList = new ArrayList<>();
 
         try (Connection connection = getConnection();
-             PreparedStatement ps = prepareStatement(connection, "GET_ORDER_BY_USERS")){
+             PreparedStatement ps = prepareStatement(connection, "GET_ORDERS_BY_USER")){
 
             ps.setString(1, users);
             ResultSet result = ps.executeQuery();

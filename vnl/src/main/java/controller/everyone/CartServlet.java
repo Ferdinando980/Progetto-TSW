@@ -34,11 +34,11 @@ public class CartServlet extends HttpServlet {
 
         String action = request.getParameter("action");
        
-        int productID = Integer.parseInt(request.getParameter("productID"));
+        String productID = request.getParameter("productID");
 
 
         ProductDao productDao = new ProductDao();
-        Product p = productDao.doRetrieveById(productID);
+        Product p = productDao.doRetrieveById(Integer.parseInt(productID));
 
         if ("update".equals(action)) {
 
@@ -46,7 +46,7 @@ public class CartServlet extends HttpServlet {
 
             if (carrello != null) {
                 for (int i=0; i<carrello.size(); i++) {
-                    if (carrello.get(i).getProdotto() == productID) {
+                    if (carrello.get(i).getProdotto().equals(productID)) {
                         carrello.get(i).setQuantita(newQuantity);
                         carrello.get(i).setPrezzo(p.getPrezzo()*carrello.get(i).getQuantita());
                         break;
@@ -56,7 +56,7 @@ public class CartServlet extends HttpServlet {
         } else if ("remove".equals(action)) {
             if (carrello != null) {
                 for (int i=0; i<carrello.size(); i++) {
-                    if (carrello.get(i).getProdotto() == productID) {
+                    if (carrello.get(i).getProdotto().equals(productID)) {
                         carrello.remove(i);
                         break;
                     }
@@ -88,7 +88,7 @@ public class CartServlet extends HttpServlet {
 
             for (int i=0; i<carrello.size(); i++) {
 
-                if (carrello.get(i).getProdotto() == productID) {
+                if (carrello.get(i).getProdotto().equals(productID)) {
                     int quantitaTot = carrello.get(i).getQuantita()+quantita;
                     carrello.get(i).setQuantita(quantitaTot);
                     carrello.get(i).setPrezzo(p.getPrezzo()* quantitaTot);

@@ -141,5 +141,14 @@
         <url-pattern>/PageAdmin</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ViewOrder</servlet-name>
+        <servlet-class>controller.registered.ViewOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewOrder</servlet-name>
+        <url-pattern>/ViewOrder</url-pattern>
+    </servlet-mapping>
 
 </web-app>

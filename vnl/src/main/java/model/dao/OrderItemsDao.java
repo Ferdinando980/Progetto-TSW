@@ -14,9 +14,9 @@ public class OrderItemsDao extends AbstractDAO {
         try (Connection connection = getConnection();
                 PreparedStatement ps = prepareStatement(connection, "INSERT_ORDERITEMS")) {
 
-            ps.setString(1, orderItems.getOrdine_id());
-            ps.setString(2, orderItems.getOrdine_users());
-            ps.setInt(3, orderItems.getProdotto());
+            ps.setInt(1,Integer.parseInt(orderItems.getOrdine_id()));
+            ps.setInt(2, Integer.parseInt(orderItems.getOrdine_users()));
+            ps.setInt(3, Integer.parseInt(orderItems.getProdotto()));
             ps.setInt(4, orderItems.getQuantita());
             ps.setFloat(5, orderItems.getPrezzo());
 
@@ -52,9 +52,9 @@ public class OrderItemsDao extends AbstractDAO {
         try (Connection connection = getConnection();
                 PreparedStatement ps = prepareStatement(connection, "DELETE_ORDERITEMS")) {
 
-            ps.setString(1, orderItems.getOrdine_id());
-            ps.setString(2, orderItems.getOrdine_users());
-            ps.setInt(3, orderItems.getProdotto());
+            ps.setInt(1, Integer.parseInt(orderItems.getOrdine_id()));
+            ps.setInt(2, Integer.parseInt(orderItems.getOrdine_users()));
+            ps.setInt(3, Integer.parseInt(orderItems.getProdotto()));
 
             int rowsAffected = ps.executeUpdate();
             return rowsAffected > 0;
@@ -70,9 +70,9 @@ public class OrderItemsDao extends AbstractDAO {
                 PreparedStatement ps = prepareStatement(connection, "GET_ORDERITEMS_BY_ORDER")) {
             {
 
-                ps.setString(1, ordine_id);
-                ps.setString(2, ordine_users);
-                ps.setString(3, prodotto);
+                ps.setInt(1, Integer.parseInt(ordine_id));
+                ps.setInt(2, Integer.parseInt(ordine_users));
+                ps.setInt(3, Integer.parseInt(prodotto));
 
                 ResultSet rs = ps.executeQuery();
 
@@ -80,9 +80,9 @@ public class OrderItemsDao extends AbstractDAO {
 
                     OrderItems orderItems = new OrderItems();
 
-                    orderItems.setOrdine_id(rs.getString("ordine_id"));
-                    orderItems.setOrdine_users(rs.getString("ordine_users"));
-                    orderItems.setProdotto(rs.getInt("prodotto"));
+                    orderItems.setOrdine_id(""+rs.getInt("ordine_id"));
+                    orderItems.setOrdine_users(""+rs.getInt("ordine_users"));
+                    orderItems.setProdotto(""+rs.getInt("prodotto"));
                     orderItems.setQuantita(rs.getInt("quantita"));
                     orderItems.setPrezzo(rs.getFloat("prezzo"));
 
