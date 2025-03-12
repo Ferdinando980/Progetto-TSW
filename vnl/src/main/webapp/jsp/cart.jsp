@@ -39,12 +39,12 @@
                                 <strong><%= product.getNomeVnl() %></strong>
 
                             </a>
-                            <p>Prezzo: </p>$<%= orderItems.getPrezzo() %>
+                            <p>Prezzo: </p>&euro;<%= orderItems.getPrezzo() %>
                             <p>Quantit&agrave;: </p>
                             <form action="Cart" method="POST">
                                 <input type="hidden" name="action" value="update">
                                 <input type="hidden" name="productID" value="<%= product.getId() %>">
-                                <input type="number" name="quantity" value="<%= orderItems.getQuantita() %>">
+                                <input type="number" name="quantity" value="<%= orderItems.getQuantita() %>" min="1" max="100">
                                 <input type="submit" value="Aggiorna">
                             </form>
                         </div>
