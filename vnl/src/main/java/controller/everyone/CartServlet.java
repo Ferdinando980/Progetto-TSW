@@ -35,17 +35,19 @@ public class CartServlet extends HttpServlet {
         String action = request.getParameter("action");
        
         int productID = Integer.parseInt(request.getParameter("productID"));
-        int quantita = Integer.parseInt(request.getParameter("quantity"));
+
 
         ProductDao productDao = new ProductDao();
         Product p = productDao.doRetrieveById(productID);
 
         if ("update".equals(action)) {
 
+            int newQuantity = Integer.parseInt(request.getParameter("quantity"));
+
             if (carrello != null) {
                 for (int i=0; i<carrello.size(); i++) {
                     if (carrello.get(i).getProdotto() == productID) {
-                        carrello.get(i).setQuantita(quantita);
+                        carrello.get(i).setQuantita(newQuantity);
                         carrello.get(i).setPrezzo(p.getPrezzo()*carrello.get(i).getQuantita());
                         break;
                     }
@@ -61,8 +63,10 @@ public class CartServlet extends HttpServlet {
                 }
             }
         }else if (carrello == null) {
+
+            int quantita = Integer.parseInt(request.getParameter("quantity"));
+
             carrello = new ArrayList<>();
-            session.setAttribute("cart", carrello);
 
 
 
@@ -78,7 +82,10 @@ public class CartServlet extends HttpServlet {
             }
 
         } else {
+
+            int quantita = Integer.parseInt(request.getParameter("quantity"));
             boolean trovato=false;
+
             for (int i=0; i<carrello.size(); i++) {
 
                 if (carrello.get(i).getProdotto() == productID) {
