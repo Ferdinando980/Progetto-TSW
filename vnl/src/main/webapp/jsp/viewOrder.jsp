@@ -15,7 +15,7 @@
 
   <div class="container_cart">
 
-    <h1>Carrello</h1>
+    <h1>Ordini</h1>
 
     <ul>
       <%
@@ -32,11 +32,11 @@
 
           </a>
           <p>Prezzo: </p>&euro;<%= ordini.get(i).getTotAmount() %>
-
+          <%}%>
         </div>
 
       </li>
-      <%}%>
+
     </ul>
 
     <div class="noOrder">

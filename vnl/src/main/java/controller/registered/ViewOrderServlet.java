@@ -16,6 +16,7 @@ import java.util.Map;
 
 @WebServlet(name="ViewOrder", value="/ViewOrder")
 public class ViewOrderServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
 
     protected void doGet (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -38,7 +39,9 @@ public class ViewOrderServlet extends HttpServlet {
 
             ArrayList<Order> ordini = orderDao.doRetrievebyUsers(userData.get("UserId"));
             session.setAttribute("orders", ordini);
-            response.sendRedirect("ViewOrder");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/viewOrder.jsp");
+            dispatcher.forward(request, response);
+
         }
 
 

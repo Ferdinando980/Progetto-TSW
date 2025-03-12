@@ -49,14 +49,7 @@ li{
     background-color: deeppink;
 }
 
-.noOrder{
-    display: flex;
-    width:100%;
-    flex-direction: row;
-    padding:1%;
-}
-
-.noOrder p{
+.p{
     font-size: 1.5vw;
     color: #FEF6E6;
 }
