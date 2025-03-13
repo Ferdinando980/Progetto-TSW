@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import model.javabeans.OrderItems;
 
@@ -54,7 +55,6 @@ public class OrderItemsDao extends AbstractDAO {
 
             ps.setInt(1, Integer.parseInt(orderItems.getOrdine_id()));
             ps.setInt(2, Integer.parseInt(orderItems.getOrdine_users()));
-            ps.setInt(3, Integer.parseInt(orderItems.getProdotto()));
 
             int rowsAffected = ps.executeUpdate();
             return rowsAffected > 0;
@@ -64,19 +64,19 @@ public class OrderItemsDao extends AbstractDAO {
         }
     }
 
-    public OrderItems doRetrieveByKey(String ordine_id, String ordine_users, String prodotto) {
+    public ArrayList<OrderItems> doRetrieveByKey(String ordine_id, String ordine_users) {
 
+        ArrayList<OrderItems> orderItemsList = new ArrayList<>();
         try (Connection connection = getConnection();
                 PreparedStatement ps = prepareStatement(connection, "GET_ORDERITEMS_BY_ORDER")) {
             {
 
                 ps.setInt(1, Integer.parseInt(ordine_id));
                 ps.setInt(2, Integer.parseInt(ordine_users));
-                ps.setInt(3, Integer.parseInt(prodotto));
 
                 ResultSet rs = ps.executeQuery();
 
-                if (rs.next()) {
+                while (rs.next()) {
 
                     OrderItems orderItems = new OrderItems();
 
@@ -86,15 +86,17 @@ public class OrderItemsDao extends AbstractDAO {
                     orderItems.setQuantita(rs.getInt("quantita"));
                     orderItems.setPrezzo(rs.getFloat("prezzo"));
 
-                    return orderItems;
+                    orderItemsList.add(orderItems);
+
                 }
+
             }
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
 
-        return null;
+        return orderItemsList;
 
     }
 

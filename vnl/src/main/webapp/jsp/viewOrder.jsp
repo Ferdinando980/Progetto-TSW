@@ -21,17 +21,17 @@
       <%
         List<Order> ordini = (List<Order>) session.getAttribute("orders");
         if (ordini != null && !ordini.isEmpty()) {
-          for (int i=0; i<ordini.size(); i++) {
+          for (Order order : ordini) {
 
       %>
       <li>
 
         <div class="description">
-          <a href="Ordine?id=<%= ordini.get(i).getId() %>">
-            <strong>Ordine: <%= ordini.get(i).getDataOrdine() %></strong>
+          <a href="OrderPage?id=<%= order.getId() %>">
+            <strong>Ordine: <%= order.getDataOrdine() %></strong>
 
           </a>
-          <p>Prezzo: </p>&euro;<%= ordini.get(i).getTotAmount() %>
+          <p>Prezzo: </p>&euro;<%= order.getTotAmount() %>
           <%}%>
         </div>
 

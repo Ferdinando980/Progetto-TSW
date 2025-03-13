@@ -17,6 +17,7 @@ import model.javabeans.Order;
 import model.javabeans.OrderItems;
 import model.javabeans.Users;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -27,7 +28,7 @@ public class CartOrderServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/order.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/cartOrder.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -39,42 +40,51 @@ public class CartOrderServlet extends HttpServlet {
         Map<String, String> userData = (Map<String, String>) session.getAttribute("UserData");
         if(userData!=null){
 
-            Order od = new Order();
+            Order order = new Order();
             LocalDate date = LocalDate.now();
             Date dataSQl = Date.valueOf(date);
 
-            od.setNome(request.getParameter("nome"));
-            od.setCognome(request.getParameter("cognome"));
-            od.setVia(request.getParameter("via"));
-            od.setCivico(request.getParameter("civico"));
-            od.setCap(request.getParameter("cap"));
-            od.setPaese(request.getParameter("paese"));
-
-            od.setStato("Confermato");
-            od.setDataOrdine(dataSQl);
-
             UsersDao usersDao = new UsersDao();
             Users users = usersDao.doRetrievebyUsername(userData.get("Username"));
-            od.setUsers(users.getUserId());
+
+            order.setUsers(users.getUserId());
+            order.setNome(request.getParameter("nome"));
+            order.setCognome(request.getParameter("cognome"));
+            order.setVia(request.getParameter("via"));
+            order.setCivico(request.getParameter("civico"));
+            order.setCap(request.getParameter("cap"));
+            order.setPaese(request.getParameter("paese"));
+            order.setStato("Confermato");
+            order.setDataOrdine(dataSQl);
 
             List<OrderItems> carrello = (List<OrderItems>) session.getAttribute("cart");
 
-            OrderDao odd = new OrderDao();
-            OrderItemsDao orderItemsDao = new OrderItemsDao();
-
             try {
 
-                odd.doSave(od);
+                OrderDao orderDao = new OrderDao();
+                OrderItemsDao orderItemsDao = new OrderItemsDao();
+                float totale = 0;
+
+                for (int i=0;i<carrello.size();i++) {
+                    totale+=carrello.get(i).getPrezzo();
+                }
+
+                order.setTotAmount(totale);
+                orderDao.doSave(order);
+
+                ArrayList<Order> orders = orderDao.doRetrievebyUsers(order.getUsers());
+
+                for (OrderItems orderItem: carrello) {
+
+                    orderDao.doRetrievebyUsers(order.getUsers());
+
+                    orderItem.setOrdine_id(orders.getLast().getId());
+                    orderItem.setOrdine_users(order.getUsers());
+
+                    orderItemsDao.doSave(orderItem);
+                }
 
                 session.removeAttribute("cart");
-                for (int i = 0; i < carrello.size(); i++) {
-                    OrderItems orderItems = carrello.get(i);
-
-                    orderItems.setOrdine_id(od.getId());
-                    orderItems.setOrdine_users(od.getUsers());
-
-                    orderItemsDao.doSave(orderItems);
-                }
                 response.sendRedirect("ConfermaOrdine");
 
             } catch (Exception e) {

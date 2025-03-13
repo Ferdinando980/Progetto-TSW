@@ -1,5 +1,3 @@
-
-<%@ page import="java.util.List" %>
 <%@ page import="model.javabeans.Product" %>
 
 <!DOCTYPE html>

@@ -151,4 +151,13 @@
         <url-pattern>/ViewOrder</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>OrderPage</servlet-name>
+        <servlet-class>controller.registered.OrderPageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OrderPage</servlet-name>
+        <url-pattern>/OrderPage</url-pattern>
+    </servlet-mapping>
 </web-app>
