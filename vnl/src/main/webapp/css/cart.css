@@ -39,10 +39,10 @@ li{
 .description{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     align-self: center;
     font-size: 1.5vw;
-    margin-left: 5%;
+    margin-left: 2%;
     color: #FEF6E5;
 }
 
@@ -59,28 +59,24 @@ li{
 }
 
 .description input{
-    width: 7%;
+    width: 8%;
     text-align: center;
+    font-size: 1vw;
 }
 
 .remove{
-    width:7%;
+    width:6%;
     align-self: center;
-    background: #FEF6E6;
-    border-radius: 100px;
-
 }
 
 .remove input{
-    object-fit: contain;
-    width:100%;
-
+    object-fit: cover;
+    width:90%;
 }
 
 
 
 .acquisti{
-    display: flex;
     width:100%;
     flex-direction: row;
     padding:1%;
@@ -89,6 +85,7 @@ li{
 .acquisti p{
     font-size: 1.5vw;
     color: #FEF6E6;
+    text-align:center;
 }
 
 .procedere{
