@@ -25,6 +25,10 @@
         <div class="nav-item" onclick="currentSlide(2)">CD</div>
         <div class="nav-item" onclick="currentSlide(3)">Giradischi</div>
     </nav> 
+        
+            <div class = "image-label">
+            <h1>VinylWaves</h1\>
+        </div>
         <div class="slide-fade">
             <a href="ListaProdotti">
                 <img src="assets/images/banner1.jpg" alt="Banner 1">
@@ -43,6 +47,8 @@
 
         <a class="prev" onclick="moveSlideShow(-1)">&#10094;</a>
         <a class="next" onclick="moveSlideShow(1)">&#10095;</a>
+
+
 
     </div>
 
