@@ -77,15 +77,17 @@ li{
 
 
 .acquisti{
+    display: flex;
     width:100%;
     flex-direction: row;
     padding:1%;
 }
 
 .acquisti p{
+    width: 100%;
     font-size: 1.5vw;
     color: #FEF6E6;
-    text-align:center;
+    text-align: center;
 }
 
 .procedere{
