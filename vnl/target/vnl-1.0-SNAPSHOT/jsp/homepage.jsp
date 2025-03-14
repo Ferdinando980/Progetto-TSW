@@ -17,14 +17,14 @@
 
 
 <div class="mainpage">
+
+
+    <div class="slideshow-container">
     <nav class="navbar">
         <div class="nav-item" onclick="currentSlide(1)">Vinili</div>
         <div class="nav-item" onclick="currentSlide(2)">CD</div>
         <div class="nav-item" onclick="currentSlide(3)">Giradischi</div>
     </nav> 
-
-    <div class="slideshow-container">
-
         <div class="slide-fade">
             <a href="ListaProdotti">
                 <img src="assets/images/banner1.jpg" alt="Banner 1">
