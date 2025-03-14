@@ -1,202 +1,221 @@
 body {
-    background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
-  }
+  background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
+}
+
+fieldset {
+  border-radius: 10px;
+  background-color: #6D3A8C;
+  border: solid 3px #FEF6E6;
+  padding: 20px;
+}
+
+legend {
+  font-size: 150%;
+  text-align: center;
+  color: #FEF6E6;
+}
+
+.visualizza-ordini {
+border-radius: 5px;
+background-color: #332620;
+display: inline-block; 
   
-  fieldset {
-    border-radius: 10px;
-    background-color: #6D3A8C;
-    border: solid 3px #FEF6E6;
-    padding: 20px;
-  }
-  
-  legend {
-    font-size: 150%;
-    text-align: center;
-    color: #FEF6E6;
-  }
-  
-  label {
-    font-size: 100%;
-    letter-spacing: normal;
-    color: #FEF6E6;
-    white-space: nowrap
-  }
-  
-  .button {
-    border-radius: 10px;
-    background-color: #332620;
-    color: #FEF6E6;
-    font-size: 100%;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+padding: 10px 20px;  
+ transition: background-color 1s ease; 
+
+}
+.visualizza-ordini a{
+  text-decoration: none;
+white-space: nowrap;
+color: #FEF6E6; 
+
+ 
+}
+.visualizza-ordini:hover {
+background-color: #C3B7D8; 
+}
+label {
+  font-size: 100%;
+  letter-spacing: normal;
+  color: #FEF6E6;
+  white-space: nowrap
+}
+
+.button {
+  border-radius: 10px;
+  background-color: #332620;
+  color: #FEF6E6;
+  font-size: 100%;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.error-message {
+  letter-spacing: 3px;
+
+}
+
+
+.success-message{
+  color:aliceblue;
+  padding: 0 10px;
+  margin:auto;
+  margin-top: 2%;
+  font-weight: bold;
+}
+
+
+.phoneGroup {
+  display: flex;
+  align-items: center;
+  gap: 4%;
+  margin-bottom: 2%;
+  width: 100%;
+  margin-top: 2.5%;
+  margin-bottom: 3.6%;
+}
+
+.button:hover {
+  background-color: #C3B7D8;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2%;
+
+}
+
+.input {
+  border-radius: 10px;
+  width: 100%;
+  color: #FEF6E6;
+  background-color: #332620;
+  text-align: center;
+  transition: background-color 1s ease;
+  font-size: 100%;
+  padding: 10px;
+  border: 2px solid #6D3A8C;
+
+}
+
+
+.labelAndInputPhone {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.input[type="tel"] {
+  margin-left: 2%;
+}
+
+.nazione {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5%;
+}
+
+select {
+  background-color: #332620;
+  transition: background-color 1s ease;
+  border-radius: 10px;
+  color: #FEF6E6;
+  font-size: 100%;
+  padding: 2%;
+  border: 2px solid #6D3A8C;
+
+
+
+
+  align-content: center;
+}
+
+input:hover {
+  background-color: #C3B7D8;
+}
+
+select:hover {
+  background-color: #C3B7D8;
+}
+
+.Modifica-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-self: center;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  min-height: 100vh;
+}
+
+.error-message {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+}
+
+
+@media (max-width: 480px) {
+  .Modifica-container {
+    padding: 5px;
     width: 100%;
-  }
-  
-  .error-message {
-    letter-spacing: 3px;
-  
+    min-height: auto;
+    margin: 0;
   }
 
-  
-  .success-message{
-    color:aliceblue;
-    padding: 0 10px;
-    margin:auto;
-    margin-top: 2%;
-    font-weight: bold;
+  legend {
+    font-size: 90%;
+    margin: 0;
   }
-  
+
+  .biglabel {
+    font-size: 90%;
+  }
+
+  .input,
+  .button {
+    font-size: 90%;
+    padding: 8px 16px;
+  }
+
+  fieldset {
+    padding: 8px;
+  }
+
+  .button {
+    padding: 8px 16px;
+  }
 
   .phoneGroup {
-    display: flex;
-    align-items: center;
-    gap: 4%;
-    margin-bottom: 2%;
-    width: 100%;
-    margin-top: 2.5%;
-    margin-bottom: 3.6%;
-  }
-  
-  .button:hover {
-    background-color: #C3B7D8;
-  }
-  
-  .form-group {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 2%;
-  
+    gap: 2%;
   }
-  
-  .input {
-    border-radius: 10px;
-    width: 100%;
-    color: #FEF6E6;
-    background-color: #332620;
-    text-align: center;
-    transition: background-color 1s ease;
-    font-size: 100%;
-    padding: 10px;
-    border: 2px solid #6D3A8C;
-  
-  }
-  
-  
-  .labelAndInputPhone {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-  
-  .input[type="tel"] {
-    margin-left: 2%;
-  }
-  
-  .nazione {
-    width: auto;
-    display: flex;
-    align-items: center;
-    gap: 0.5%;
-  }
-  
-  select {
-    background-color: #332620;
-    transition: background-color 1s ease;
-    border-radius: 10px;
-    color: #FEF6E6;
-    font-size: 100%;
-    padding: 2%;
-    border: 2px solid #6D3A8C;
-  
-  
-  
-  
-    align-content: center;
-  }
-  
-  input:hover {
-    background-color: #C3B7D8;
-  }
-  
-  select:hover {
-    background-color: #C3B7D8;
-  }
-  
-  .Modifica-container {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    align-self: center;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    letter-spacing: 2px;
-    min-height: 100vh;
-  }
-  
-  .error-message {
-    font-size: 12px;
-    color: red;
-    margin-top: 5px;
-  }
-  
-  
-  @media (max-width: 480px) {
-    .Modifica-container {
-      padding: 5px;
-      width: 100%;
-      min-height: auto;
-      margin: 0;
-    }
-  
-    legend {
-      font-size: 90%;
-      margin: 0;
-    }
-  
-    .biglabel {
-      font-size: 90%;
-    }
-  
-    .input,
-    .button {
-      font-size: 90%;
-      padding: 8px 16px;
-    }
-  
-    fieldset {
-      padding: 8px;
-    }
-  
-    .button {
-      padding: 8px 16px;
-    }
-  
-    .phoneGroup {
-      flex-direction: column;
-      gap: 2%;
-    }
-  
-    .input[type="tel"] {
-      margin-left: 0;
-    }
-  
-    select {
-      padding: 1.5%;
-      font-size: 90%;
-    }
-  
-    .labelAndInputPhone {
-      flex-direction: column;
-    }
-  
-    .nazione {
-      gap: 0.25%;
-    }
 
-    
+  .input[type="tel"] {
+    margin-left: 0;
   }
+
+  select {
+    padding: 1.5%;
+    font-size: 90%;
+  }
+
+  .labelAndInputPhone {
+    flex-direction: column;
+  }
+
+  .nazione {
+    gap: 0.25%;
+  }
+
+  
+}

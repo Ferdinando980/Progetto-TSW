@@ -3,6 +3,7 @@ model\javabeans\Category.class
 controller\everyone\RegistrationServlet.class
 model\dao\ProductDao.class
 model\QueryPool.class
+controller\registered\ViewOrderServlet.class
 controller\everyone\CartServlet.class
 controller\everyone\ProductServlet.class
 controller\registered\EditServlet.class
@@ -25,3 +26,4 @@ model\dao\AbstractDAO.class
 controller\everyone\LoginServlet.class
 controller\everyone\CartOrderServlet.class
 model\dao\OrderItemsDao.class
+controller\registered\OrderPageServlet.class

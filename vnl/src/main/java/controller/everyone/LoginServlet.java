@@ -86,6 +86,7 @@ public class LoginServlet extends HttpServlet {
             userData.put("DataNascita", user.getDataDiNascita().toString());
 
             session.setAttribute("UserData", userData);
+            
             RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/homepage.jsp");
             dispatcher.forward(request, response);
             return; 

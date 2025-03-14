@@ -1,0 +1,44 @@
+body {
+    background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+    padding: 5%;
+    min-height: 100vh;
+}
+
+.gestione {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+    padding: 20px;
+    font-size: 2.5vw;
+    background-color: #6D3A8C;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #FEF6E6;
+}
+
+.gestione h1 {
+    font-size: 2.5vw;
+    color: #FEF6E6;
+}
+
+.gestione a {
+    color: #FEF6E6;
+    background-color: #332620;
+    text-align: center;
+    font-size: 2vw;
+    margin: 0.5vw;
+    border-radius: 20px;
+    width: 30%;
+    border: none;
+    text-decoration-line: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 30%;
+}

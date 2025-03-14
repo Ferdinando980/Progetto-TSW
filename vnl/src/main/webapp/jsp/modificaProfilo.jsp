@@ -22,6 +22,9 @@
         <div class="Modifica-container">
             <form id="editProfileForm" action="EditProfile" method="POST" class="edit-form">
                 <fieldset>
+                      <div class = "visualizza-ordini">
+                                <a href="ViewOrder">Storico ordini</a>
+                            </div>
                     <div class="biglabel">
                         <legend>Modifica Profilo</legend>
                     </div>
@@ -40,7 +43,7 @@
                         <span id="birthDateError" class="error-message"></span>
                         <label for="DataDiNascita">Data di nascita:</label><br>
                         <input type="date" id="DataDiNascita" name="DataDiNascita" 
-                            value="" class="input"><br>
+                            value="${UserData.DataNascita}" class="input"><br>
 
                         <div class="phoneGroup">
                             <div class="nazione">
@@ -71,10 +74,14 @@
                         <span id="SubmitSuccess" class="success-message">
                             ${not empty successMessage ? successMessage : ''}
                         </span>
+                          
                     </div>
+
                 </fieldset>
             </form>
         </div>
+
+
     </main>
 
     <jsp:include page="footer.jsp"></jsp:include>
