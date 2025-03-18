@@ -2,10 +2,17 @@
 <%@ page import="java.util.HashMap" %>
 <%
   HashMap<String, String> userData = null;
+  String Tipo = "default"; 
+
   if (session != null) {
       userData = (HashMap<String, String>) session.getAttribute("UserData");
+      if (userData != null) {
+          Tipo = userData.get("tipo"); 
+  }
   }
   boolean isLoggedIn = (userData != null && "true".equals(userData.get("IsLogged")));
+  boolean isAdmin = "admin".equals(Tipo); 
+  
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,13 +50,21 @@
                         <img src="assets/images/cart.png" alt="Carrello">
                     </a>
                 </div>
+                     <div class="admin-check">
+                    <% if (isAdmin) { %>
+                        <button onclick="window.location.href='PageAdmin'">Pannello Admin</button>
+                    <% } %>
+                </div>
+                     </div>
                 <div class="profile" id="profile-section"></div>
             </div>
+       
         </div>
     </header>
 
     <script>
         var isLoggedIn = <%= isLoggedIn ? "true" : "false" %>;
+              var Tipo = "<%= Tipo %>";
     </script>
 
     <script type="text/javascript" src="script/ProfileChanger.js"></script>

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let profileSection = document.getElementById("profile-section");
 
+
     if (isLoggedIn) {
 
         profileSection.innerHTML = `
@@ -16,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
             </a>
         `;
     }
+        
+
 });
 
 
