@@ -15,7 +15,7 @@ body {
     color: #FEF6E6;
 }
 
-label {
+.form-group label {
     font-size: 100%;
     letter-spacing: normal;
     color: #FEF6E6;
@@ -47,7 +47,7 @@ label {
 
 }
 
-input {
+.form-group input {
     border-radius: 10px;
     width: 100%;
     color: #FEF6E6;
@@ -60,7 +60,7 @@ input {
 
 }
 
-select{
+.from-group select{
     background-color: #332620;
     transition: background-color 1s ease;
     border-radius: 10px;
@@ -71,11 +71,11 @@ select{
     align-content: center;
 }
 
-input:hover{
+.form-group input:hover{
     background-color: #C3B7D8;
 }
 
-select:hover{
+.form-group select:hover{
     background-color: #C3B7D8;
 }
 
@@ -108,13 +108,12 @@ select:hover{
         font-size: 90%;
     }
 
-    input,
-    button {
+    .form-group input{
         font-size: 90%;
         padding: 8px 16px;
     }
 
-    button {
+    .conferma button{
         padding: 8px 16px;
     }
 
