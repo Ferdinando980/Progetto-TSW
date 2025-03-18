@@ -23,7 +23,6 @@ import model.javabeans.Product;
 )
 @WebServlet(name="AddProduct", value="/AddProduct")
 public class AddProductServlet extends HttpServlet {
-    private static final String IMAGE_UPLOAD_DIRECTORY = "C:/Users/giuli/Desktop/tsw/Progetto-TSW/vnl/src/main/webapp/assets/product/"; 
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -50,7 +49,6 @@ public class AddProductServlet extends HttpServlet {
             String descrizione = request.getParameter("descrizione");
             String condizione = request.getParameter("condizione");
             String marca = request.getParameter("marca");
-            
             String nomeVnl = request.getParameter("nomeVnl");
 
             Product product;
@@ -59,16 +57,15 @@ public class AddProductServlet extends HttpServlet {
             
         Part filePart = request.getPart("img");
         if (filePart != null && filePart.getSize() > 0) {
-            
-            File uploadDir = new File(IMAGE_UPLOAD_DIRECTORY);
+            String uploadPath = getServletContext().getRealPath("/assets/product/");
+            File uploadDir = new File(uploadPath);
             if (!uploadDir.exists()) uploadDir.mkdirs();
 
     
             String fileExtension = filePart.getSubmittedFileName().substring(filePart.getSubmittedFileName().lastIndexOf('.'));
             String fileName = nomeVnl + fileExtension;
 
-        
-            String filePath = IMAGE_UPLOAD_DIRECTORY + fileName;
+            String filePath = uploadPath + File.separator + fileName;
             filePart.write(filePath);
 
         

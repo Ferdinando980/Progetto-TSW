@@ -1,0 +1,44 @@
+#addproductform{
+    padding:5%;
+    background-color: #6D3A8C;
+    color: #332620;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#drop-area:hover {
+    background-color: #FEF6E6;
+}
+
+#drop-area label {
+    color: #332620;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#drop-area input {
+    display: none;
+}
+
+.img-preview{
+    max-width: 50%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.mainpage{
+    padding:3%;
+    margin-top:5%;
+    height: 100vh;
+}
