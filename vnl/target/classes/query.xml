@@ -39,12 +39,12 @@
     <entry key="GET_ORDERS_BY_STATO">SELECT * FROM ordine WHERE stato=?</entry>
 
     <!-- OrderItems -->
-    <entry key="INSERT_ORDER_ITEM">INSERT INTO OP (ordine_id, ordine_users, prodotto, quantita,
+    <entry key="INSERT_ORDERITEMS">INSERT INTO OP (ordine_id, ordine_users, prodotto, quantita,
         prezzo) VALUES (?,?,?,?,?)</entry>
-    <entry key="UPDATE_ORDER_ITEM">UPDATE OP SET quantita=?, prezzo=? WHERE ordine_id=? AND
+    <entry key="UPDATE_ORDERITEMS">UPDATE OP SET quantita=?, prezzo=? WHERE ordine_id=? AND
         ordine_users=? AND prodotto=?</entry>
-    <entry key="DELETE_ORDER_ITEM">DELETE FROM OP WHERE ordine_id=? AND ordine_users=? AND
+    <entry key="DELETE_ORDERITEMS">DELETE FROM OP WHERE ordine_id=? AND ordine_users=? AND
         prodotto=?</entry>
     <entry key="GET_ALL_ORDER_ITEMS">SELECT * FROM OP</entry>
-    <entry key="GET_ORDER_ITEMS_BY_ORDER">SELECT * FROM OP WHERE ordine_id=? AND ordine_users=?</entry>
+    <entry key="GET_ORDERITEMS_BY_ORDER">SELECT * FROM OP WHERE ordine_id=? AND ordine_users=?</entry>
 </properties>
