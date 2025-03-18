@@ -11,11 +11,11 @@
   border-bottom: 2px solid black;
 }
 
-button{
+.admin-check button{
   border-radius: 5%;
 }
 
-button:hover {
+.admin-check button:hover {
   background-color: #C3B7D8;
   border: 2px solid #332620;
  
