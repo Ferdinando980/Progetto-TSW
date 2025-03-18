@@ -96,8 +96,8 @@ public class Product {
     public Product() {
     }
 
-    public Product(int id, float prezzo, String descrizione, String condizione, String tipo, String marca, String img, String nomeVnl, String artista, String genere) {
-        this.id = id;
+    public Product(float prezzo, String descrizione, String condizione, String tipo, String marca, String img, String nomeVnl, String artista, String genere) {
+    
         this.prezzo = prezzo;
         this.descrizione = descrizione;
         this.condizione = condizione;

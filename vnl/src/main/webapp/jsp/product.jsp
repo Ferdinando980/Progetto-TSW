@@ -1,3 +1,6 @@
+
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Map"%>
 <%@ page import="model.javabeans.Product" %>
 
 <!DOCTYPE html>
@@ -68,7 +71,27 @@
                         <%
                             }
                         }
-                        %>
+
+                         Map<String, String> userData = (Map<String, String>) session.getAttribute("UserData");
+                    if (userData != null) {
+                        String userTipo = userData.get("tipo");
+                        if ("admin".equals(userTipo)) {
+                    %>
+                        <div name="adminside">
+                        <a href="ModifyProduct?id=<%= product.getId() %>">
+                            <button class="modify-product-btn">Modifica prodotto</button>
+                        </a>
+
+                        <form action="DeleteProduct" method="post">
+                        <input type="hidden" name="productId" value="<%= product.getId() %>">
+                         <button type="submit" class="delete-product-btn">Delete Product</button>
+                        </form>
+                        </div>
+                    <%
+                        }
+                    }
+                    %>
+                    
 
                         <div class="addCart">
                             <form action="Cart" method="post">

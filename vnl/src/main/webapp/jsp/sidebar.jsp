@@ -15,23 +15,20 @@
     <button class="dropdown-btn">Vinili
     </button>
     <div class="dropdown-container">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+    <a href="FilterProduct?tipo=vinile&condizione=nuovo">Nuovo</a>
+    <a href="FilterProduct?tipo=vinile&condizione=usato">Usato</a>
     </div>
     <button class="dropdown-btn">Giradischi
     </button>
     <div class="dropdown-container">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+    <a href="FilterProduct?tipo=giradischi&condizione=nuovo">Nuovo</a>
+    <a href="FilterProduct?tipo=giradischi&condizione=usato">Usato</a>
     </div>
     <button class="dropdown-btn">Compact Disc
     </button>
     <div class="dropdown-container">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+    <a href="FilterProduct?tipo=cd&condizione=nuovo">Nuovo</a>
+    <a href="FilterProduct?tipo=cd&condizione=usato">Usato</a>
     </div>
 
 

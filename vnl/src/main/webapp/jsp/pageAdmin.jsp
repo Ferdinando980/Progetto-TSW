@@ -1,16 +1,17 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: cerus
-  Date: 07/03/2025
-  Time: 14:11
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="jakarta.servlet.http.HttpSession" %>
+<%@ page import="java.util.HashMap" %>
+<%
+  HashMap<String, String> userData = (HashMap<String, String>) session.getAttribute("UserData");
+    boolean isLoggedIn = (userData != null && "true".equals(userData.get("IsLogged")));
+    boolean isAdmin = isLoggedIn && ("admin").equals(userData.get("tipo"));
+%>
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="stylesheet" href="./css/pageAdmin.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/adminpage.css">
   <title>Admin</title>
 </head>
 
@@ -18,13 +19,17 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
-<div class="container">
+<div class="mainpage">
+
+  <h1>Welcome, Admin <%= userData.get("Username") %>!</h1>
 
   <div class="gestione">
-    <h1>Admin</h1>
-    <a href="AggiuntaArticolo">Add Product</a>
-    <a href="ModificaArticolo">Update Product</a>
-    <a href="GestisciOrdini">Manage Orders</a>
+    <a href="AddProduct">  
+    <button class="addproductbtn">Aggiungi prodotto</button>
+    </a>
+    <a href="ManageOrders">
+      <button class="manageordersbtn">Gestisci Ordini</button>
+    </a>
   </div>
 
 </div>
