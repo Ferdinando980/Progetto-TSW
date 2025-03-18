@@ -22,7 +22,7 @@ label {
     white-space: nowrap
 }
 
-button {
+.conferma button {
     border-radius: 20px;
     background-color: #332620;
     color: #FEF6E6;
@@ -35,7 +35,7 @@ button {
     width: 100%;
 }
 
-button:hover {
+.conferma button:hover {
     background-color: #C3B7D8;
 }
 

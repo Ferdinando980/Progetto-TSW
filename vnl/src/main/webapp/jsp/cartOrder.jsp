@@ -42,7 +42,9 @@
 
       </div>
 
-      <button type="submit">Conferma Acquisto</button>
+      <div class="conferma">
+        <button type="submit">Conferma Acquisto</button>
+      </div>
 
     </form>
 
