@@ -11,6 +11,16 @@
   border-bottom: 2px solid black;
 }
 
+button{
+  border-radius: 5%;
+}
+
+button:hover {
+  background-color: #C3B7D8;
+  border: 2px solid #332620;
+ 
+}
+
 .logo {
   width: 60px;
   height: auto;
