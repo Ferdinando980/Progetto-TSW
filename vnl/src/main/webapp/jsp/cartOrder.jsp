@@ -14,7 +14,7 @@
   <div class="fieldset">
 
     <div class="biglabel">
-      <h1>Conferma Aquisto</h1>
+      <h1>Conferma Acquisto</h1>
     </div>
 
     <form action="CartOrder" method="post">
