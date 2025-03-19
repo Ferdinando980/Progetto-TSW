@@ -84,7 +84,7 @@
 
                         <form action="DeleteProduct" method="post">
                         <input type="hidden" name="productId" value="<%= product.getId() %>">
-                         <button type="submit" class="delete-product-btn">Delete Product</button>
+                         <button type="submit" class="delete-product-btn">Elimina Prodotto</button>
                         </form>
                         </div>
                     <%

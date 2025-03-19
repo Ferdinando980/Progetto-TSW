@@ -1,0 +1,12 @@
+.manageorderscontainer{
+    background: linear-gradient(180deg, #C3B7D8 5%, #6D3A8C 67%);
+    border-radius: 2%;
+    height:100vh;
+    padding:2%;
+}
+
+table{
+    
+    background: #FEF6E6;
+    
+}

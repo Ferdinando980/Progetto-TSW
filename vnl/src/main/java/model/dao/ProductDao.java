@@ -20,15 +20,16 @@ public class ProductDao extends AbstractDAO{
                 ps.setString(2, product.getDescrizione());
                 ps.setString(3, product.getCondizione());
                 ps.setString(4, product.getTipo());
-                ps.setString(5, product.getMarca());
                 ps.setString(6, product.getNomeVnl());  
         
                
                 if ("vinile".equalsIgnoreCase(product.getTipo()) || "cd".equalsIgnoreCase(product.getTipo())) {
+                    ps.setNull(5,Types.VARCHAR);
                     ps.setString(7, product.getArtista());  
                     ps.setString(8, product.getGenere());   
            
                 } else if ("giradischi".equalsIgnoreCase(product.getTipo())) {
+                    ps.setString(5, product.getMarca());
                     ps.setNull(7, Types.VARCHAR); 
                     ps.setNull(8, Types.VARCHAR); 
                 
@@ -62,9 +63,24 @@ public class ProductDao extends AbstractDAO{
             ps.setString(4, product.getTipo());
             ps.setString(5, product.getMarca());
             ps.setString(6, product.getNomeVnl());
-            ps.setString(7, product.getArtista());
-            ps.setString(8, product.getGenere());
             ps.setString(9, product.getImg());
+
+                     
+            if ("vinile".equalsIgnoreCase(product.getTipo()) || "cd".equalsIgnoreCase(product.getTipo())) {
+                ps.setNull(5,Types.VARCHAR);
+                ps.setString(7, product.getArtista());  
+                ps.setString(8, product.getGenere());   
+       
+            } else if ("giradischi".equalsIgnoreCase(product.getTipo())) {
+                ps.setString(5, product.getMarca());
+                ps.setNull(7, Types.VARCHAR); 
+                ps.setNull(8, Types.VARCHAR); 
+            
+            } else {
+                throw new IllegalArgumentException("Invalid product type: " + product.getTipo());
+            }
+            ps.setInt(10,product.getId());
+    
 
             int rowsAffected=  ps.executeUpdate();
             return rowsAffected>0;

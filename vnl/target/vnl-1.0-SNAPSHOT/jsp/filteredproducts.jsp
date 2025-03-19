@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/product.css">
+
   <title>Prodotti Filtrati</title>
 
 </head>

@@ -12,6 +12,7 @@
   <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/adminpage.css">
+
   <title>Admin</title>
 </head>
 
@@ -27,7 +28,7 @@
     <a href="AddProduct">  
     <button class="addproductbtn">Aggiungi prodotto</button>
     </a>
-    <a href="ManageOrders">
+    <a href="ManageOrder">
       <button class="manageordersbtn">Gestisci Ordini</button>
     </a>
   </div>

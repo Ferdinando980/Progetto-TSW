@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/addproduct.css">
+ 
     <title>Aggiungi Prodotto</title>
 </head>
 <body>

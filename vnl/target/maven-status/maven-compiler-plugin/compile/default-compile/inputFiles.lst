@@ -3,8 +3,10 @@ C:\Users\giuli\Desktop\tsw\Progetto-TSW\vnl\src\main\java\controller\admin\Admin
 C:\Users\giuli\Desktop\tsw\Progetto-TSW\vnl\src\main\java\controller\admin\DeleteProductServlet.java
 C:\Users\giuli\Desktop\tsw\Progetto-TSW\vnl\src\main\java\controller\admin\ManageOrderServlet.java
 C:\Users\giuli\Desktop\tsw\Progetto-TSW\vnl\src\main\java\controller\admin\ModifyProductServlet.java
+C:\Users\giuli\Desktop\tsw\Progetto-TSW\vnl\src\main\java\controller\admin\OrderDetailsServlet.java
 C:\Users\giuli\Desktop\tsw\Progetto-TSW\vnl\src\main\java\controller\admin\PageAdminServlet.java
 C:\Users\giuli\Desktop\tsw\Progetto-TSW\vnl\src\main\java\controller\admin\UpdateProductServlet.java
+C:\Users\giuli\Desktop\tsw\Progetto-TSW\vnl\src\main\java\controller\admin\UpdateStatusServlet.java
 C:\Users\giuli\Desktop\tsw\Progetto-TSW\vnl\src\main\java\controller\everyone\CartOrderServlet.java
 C:\Users\giuli\Desktop\tsw\Progetto-TSW\vnl\src\main\java\controller\everyone\CartServlet.java
 C:\Users\giuli\Desktop\tsw\Progetto-TSW\vnl\src\main\java\controller\everyone\ConfermaOrdineServlet.java

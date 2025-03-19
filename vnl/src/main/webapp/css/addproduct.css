@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 8px;
+    margin:2%;
 
 }
 
@@ -33,12 +34,5 @@
 
 .img-preview{
     max-width: 50%;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-.mainpage{
-    padding:3%;
-    margin-top:5%;
-    height: 100vh;
+ 
 }

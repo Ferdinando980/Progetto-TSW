@@ -31,12 +31,11 @@
         <div class="logo">
             <img src="assets/images/Logo.png" alt="Logo">
         </div>
-
-        <div class="search-container">
-            <form action="">
-                <input class="textbox" type="text" placeholder="Cerca.." name="search">
-            </form>
-        </div>
+          <div class="search-container">
+                <form action="Search" method="get">
+                    <input class="textbox" type="text" placeholder="Cerca.." name="search">
+                </form>
+            </div>
 
         <div class="RightSection">
             <div class="headerlinks">

@@ -23,16 +23,25 @@ public class UpdateProductServlet  extends HttpServlet{
         String nomeVnl = request.getParameter("nomeVnl");
         String descrizione = request.getParameter("descrizione");
         float prezzo = Float.parseFloat(request.getParameter("prezzo"));
-        String img = request.getParameter("img");
+        String condizione= request.getParameter("condizione");
+        
+
+    
         
     
         ProductDao productDao = new ProductDao();
-        Product product = new Product();
-        product.setId(id);
-        product.setNomeVnl(nomeVnl);
-        product.setDescrizione(descrizione);
-        product.setPrezzo(prezzo);
-        product.setImg(img);
+        Product oldproduct= productDao.doRetrieveById(id);
+        Product product;
+
+        if(oldproduct.getTipo().equals("giradischi")){
+            String marca= request.getParameter("marca");
+            product = new Product(prezzo, descrizione, condizione,oldproduct.getTipo(), marca, oldproduct.getImg(), nomeVnl, oldproduct.getArtista(), oldproduct.getGenere());
+        }else{
+            product = new Product(prezzo, descrizione, condizione,oldproduct.getTipo(), oldproduct.getMarca(), oldproduct.getImg(), nomeVnl, oldproduct.getArtista(), oldproduct.getGenere());
+        }
+        product.setId(oldproduct.getId());
+  
+
         
         
         productDao.doUpdate(product);

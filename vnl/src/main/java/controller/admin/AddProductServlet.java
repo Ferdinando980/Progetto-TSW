@@ -87,7 +87,8 @@ public class AddProductServlet extends HttpServlet {
 
     
             ProductDao productDAO = new ProductDao();
-            productDAO.doSave(product);
+            System.out.print( "Saving product:" + productDAO.doSave(product));
+            
 
             response.sendRedirect("ListaProdotti");
         } 

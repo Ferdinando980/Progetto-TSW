@@ -14,10 +14,12 @@
     <entry key="GET_USER_BY_USERNAME">SELECT * FROM users WHERE username = ?</entry>
 
     <!-- Products -->
+    <entry key="SEARCH_PRODUCT">SELECT * FROM prodotto WHERE nomeVnl LIKE ? OR artista LIKE ? OR genere LIKE ?</entry>
+    <entry key="FILTER_PRODUCTS">SELECT * FROM prodotto WHERE tipo = ? AND condizione = ?</entry>
     <entry key="INSERT_PRODUCT">INSERT INTO prodotto (prezzo, descrizione, condizione, tipo, marca,
         nomeVnl, artista, genere, img_path) VALUES (?,?,?,?,?,?,?,?,?)</entry>
     <entry key="UPDATE_PRODUCT">UPDATE prodotto SET prezzo=?, descrizione=?, condizione=?, tipo=?,
-        marca=?, modello=?, nomeVnl=?, artista=?, genere=?,img_path=? WHERE id=?</entry>
+        marca=?, nomeVnl=?, artista=?, genere=?,img_path=? WHERE id=?</entry>
     <entry key="UPDATE_PRODUCT_PRICE">UPDATE prodotto SET prezzo=? WHERE id=?</entry>
     <entry key="UPDATE_PRODUCT_IMG"> UPDATE prodotto SET img_path=? WHERE id=?</entry>
     <entry key="DELETE_PRODUCT">DELETE FROM prodotto WHERE id=?</entry>
@@ -37,6 +39,8 @@
     <entry key="GET_ALL_ORDERS">SELECT * FROM ordine</entry>
     <entry key="GET_ORDERS_BY_USER">SELECT * FROM ordine WHERE users=?</entry>
     <entry key="GET_ORDERS_BY_STATO">SELECT * FROM ordine WHERE stato=?</entry>
+    <entry key="GET_ORDER_BY_ID">SELECT * FROM ordine WHERE id=?</entry>
+     <entry key="SEARCH_ORDER">SELECT * FROM ordine WHERE username LIKE ?</entry>
 
     <!-- OrderItems -->
     <entry key="INSERT_ORDERITEMS">INSERT INTO OP (ordine_id, ordine_users, prodotto, quantita,

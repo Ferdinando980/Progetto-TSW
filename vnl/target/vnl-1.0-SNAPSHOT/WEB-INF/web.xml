@@ -203,7 +203,7 @@
 
     <servlet>
         <servlet-name>DeleteProduct</servlet-name>
-        <servlet-class>controller.everyone.DeleteProductServlet</servlet-class>
+        <servlet-class>controller.admin.DeleteProductServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -230,4 +230,26 @@
         <servlet-name>OrderPage</servlet-name>
         <url-pattern>/OrderPage</url-pattern>
     </servlet-mapping>
+
+        <servlet>
+        <servlet-name>OrderDetails</servlet-name>
+        <servlet-class>controller.admin.OrderDetailsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OrderDetails</servlet-name>
+        <url-pattern>/OrderDetails</url-pattern>
+    </servlet-mapping>
+
+       <servlet>
+        <servlet-name>UpdateStatus</servlet-name>
+        <servlet-class>controller.admin.UpdateStatusServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateStatus</servlet-name>
+        <url-pattern>/UpdateStatus</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

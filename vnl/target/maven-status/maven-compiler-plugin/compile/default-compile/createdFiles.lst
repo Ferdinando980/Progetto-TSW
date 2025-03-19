@@ -23,6 +23,7 @@ controller\everyone\SearchServlet.class
 controller\everyone\LogoutServlet.class
 controller\everyone\ConfermaOrdineServlet.class
 model\javabeans\Users.class
+controller\admin\UpdateStatusServlet.class
 controller\everyone\ProductsListServlet.class
 model\javabeans\Cart.class
 controller\everyone\FilterProductServlet.class
@@ -34,4 +35,5 @@ controller\everyone\LoginServlet.class
 controller\admin\AdminPageServlet.class
 controller\everyone\CartOrderServlet.class
 model\dao\OrderItemsDao.class
+controller\admin\OrderDetailsServlet.class
 controller\registered\OrderPageServlet.class

@@ -33,7 +33,7 @@
                         %>
                             
                         <img src="<%= imgSrc %>">
-        </div>
+            </div>
         <div class="product-details">
 
         <div>
@@ -46,22 +46,38 @@
         <textarea id="descrizione" name="descrizione" required><%= product.getDescrizione() %></textarea>
         </div>
 
+        <% 
+            if(product.getTipo().equals("giradischi")){
+
+                %>
+                    <div>
+                 <label for="marca">Marca:</label>
+                 <textarea id="marca" name="marca" required><%= product.getMarca() %></textarea>
+                 </div>
+
+                <%
+            }
+            %>
+
+        <div>
+        <label for="condizione">Condizione:</label>
+            <select id="condizione" name="condizione" required>
+            <option value="<%= product.getCondizione() %>"><%= product.getCondizione() %></option>
+            <option value="Nuovo">Nuovo</option>
+            <option value="Usato">Usato</option>
+        </div>
+
         <div>
         <label for="prezzo">Prezzo:</label>
         <input type="number" id="prezzo" name="prezzo" value="<%= product.getPrezzo() %>" required />
         </div>
 
-        <div>
-        <label for="img">Immagine URL:</label>
-        <input type="text" id="img" name="img" value="<%= product.getImg() %>" />
-        </div>
-
         <button type="submit">Aggiorna Prodotto</button>
+        </div>
+        </div>
     </form>
     </div>
-    </div>
 
-    </div>
     <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

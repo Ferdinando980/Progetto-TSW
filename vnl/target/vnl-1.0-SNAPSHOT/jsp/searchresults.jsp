@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/product.css">
   
+  
     <title>Risultati Ricerca</title>
 </head>
 

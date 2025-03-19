@@ -1,9 +1,13 @@
 package model.dao;
 
-import model.javabeans.Order;
-
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+
+import model.javabeans.Order;
 
 public class OrderDao extends AbstractDAO {
 
@@ -69,7 +73,7 @@ public class OrderDao extends AbstractDAO {
         }
     }
 
-    public Order doRetrieveById(String id){
+    public Order doRetrieveById(String id) throws SQLException{
 
         Order order = null;
 
@@ -187,5 +191,24 @@ public class OrderDao extends AbstractDAO {
         }
         return ordersList;
     }
+
+    public boolean updateOrderStatus(int orderId, String  stato){
+        try (Connection connection = getConnection();
+         PreparedStatement ps = prepareStatement(connection, "UPDATE_ORDER_STATUS")) {
+
+        ps.setString(1, stato);
+        ps.setInt(2, orderId);
+
+        int rowsAffected = ps.executeUpdate();
+        return rowsAffected > 0;
+    } catch (SQLException e) {
+        System.out.println(e.getMessage());
+        return false;
+    }
+
+
+    }
+
+
 
 }
