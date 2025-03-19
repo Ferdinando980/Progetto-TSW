@@ -76,9 +76,10 @@ public class AddProductServlet extends HttpServlet {
              
                 String artista = request.getParameter("artista");
                 String genere = request.getParameter("genere");
-                product = new Product(prezzo, descrizione, condizione, tipo, marca, nomeVnl, artista, genere, imgPath); 
+                product = new Product(prezzo, descrizione, condizione, tipo, marca,imgPath,nomeVnl, artista, genere); 
+                System.out.println("Genre received: " + genere + " (Length: " + genere.length() + ")");
             } else if ("giradischi".equalsIgnoreCase(tipo)) {
-                product = new Product(prezzo, descrizione, condizione, tipo, marca, nomeVnl, null,null, imgPath); 
+                product = new Product(prezzo, descrizione, condizione, tipo, marca, imgPath, nomeVnl, null,null); 
             } else {
                 throw new IllegalArgumentException("Invalid product type: " + tipo);
             }

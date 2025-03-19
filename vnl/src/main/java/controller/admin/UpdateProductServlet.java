@@ -40,6 +40,7 @@ public class UpdateProductServlet  extends HttpServlet{
             product = new Product(prezzo, descrizione, condizione,oldproduct.getTipo(), oldproduct.getMarca(), oldproduct.getImg(), nomeVnl, oldproduct.getArtista(), oldproduct.getGenere());
         }
         product.setId(oldproduct.getId());
+       
   
 
         

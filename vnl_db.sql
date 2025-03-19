@@ -26,7 +26,7 @@ create table ordine(
     civico varchar(5) not null,
     cap int not null,
     paese varchar(20) not null,
-    foreign key (users) references users(id),
+    foreign key (users) references users(id) ON DELETE CASCADE,
     unique key (id, users)  -- Add the composite index for foreign key reference
 );
 
@@ -51,8 +51,8 @@ create table OP(
     prodotto INT,
     quantita int not null,
     prezzo float not null,
-    foreign key (ordine_id, ordine_users) references ordine(id, users),
-    foreign key (prodotto) references prodotto(id),
+    foreign key (ordine_id, ordine_users) references ordine(id, users) ON DELETE CASCADE,
+    foreign key (prodotto) references prodotto(id)  ON DELETE CASCADE,
     primary key(ordine_id, ordine_users, prodotto)
 );
 
