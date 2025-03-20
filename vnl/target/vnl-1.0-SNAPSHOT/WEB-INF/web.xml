@@ -10,6 +10,20 @@
     <param-value>false</param-value>
 </context-param>
 
+    <error-page>
+        <location>/error/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error/redirectError.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error/fatalError.jsp</location>
+    </error-page>
+
     <servlet>
         <servlet-name>Registrazione</servlet-name>
         <servlet-class>controller.everyone.RegistrationServlet</servlet-class>
