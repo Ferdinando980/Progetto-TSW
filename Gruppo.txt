@@ -1,0 +1,14 @@
+Nome_1:Ferdinando Gregorio
+Cognome_1:Fernandez
+Username_1:Ferdinando980
+Id_1: 26366029
+
+Nome_2: Antonio 
+Cognome_2: Ceruso
+Username_2: Ceuto
+Id_2: 26368238
+
+Nome_3:Giulia
+Cognome_3:Ferraro
+Username_3:LimeMoss
+Id_3:26726716
