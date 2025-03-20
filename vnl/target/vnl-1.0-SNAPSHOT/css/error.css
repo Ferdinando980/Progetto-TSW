@@ -1,0 +1,24 @@
+.container{
+
+    height: 100vh;
+    background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
+
+}
+
+.biglabel{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FEF6E6;
+
+}
+
+.error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FEF6E6;
+}
