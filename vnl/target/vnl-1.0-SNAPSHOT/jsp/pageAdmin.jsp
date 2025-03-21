@@ -11,7 +11,7 @@
 <head>
   <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/adminpage.css">
+    <link rel="stylesheet" href="./css/pageAdmin.css">
 
   <title>Admin</title>
 </head>

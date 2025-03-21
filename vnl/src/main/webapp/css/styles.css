@@ -35,5 +35,6 @@ background-color: #C3B7D8;
   background-color: #C3B7D8;
   margin: auto;
   width:100%;
+  min-height:100vh;
 
 }

@@ -3,6 +3,7 @@ package controller.everyone;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -20,9 +21,10 @@ public class SearchServlet  extends HttpServlet{
             throws ServletException, IOException {
 
                  String keyword = request.getParameter("search");
-
+        
+    try{
         if (keyword == null || keyword.trim().isEmpty()) {
-            response.sendRedirect("/jsp/prodctslist.jsp"); 
+            response.sendRedirect("ListaProdotti"); 
             return;
         }
 
@@ -32,6 +34,16 @@ public class SearchServlet  extends HttpServlet{
         request.setAttribute("keyword", keyword);
         request.setAttribute("searchResults", searchResults);
         request.getRequestDispatcher("/jsp/searchresults.jsp").forward(request, response);
+
+
+
+    }catch(Exception e){
+                System.err.println(e.getMessage());
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/error.jsp");
+            dispatcher.forward(request, response);
+
+    }
+
     }
 
 
