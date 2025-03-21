@@ -23,13 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function logout() {
-    fetch("Logout", {
-        method: "GET"
-    })
-        .then(response => {
-            if (response.ok) {
-                location.reload();
-            }
-        })
-        .catch(error => console.error("Errore nel logout:", error));
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "Logout", true);
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            location.reload();
+        }
+    };
+    xhr.onerror = function() {
+        console.error("Errore nel logout:", xhr.statusText);
+    };
+    xhr.send();
 }
