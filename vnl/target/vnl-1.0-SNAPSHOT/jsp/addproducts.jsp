@@ -28,13 +28,15 @@
         <div id="NomeAlbumModello" name="nome">
         <label>Nome Album/Modello Giradischi:</label>
             <input type="text" name="nomeVnl">
-
-            <label>Artista:</label>
-            <input type="text" name="artista">
-
-            <label>Genere:</label>
-            <input type="text" name="genere">
         </div>
+
+        <label>Artista:</label>
+        <input type="text" name="artista">
+
+        <label>Genere:</label>
+        <input type="text" name="genere">
+
+
         <label>Tipo di Prodotto:</label>
         <select id="tipo" name="tipo" required>
             <option value="">Seleziona Tipo</option>
