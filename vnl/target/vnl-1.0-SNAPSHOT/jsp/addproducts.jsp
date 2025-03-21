@@ -64,7 +64,8 @@
         
         <div id="drop-area">
         <p>Trascina un immagine qui</p>
-        <label for="fileElem">browse</label>
+        <p> oppure </p>
+        <label for="fileElem">carica file</label>
         <input type="file" id="fileElem" name="img" accept="image/*" onchange="handleFiles(this.files)">
         <div id="preview" name="img-preview"></div>
         </div>

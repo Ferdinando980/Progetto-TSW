@@ -22,7 +22,7 @@
 
 <div class="mainpage">
 
-  <h1>Welcome, Admin <%= userData.get("Username") %>!</h1>
+  <h1>Benvenuto <%= userData.get("Username") %>!</h1>
 
   <div class="gestione">
     <a href="AddProduct">  

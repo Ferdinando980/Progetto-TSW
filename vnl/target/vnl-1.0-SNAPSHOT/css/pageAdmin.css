@@ -1,50 +1,63 @@
 
-
 .gestione {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    margin-top: 0;
-
-    background-color: #6D3A8C;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #FEF6E6;
+    justify-content: space-evenly;
+    font-size: 100%;
+    border-radius: 20px;
+    border: 1px solid;
+ background-color: #6e3a8c; 
 }
-.gestione button{
 
-    
-    cursor:pointer;
-    border:none;
-    background-color:#332620;
-    color:#FEF6E6;
-    padding:2% 15%;
 
-    text-align: center;
- 
+.addproductbtn {
+    background-color: #c2b7d7; 
+    color: #000000; 
+    padding: 2% 15%;
     font-size: 100%;
     margin: 1vw;
     border-radius: 15px;
     letter-spacing: 2px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
 
-    
-    
+.addproductbtn:hover {
+    background-color: #4b3756; 
 }
 
 
-h1{
+.manageordersbtn {
+    background-color: #c2b7d7; 
+    color: #000000; 
+    padding: 2% 15%;
     font-size: 100%;
-    text-align:center;
-    color: #fefaef;
+    margin: 1vw;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.manageordersbtn:hover {
+    background-color: #4b3756; 
+}
+
+
+h1 {
+    font-size: 100%;
+    text-align: center;
+    color: #332620;
+    background-color: #c2b7d7;
+    border-radius: 20px;
 
     margin: auto;
     -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-color: #332620;
 }
-
-
-
 
 
 @media (max-width: 768px) {
@@ -56,5 +69,14 @@ h1{
         padding: 3% 10%;
         font-size: 90%;
     }
-}
 
+
+    .gestione {
+        flex-direction: column;
+    }
+
+    .gestione button {
+        width: 100%; 
+        margin: 5px 0; 
+    }
+}
