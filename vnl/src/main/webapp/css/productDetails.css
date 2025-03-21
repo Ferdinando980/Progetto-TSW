@@ -52,11 +52,20 @@
 }
 
 .addCart button{
-    border-radius: 20px;
-    background-color: #332620;
-    color: #FEF6E6;
+
     font-size: 100%;
     margin-top: 20px;
     margin-right: 5%;
     padding: 5px;
+}
+
+.mainpage button{
+
+    border-radius: 8px;
+    font-size:110%;
+    margin:2%;
+    border:none;
+    background-color:#6D3A8C;
+    color:#FEF6E6;
+    
 }
