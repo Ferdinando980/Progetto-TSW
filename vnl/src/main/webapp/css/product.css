@@ -50,6 +50,11 @@ font-size:125%;
 }
 
 @media (max-width: 1024px){
+
+    .page-container{
+        display: block;
+    }
+
     ul {
         grid-template-columns: repeat(2, minmax(200px, 1fr));
     }
