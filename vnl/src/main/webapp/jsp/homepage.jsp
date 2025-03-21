@@ -71,7 +71,8 @@
 
 </div>
 
-<jsp:include page="footer.jsp"></jsp:include>
 
+
+<jsp:include page="footer.jsp"></jsp:include>
 <script src="script/slidingbanner.js"></script>
 </body>
