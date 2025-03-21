@@ -18,6 +18,7 @@
 .admin-check button:hover {
   background-color: #C3B7D8;
   border: 2px solid #332620;
+  cursor: pointer;
  
 }
 
@@ -121,6 +122,7 @@
 }
 .logout-button:hover {
   background-color: #C3B7D8;
+  cursor: pointer;
 
 }
 

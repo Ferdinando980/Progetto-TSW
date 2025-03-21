@@ -1,120 +1,139 @@
-body{
+body {
     background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
+
 }
 
-.container_cart{
+.container_cart {
     display: flex;
     flex-direction: column;
-    width:100%;
+    width: 100%;
     min-height: 100vh;
     padding-right: 2%;
+    padding-left: 2%;
+    box-sizing: border-box;
 }
 
-li{
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
     display: flex;
     justify-content: space-between;
-    border-style: solid;
-    border-color: #FEF6E6;
+    border: 1px solid #FEF6E6;
     background: #6D3A8C;
     border-radius: 10px;
-    padding:1%;
+    padding: 1%;
+    margin-bottom: 10px;
 }
 
-.image{
-    width: 30%;
+.image {
+    width: 25%;
 }
 
-.image img{
-    width:100%;
+.image img {
+    width: 100%;
     object-fit: cover;
+    border-radius: 8px;
 }
 
-.container_cart h1{
+.container_cart h1 {
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 200%;
     padding-top: 15px;
     color: #FEF6E6;
+    margin-bottom: 20px;
 }
 
-.description{
+.description {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 75%;
     align-self: center;
-    font-size: 1.5vw;
+    font-size: 100%;
     margin-left: 2%;
     color: #FEF6E5;
+    line-height: 1.5;
 }
 
-.description a{
+.description a {
     text-align: center;
     background-color: #FEF6E6;
-    border-radius:20px;
+    border-radius: 20px;
     color: #6D3A8C;
-    width: 30%;
+    width: 40%;
+    padding: 5px;
+    text-decoration: none;
+    margin-top: 10px;
 }
 
-.description a:hover{
-    background-color: deeppink;
+.description a:hover {
+    background-color: #A64CAF;
+    color: #FEF6E6;
 }
 
-.description input{
+.description input {
     width: 8%;
     text-align: center;
-    font-size: 1vw;
+    font-size: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #FEF6E6;
 }
 
-.remove{
-    width:6%;
+.remove {
+    width: 6%;
     align-self: center;
 }
 
-.remove input{
+.remove input {
     object-fit: cover;
-    width:90%;
+    width: 90%;
+    cursor: pointer;
 }
 
-
-
-.acquisti{
+.acquisti {
     display: flex;
-    width:100%;
+    width: 100%;
     flex-direction: row;
-    padding:1%;
+    padding: 1%;
+    margin-top: 20px;
 }
 
-.acquisti p{
+.acquisti p {
     width: 100%;
-    font-size: 1.5vw;
+    font-size: 100%;
     color: #FEF6E6;
     text-align: center;
 }
 
-.procedere{
+.procedere {
     display: flex;
     width: 50%;
     border-radius: 20px;
     padding: 1%;
-
+    justify-content: flex-end;
 }
 
-.procedere a{
-    width: 40%;
+.procedere a {
+    width: 50%;
     text-align: center;
-    text-decoration-line: none;
+    text-decoration: none;
     background-color: #6D3A8C;
     color: #FEF6E6;
     border-radius: 20px;
-    font-size: 1.4vw;
+    font-size: 100%;
     letter-spacing: 2px;
-    margin-left: auto;
+    padding: 8px 5px;
+    border: 1px solid #FEF6E6;
 }
 
-.procedere a:hover{
-    background-color: deeppink;
+.procedere a:hover {
+    background-color: #A64CAF;
 }
 
-.continua{
+.continua {
     display: flex;
     width: 50%;
     border-radius: 10px;
@@ -122,32 +141,53 @@ li{
     padding: 1%;
 }
 
-.continua a{
-    width: 40%;
+.continua a {
+    width: 50%;
     text-align: center;
-    text-decoration-line: none;
+    text-decoration: none;
     background-color: #6D3A8C;
     color: #FEF6E6;
     border-radius: 20px;
-    font-size: 1.4vw;
+    font-size: 100%;
     letter-spacing: 2px;
+    padding: 8px 5px;
+    border: 1px solid #FEF6E6;
 }
 
-.continua a:hover{
-    background-color: deeppink;
+.continua a:hover {
+    background-color: #A64CAF;
 }
 
 @media (max-width: 480px) {
-    .container_cart{
+    .container_cart {
         padding: 10px;
-        width: 90%;
-    }
-    .acquisti{
         width: 100%;
+        margin: 0 auto;
     }
-    .acquisti a{
-        font-size: 1vw;
+    
+    .acquisti {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .acquisti a {
+        font-size: 90%;
         letter-spacing: 0px;
         align-self: center;
+    }
+    
+    .description a, .procedere a, .continua a {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .image {
+        width: 40%;
+    }
+    
+    .procedere, .continua {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
     }
 }
