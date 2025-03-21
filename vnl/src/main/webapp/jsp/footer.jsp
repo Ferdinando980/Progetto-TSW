@@ -23,7 +23,7 @@
         <div class="footer-info">
             <p>&copy; 2025 VinylWaves. All rights reserved.</p>
         </div>
-P
+
     </footer>
 </body>
 
