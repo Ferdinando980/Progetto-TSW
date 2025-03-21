@@ -10,6 +10,7 @@
     border-top: 3px solid #E5E5E5;
     font-size: 100%;
     letter-spacing: 2px;
+        min-height: 10vh; 
     display: flex;
     justify-content: center;
     align-items: center;

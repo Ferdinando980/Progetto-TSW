@@ -1,19 +1,19 @@
-
-
-
 .slideshow-container {
     max-width: 100%;
     width: 100%;
 
     position: relative;
-    margin: auto;
+    margin-top: 0;
 
 
 }
 
-.mainpage{
-    flex: 1;
+.mainpage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
 
 .image-label {
     position: absolute;
@@ -29,11 +29,6 @@
     -webkit-text-stroke-width: 0.00010px;
     -webkit-text-stroke-color: #372339;
 
-}
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
 }
 
 .slide-fade {
@@ -54,7 +49,7 @@ body {
 
 .slide-fade img {
     width: 100%;
-    height: 100%;
+
     object-fit: cover;
     display: block;
     border: 2.5px solid #000000;
@@ -105,57 +100,47 @@ body {
 
 
 .info-grid {
-  display: flex;
-  align-items: center;
-  color: #332620;
-  background-color: #C3B7D8;
-  width: 100%;
-  padding: 30px 20px;
-  box-sizing: border-box;
+    display: flex;
+
+    align-items: center;
+    color: #332620;
+    background-color: #C3B7D8;
+    width: 100%;
+
+    padding: 30px 20px;
+    box-sizing: border-box;
 }
 
 .infotextTitle {
-<<<<<<< HEAD
-  flex: 0 0 30%;
-  text-align: center;
-  padding-right: 20px;
-=======
-    font-weight: bold;
-    font-size: 150%;
-    padding: 5%;
-    text-wrap: nowrap;
-    color: #6D3A8C;
-    -webkit-text-stroke-width: 0.00010px;
-    -webkit-text-stroke-color: #121212;
+    flex: 0 0 30%;
+    text-align: center;
 
-    font-size: 50%;
-
->>>>>>> f285f3aac745dee0945a00d415a4cb5c3d6af9c9
+    padding-right: 20px;
 }
 
 .infotextTitle h1 {
-  font-weight: bold;
-  font-size: 2.5rem;
-  color: #7f45a5;
-  margin: 0;
-  text-shadow: 1px 1px 0px rgba(18, 18, 18, 0.3);
-  -webkit-text-stroke-width: 0.1px;
-  -webkit-text-stroke-color: #121212;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #7f45a5;
+    margin: 0;
+    text-shadow: 1px 1px 0px rgba(18, 18, 18, 0.3);
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: #121212;
 }
 
 .infotext {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: left;
-  padding-left: 20px;
-  border-left: 2px solid #7f45a5;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    padding-left: 20px;
+    border-left: 2px solid #7f45a5;
 }
 
 .infotext p {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 
@@ -193,18 +178,18 @@ body {
     .infotext {
         flex-direction: column;
         text-align: center;
-        border:none;
+        border: none;
     }
 
     .info-grid {
-        
+
         flex-direction: column;
         align-items: center;
-   
+
     }
 
     .infotextTitle {
-          border-bottom: 2px solid #7f45a5;
+        border-bottom: 2px solid #7f45a5;
         font-size: 100%;
         padding: 0%;
     }
