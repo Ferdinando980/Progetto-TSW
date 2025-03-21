@@ -67,13 +67,13 @@
             <% if (cart != null && !cart.isEmpty()) { %>
 
                 <div class="procedere">
-                    <a href=CartOrder>Procedi con l'acquito</a>
+                    <a href=CartOrder>Procedi con l'acquisto</a>
                 </div>
 
             <% } else %>  <p>Carrello Vuoto</p>
 
             <div class="continua">
-                <a href="Homepage">Continua lo shopping</a>
+                <a href="ListaProdotti">Continua lo shopping</a>
             </div>
 
         </div>

@@ -2,6 +2,10 @@ package controller.everyone;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -16,10 +20,6 @@ import model.dao.UsersDao;
 import model.javabeans.Order;
 import model.javabeans.OrderItems;
 import model.javabeans.Users;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 @WebServlet(name="CartOrder", value="/CartOrder")
 public class CartOrderServlet extends HttpServlet {
@@ -54,7 +54,7 @@ public class CartOrderServlet extends HttpServlet {
             order.setCivico(request.getParameter("civico"));
             order.setCap(request.getParameter("cap"));
             order.setPaese(request.getParameter("paese"));
-            order.setStato("In lavorazione");
+            order.setStato("Elaborando");
             order.setDataOrdine(dataSQl);
 
             List<OrderItems> carrello = (List<OrderItems>) session.getAttribute("cart");
