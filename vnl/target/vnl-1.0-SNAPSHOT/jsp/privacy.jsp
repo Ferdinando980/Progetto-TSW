@@ -5,6 +5,7 @@
   Time: 16:55
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,10 +62,10 @@
             Non saremo responsabili per danni indiretti, speciali, incidentali o consequenziali derivanti dall'uso del nostro sito o dall'acquisto di prodotti. In nessun caso la nostra responsabilità totale nei tuoi confronti supererà l'importo pagato per i prodotti acquistati.<br>
 
             11. Legge Applicabile<br>
-            Questi Termini e Condizioni sono regolati dalla legge di [Paese/Regione]. Qualsiasi disputa sarà soggetta alla giurisdizione esclusiva dei tribunali di [località].<br>
+            Questi Termini e Condizioni sono regolati dalla legge Italiana. Qualsiasi disputa sarà soggetta alla giurisdizione esclusiva dei tribunali locali.<br>
 
             12. Contatti<br>
-            Per qualsiasi domanda sui nostri Termini e Condizioni, contattaci a: [Email di contatto] [Numero di telefono] [Indirizzo fisico, se applicabile]<br>
+            Per qualsiasi domanda sui nostri Termini e Condizioni, contattaci<br>
 
             Nota Importante: Questi termini sono generici e dovrebbero essere adattati alle normative locali.<br>
         </p>
