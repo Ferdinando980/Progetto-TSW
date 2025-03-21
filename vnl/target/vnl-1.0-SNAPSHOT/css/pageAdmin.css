@@ -1,18 +1,12 @@
 
-.container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-self: center;
-    padding: 5%;
-}
 
 .gestione {
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-self: center;
-    padding: 5%;
+    align-items: center;
+    margin-top: 0;
+
     background-color: #6D3A8C;
     border-radius: 10px;
     border-style: solid;
@@ -20,29 +14,47 @@
 }
 .gestione button{
 
+    
     cursor:pointer;
     border:none;
     background-color:#332620;
     color:#FEF6E6;
-    padding:5%;
+    padding:2% 15%;
+
+    text-align: center;
+ 
+    font-size: 100%;
+    margin: 1vw;
+    border-radius: 15px;
+    letter-spacing: 2px;
+
+    
     
 }
 
 
 h1{
+    font-size: 100%;
     text-align:center;
+    color: #fefaef;
+
+    margin: auto;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: #000000;
 }
 
-.gestione a {
 
-    background-color: #332620;
-    text-align: center;
-    font-size: 1vw;
-    margin: 0.5vw;
-    border-radius: 20px;
-    width: 20%;
-    border: none;
-    text-decoration-line: none;
-    max-width: 30%;
-   
+
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 80%;
+    }
+
+    .gestione button {
+        padding: 3% 10%;
+        font-size: 90%;
+    }
 }
+
