@@ -21,9 +21,9 @@
         Order order = (Order) request.getAttribute("order");
     %>
     <p><strong>ID:</strong> <%= order.getId() %></p>
-    <p><strong>User:</strong> <%= order.getUsers() %></p>
-    <p><strong>Status:</strong> <%= order.getStato() %></p>
-    <p><strong>Total Amount:</strong> <%= order.getTotAmount() %></p>
+    <p><strong>ID Utente:</strong> <%= order.getUsers() %></p>
+    <p><strong>Stato:</strong> <%= order.getStato() %></p>
+    <p><strong>Totale:</strong> <%= order.getTotAmount() %></p>
     <p><strong>Date:</strong> <%= order.getDataOrdine() %></p>
     
     <div class="update">

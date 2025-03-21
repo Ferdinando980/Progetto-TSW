@@ -144,7 +144,7 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .header {
     flex-direction: column;
     justify-content: center;
