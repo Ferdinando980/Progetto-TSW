@@ -14,6 +14,7 @@ controller\admin\DeleteProductServlet.class
 model\dao\OrderDao.class
 controller\admin\ManageOrderServlet.class
 model\javabeans\Order.class
+controller\everyone\PrivacyServlet.class
 model\javabeans\OrderItems.class
 controller\admin\AddProductServlet.class
 controller\everyone\HomepageServlet.class

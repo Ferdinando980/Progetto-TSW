@@ -49,7 +49,7 @@
 
 .slide-fade img {
     width: 100%;
-
+    min-height: 80vh;
     object-fit: cover;
     display: block;
     border: 2.5px solid #000000;
