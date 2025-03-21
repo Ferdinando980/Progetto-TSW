@@ -16,13 +16,16 @@ body{
 
 
 
-.button:hover {
-background-color: #4A3A2D;
-}
 
+button:hover {
+  background-color: #4A3A2D;
+  color:#FEF6E6;
+  }
+  
+  
 
-.input:hover{
-background-color: #4A3A2D;
+input:hover{
+background-color: #C3B7D8;
 }
 
 

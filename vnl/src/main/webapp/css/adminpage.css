@@ -1,13 +1,12 @@
 .mainpage{
     padding:3%;
     margin-top:5%;
-    height: 100vh;
 }
 
 
 .gestione{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #FEF6E6;
     color:#332620;
     border-radius: 8px;
@@ -20,8 +19,9 @@
     background-color: #6D3A8C;
     border-radius: 8px;
     cursor: pointer;
-    padding:1%;
-    margin:8%;
+    padding:2%;
+    margin:5%;
+    font-size:120%;
 
 }
 

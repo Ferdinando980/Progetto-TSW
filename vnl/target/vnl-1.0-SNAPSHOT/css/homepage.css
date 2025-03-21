@@ -1,3 +1,6 @@
+
+
+
 .slideshow-container {
     max-width: 100%;
     width: 100%;
@@ -104,9 +107,22 @@
 }
 
 .infotextTitle {
+<<<<<<< HEAD
   flex: 0 0 30%;
   text-align: center;
   padding-right: 20px;
+=======
+    font-weight: bold;
+    font-size: 150%;
+    padding: 5%;
+    text-wrap: nowrap;
+    color: #6D3A8C;
+    -webkit-text-stroke-width: 0.00010px;
+    -webkit-text-stroke-color: #121212;
+
+    font-size: 50%;
+
+>>>>>>> f285f3aac745dee0945a00d415a4cb5c3d6af9c9
 }
 
 .infotextTitle h1 {

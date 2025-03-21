@@ -40,6 +40,12 @@
         <label for="nomeVnl">Nome:</label>
         <input type="text" id="nomeVnl" name="nomeVnl" value="<%= product.getNomeVnl() %>" required />
         </div>
+        
+        <div name="prezzoclass">
+        <label for="prezzo">Prezzo:</label>
+        <input type="number" id="prezzo" name="prezzo" value="<%= product.getPrezzo() %>" required />
+        </div>
+
 
         <div>
         <label for="descrizione">Descrizione:</label>
@@ -59,17 +65,13 @@
             }
             %>
 
-        <div>
+        <div name="condizioneclass">
         <label for="condizione">Condizione:</label>
             <select id="condizione" name="condizione" required>
             <option value="<%= product.getCondizione() %>"><%= product.getCondizione() %></option>
             <option value="Nuovo">Nuovo</option>
             <option value="Usato">Usato</option>
-        </div>
-
-        <div>
-        <label for="prezzo">Prezzo:</label>
-        <input type="number" id="prezzo" name="prezzo" value="<%= product.getPrezzo() %>" required />
+            </select>
         </div>
 
         <button type="submit">Aggiorna Prodotto</button>
@@ -77,7 +79,7 @@
         </div>
     </form>
     </div>
-
-    <jsp:include page="footer.jsp"></jsp:include>
+   <jsp:include page="footer.jsp"></jsp:include>
+ 
 </body>
 </html>

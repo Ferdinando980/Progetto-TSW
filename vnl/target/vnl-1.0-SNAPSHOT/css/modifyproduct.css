@@ -1,15 +1,23 @@
 
+h2{
+    font-size:200%;
+    text-align: center;
+    padding:2%;
+    background-color:#6D3A8C;
+
+
+}
+
 .product-container{
-display: flex;
+    display: flex;
     flex-direction: row; 
-    align-items: flex-start; 
     justify-content: center; 
     width: 100%;
     max-width: 80%;
     height: auto;
     margin: 5%;
     background-color: #FEF6E6;
-    text-align: center;
+
 }
 
 
@@ -63,7 +71,7 @@ display: flex;
 }
 
 
-button {
+.product-container button {
     width: 100%;
     padding: 10px;
     font-size: 18px;
@@ -75,7 +83,7 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+.product-container button:hover {
     background-color: #332620;
     color: #FEF6E6;
     border-radius: 8px;

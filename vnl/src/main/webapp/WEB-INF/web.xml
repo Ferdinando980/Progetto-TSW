@@ -5,10 +5,10 @@
                              https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
 
-<context-param>
-    <param-name>jakarta.servlet.jsp.el.ignored</param-name>
-    <param-value>false</param-value>
-</context-param>
+    <context-param>
+        <param-name>jakarta.servlet.jsp.el.ignored</param-name>
+        <param-value>false</param-value>
+    </context-param>
 
     <error-page>
         <location>/error/error.jsp</location>
@@ -244,7 +244,7 @@
         <url-pattern>/OrderDetails</url-pattern>
     </servlet-mapping>
 
-       <servlet>
+    <servlet>
         <servlet-name>UpdateStatus</servlet-name>
         <servlet-class>controller.admin.UpdateStatusServlet</servlet-class>
     </servlet>
