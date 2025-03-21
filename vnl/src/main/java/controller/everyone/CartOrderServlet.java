@@ -54,7 +54,7 @@ public class CartOrderServlet extends HttpServlet {
             order.setCivico(request.getParameter("civico"));
             order.setCap(request.getParameter("cap"));
             order.setPaese(request.getParameter("paese"));
-            order.setStato("Confermato");
+            order.setStato("In lavorazione");
             order.setDataOrdine(dataSQl);
 
             List<OrderItems> carrello = (List<OrderItems>) session.getAttribute("cart");

@@ -14,16 +14,18 @@
       <jsp:include page="header.jsp"></jsp:include>
 
 
-    <h2>Tutti gli ordini</h2>
+
     <div class="manageorderscontainer">
+     <h2>Tutti gli ordini</h2>
     <table border="1">
+
         <tr>
             <th>ID</th>
             <th>Utente</th>
             <th>Stato</th>
             <th>Totale</th>
             <th>Data</th>
-            <th>Actions</th>
+            <th>Modifica</th>
         </tr>
         <%
 
