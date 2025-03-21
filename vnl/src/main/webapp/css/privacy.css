@@ -1,0 +1,33 @@
+body{
+    background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
+    min-height: 100vh;
+}
+
+.container{
+    padding: 1%;
+    color: #FEF6E6;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 3vw;
+}
+
+.container p{
+    text-align: center;
+    font-size: 2vw;
+}
+
+.tos{
+    color: #FEF6E6;
+    padding: 1%;
+
+}
+
+.tos h1{
+    font-size: 2.5vw;
+}
+
+.tos p{
+    font-size: 1.5vw;
+}
