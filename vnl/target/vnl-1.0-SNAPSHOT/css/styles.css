@@ -27,11 +27,10 @@ background-color: #4A3A2D;
 
 
 .mainpage{
+
   position:relative;
   background-color: #C3B7D8;
   margin: auto;
   width:100%;
-  min-height:100vh;
-
 
 }

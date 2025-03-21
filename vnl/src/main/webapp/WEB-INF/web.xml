@@ -10,42 +10,49 @@
     <param-value>false</param-value>
 </context-param>
 
+    <error-page>
+        <location>/error/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error/redirectError.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error/fatalError.jsp</location>
+    </error-page>
+
     <servlet>
         <servlet-name>Registrazione</servlet-name>
         <servlet-class>controller.everyone.RegistrationServlet</servlet-class>
     </servlet>
 
-   
     <servlet-mapping>
         <servlet-name>Registrazione</servlet-name>
         <url-pattern>/Registrazione</url-pattern>
     </servlet-mapping>
 
-       <servlet>
+    <servlet>
         <servlet-name>Logout</servlet-name>
         <servlet-class>controller.everyone.LogoutServlet</servlet-class>
     </servlet>
 
-   
-   
     <servlet-mapping>
         <servlet-name>Logout</servlet-name>
         <url-pattern>/Logout</url-pattern>
     </servlet-mapping>
 
-    
-       <servlet>
+    <servlet>
         <servlet-name>EditProfile</servlet-name>
         <servlet-class>controller.registered.EditServlet</servlet-class>
     </servlet>
-
-   
    
     <servlet-mapping>
         <servlet-name>EditProfile</servlet-name>
         <url-pattern>/EditProfile</url-pattern>
     </servlet-mapping>
-
 
     <servlet>
         <servlet-name>Login</servlet-name>
@@ -62,12 +69,10 @@
         <servlet-class>controller.everyone.HomepageServlet</servlet-class>
     </servlet>
 
-        <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>Homepage</servlet-name>
         <url-pattern>/Homepage</url-pattern>
     </servlet-mapping>
-
-    
 
     <servlet>
         <servlet-name>Prodotto</servlet-name>
@@ -78,8 +83,6 @@
         <servlet-name>Prodotto</servlet-name>
         <url-pattern>/Prodotto</url-pattern>
     </servlet-mapping>
-
-
 
     <servlet>
         <servlet-name>ListaProdotti</servlet-name>
@@ -231,7 +234,7 @@
         <url-pattern>/OrderPage</url-pattern>
     </servlet-mapping>
 
-        <servlet>
+    <servlet>
         <servlet-name>OrderDetails</servlet-name>
         <servlet-class>controller.admin.OrderDetailsServlet</servlet-class>
     </servlet>

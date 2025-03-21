@@ -4,7 +4,7 @@
 .slideshow-container {
     max-width: 100%;
     width: 100%;
-    height: 60%;
+    height: 100vh;
     position: relative;
     margin: auto;
 
@@ -19,7 +19,7 @@
     margin: auto;
     color: #f2f2f2;
 
-    font-size: 40px; 
+    font-size: 4vw;
     border-radius: 5px;
     text-align: center;
     z-index: 10;
@@ -27,19 +27,20 @@
     -webkit-text-stroke-color: #372339;
 
 }
+
 .slide-fade {
     border-radius: 1%;
 
     width: 100%;
-    height: 100vh;
+    height: 100%;
 
     overflow: hidden;
     display: flex;
     transition: transform 1s ease-in-out;
     animation-name: fade;
     animation-duration: 2s;
-    
-    
+
+
 }
 
 
@@ -49,26 +50,26 @@
     object-fit: cover;
     display: block;
     border: 2.5px solid #000000;
-    
+
 }
 
 .navbar {
-    position: absolute; 
-    top: 0; 
+    position: absolute;
+    top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px 0;
-    z-index: 10; 
+    z-index: 10;
 }
 
 .nav-item {
     cursor: pointer;
     padding: 1.5%;
     color: #ffffff;
-    
+
 }
 
 
@@ -79,7 +80,7 @@
     color: #FEF6E6;
     border-radius: 20px;
 
-    
+
 }
 
 
@@ -113,16 +114,18 @@
     -webkit-text-stroke-width: 0.00010px;
     -webkit-text-stroke-color: #121212;
 
+    font-size: 50%;
+
 }
 
 
 .infotext {
     display: flex;
     flex-direction: column;
-    font-size: 120%;
-    text-align: right;
-    padding-top: 1%;
-    padding-right: 5%;
+    font-size: 100%;
+    text-align: center;
+    align-self: center;
+    align-items: center;
 
 }
 
@@ -155,32 +158,21 @@
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-@media (max-width: 780px) {
-    .image-label{
-        font-size: 28px;
-    }
-}
 
-    
-@media only screen and (max-width: 500px) {
-    .mainpage {
-        width: 90%;
+@media (max-width: 600px) {
+    .infotext {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-grid {
+        flex-direction: column;
+        align-items: center;
     }
 
     .infotextTitle {
-        font-size: 20px;
+        font-size: 100%;
+        padding: 0%;
     }
 
-    .infotext {
-        font-size: 15px;
-    }
-
-    .image-label {
-   
-
-    font-size: 12px;
-
- 
-
-}
 }

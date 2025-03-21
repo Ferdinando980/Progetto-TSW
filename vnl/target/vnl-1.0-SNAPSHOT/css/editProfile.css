@@ -1,5 +1,17 @@
 body {
   background: linear-gradient(180deg, #6D3A8C 5%, #010913 67%);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.page-container {
+  padding: 3%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 fieldset {
@@ -7,38 +19,70 @@ fieldset {
   background-color: #6D3A8C;
   border: solid 3px #FEF6E6;
   padding: 20px;
+  box-sizing: border-box;
 }
 
-legend {
+.biglabel legend {
   font-size: 150%;
-  text-align: center;
   color: #FEF6E6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Containers {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.Visual-container {
+  color: #FEF6E6;
+  width: 40%;
+  border-right: solid 3px #FEF6E6;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Visual-container h2 {
+  margin-top: 0;
+  color: #FEF6E6;
+}
+
+.Visual-container p {
+  margin: 10px 0;
 }
 
 .visualizza-ordini {
-border-radius: 5px;
-background-color: #332620;
-display: inline-block; 
-  
-padding: 10px 20px;  
- transition: background-color 1s ease; 
-
+  margin-top: 20px;
 }
-.visualizza-ordini a{
+
+.visualizza-ordini a {
+  border-radius: 5px;
+  background-color: #332620;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
   text-decoration: none;
-white-space: nowrap;
-color: #FEF6E6; 
+  white-space: nowrap;
+  color: #FEF6E6;
+}
 
- 
+.visualizza-ordini a:hover {
+  background-color: #C3B7D8;
 }
-.visualizza-ordini:hover {
-background-color: #C3B7D8; 
+
+.Modifica-container {
+  flex: 1;
+  padding-left: 20px;
 }
+
 label {
   font-size: 100%;
-  letter-spacing: normal;
   color: #FEF6E6;
-  white-space: nowrap
+  white-space: nowrap;
+  margin-top: 15px;
+  display: block;
 }
 
 .button {
@@ -54,41 +98,34 @@ label {
   width: 100%;
 }
 
+.button:hover {
+  background-color: #C3B7D8;
+}
+
 .error-message {
-  letter-spacing: 3px;
-
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
 }
 
-
-.success-message{
-  color:aliceblue;
-  padding: 0 10px;
-  margin:auto;
-  margin-top: 2%;
+.success-message {
+  color: #FEF6E6;
+  padding: 10px;
+  margin: 15px 0;
   font-weight: bold;
+  text-align: center;
 }
-
 
 .phoneGroup {
   display: flex;
-  align-items: center;
   gap: 4%;
-  margin-bottom: 2%;
-  width: 100%;
-  margin-top: 2.5%;
-  margin-bottom: 3.6%;
-}
-
-.button:hover {
-  background-color: #C3B7D8;
+  margin: 15px 0;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 2%;
-
 }
 
 .input {
@@ -97,125 +134,90 @@ label {
   color: #FEF6E6;
   background-color: #332620;
   text-align: center;
-  transition: background-color 1s ease;
+  transition: background-color 0.3s ease;
   font-size: 100%;
   padding: 10px;
   border: 2px solid #6D3A8C;
-
+  box-sizing: border-box;
+  margin-top: 5px;
 }
 
+.nazione {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+}
 
 .labelAndInputPhone {
   flex: 1;
   display: flex;
-  align-items: center;
-}
-
-.input[type="tel"] {
-  margin-left: 2%;
-}
-
-.nazione {
-  width: auto;
-  display: flex;
-  align-items: center;
-  gap: 0.5%;
+  flex-direction: column;
 }
 
 select {
   background-color: #332620;
-  transition: background-color 1s ease;
+  transition: background-color 0.3s ease;
   border-radius: 10px;
   color: #FEF6E6;
   font-size: 100%;
-  padding: 2%;
+  padding: 10px;
   border: 2px solid #6D3A8C;
-
-
-
-
-  align-content: center;
-}
-
-input:hover {
-  background-color: #C3B7D8;
-}
-
-select:hover {
-  background-color: #C3B7D8;
-}
-
-.Modifica-container {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  align-self: center;
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-  letter-spacing: 2px;
-  min-height: 100vh;
-}
-
-.error-message {
-  font-size: 12px;
-  color: red;
   margin-top: 5px;
 }
 
+.input:hover, select:hover {
+  background-color: #C3B7D8;
+}
+
+@media (max-width: 768px) {
+  .Containers {
+    flex-direction: column;
+  }
+  
+  .Visual-container {
+    width: 100%;
+    border-right: none;
+    border-bottom: solid 3px #FEF6E6;
+    padding-right: 0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .Modifica-container {
+    padding-left: 0;
+  }
+}
 
 @media (max-width: 480px) {
-  .Modifica-container {
-    padding: 5px;
-    width: 100%;
-    min-height: auto;
-    margin: 0;
+  .page-container {
+    padding: 10px;
   }
-
-  legend {
-    font-size: 90%;
-    margin: 0;
-  }
-
-  .biglabel {
-    font-size: 90%;
-  }
-
-  .input,
-  .button {
-    font-size: 90%;
-    padding: 8px 16px;
-  }
-
+  
   fieldset {
+    padding: 15px;
+  }
+  
+  .biglabel legend {
+    font-size: 120%;
+  }
+  
+  .input,
+  .button,
+  select {
+    font-size: 90%;
     padding: 8px;
   }
-
-  .button {
-    padding: 8px 16px;
-  }
-
+  
   .phoneGroup {
     flex-direction: column;
-    gap: 2%;
+    gap: 15px;
   }
-
-  .input[type="tel"] {
-    margin-left: 0;
-  }
-
-  select {
-    padding: 1.5%;
-    font-size: 90%;
-  }
-
-  .labelAndInputPhone {
-    flex-direction: column;
-  }
-
-  .nazione {
-    gap: 0.25%;
-  }
-
   
+  .nazione {
+    width: 100%;
+  }
+  
+  .visualizza-ordini a {
+    padding: 8px 16px;
+  }
 }
