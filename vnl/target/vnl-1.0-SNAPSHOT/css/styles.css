@@ -22,10 +22,16 @@ button:hover {
   color:#FEF6E6;
   }
   
-  
+
+input{
+    border:none;
+    border-radius:8px;
+}
 
 input:hover{
 background-color: #C3B7D8;
+  
+
 }
 
 

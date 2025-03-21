@@ -13,9 +13,10 @@
 
    <jsp:include page="header.jsp"></jsp:include>
 
-    <h2>Order Details</h2>
+   
 
     <div class="orderdetails">
+     <h2>Dettagli Ordine</h2>
     <%
         Order order = (Order) request.getAttribute("order");
     %>
@@ -29,7 +30,7 @@
     <form action="UpdateStatus" method="post">
         <input type="hidden" name="id" value="<%= order.getId() %>">
         <select name="status">
-            <option value="Elaborando">Elaborando</option>
+            <option value="Inlavorazione">In lavorazione</option>
             <option value="Spedito">Spedito</option>
             <option value="Consegnato">Consegnato</option>
         </select>
