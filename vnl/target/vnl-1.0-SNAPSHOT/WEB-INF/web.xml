@@ -254,5 +254,14 @@
         <url-pattern>/UpdateStatus</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Privacy</servlet-name>
+        <servlet-class>controller.everyone.PrivacyServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Privacy</servlet-name>
+        <url-pattern>/Privacy</url-pattern>
+    </servlet-mapping>
 
 </web-app>

@@ -73,7 +73,7 @@
             <% } else %>  <p>Carrello Vuoto</p>
 
             <div class="continua">
-                <a href="Homepage">Continua lo shopping</a>
+                <a href="ListaProdotti">Continua lo shopping</a>
             </div>
 
         </div>
