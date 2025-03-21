@@ -28,13 +28,15 @@
         <div id="NomeAlbumModello" name="nome">
         <label>Nome Album/Modello Giradischi:</label>
             <input type="text" name="nomeVnl">
-
-            <label>Artista:</label>
-            <input type="text" name="artista">
-
-            <label>Genere:</label>
-            <input type="text" name="genere">
         </div>
+
+        <label>Artista:</label>
+        <input type="text" name="artista">
+
+        <label>Genere:</label>
+        <input type="text" name="genere">
+
+
         <label>Tipo di Prodotto:</label>
         <select id="tipo" name="tipo" required>
             <option value="">Seleziona Tipo</option>
@@ -62,7 +64,8 @@
         
         <div id="drop-area">
         <p>Trascina un immagine qui</p>
-        <label for="fileElem">browse</label>
+        <p> oppure </p>
+        <label for="fileElem">carica file</label>
         <input type="file" id="fileElem" name="img" accept="image/*" onchange="handleFiles(this.files)">
         <div id="preview" name="img-preview"></div>
         </div>
