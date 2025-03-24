@@ -40,7 +40,7 @@ li {
 
 .container_cart h1 {
     text-align: center;
-    font-size: 200%;
+    font-size: 2vw;
     padding-top: 15px;
     color: #FEF6E6;
     margin-bottom: 20px;
@@ -51,7 +51,7 @@ li {
     flex-direction: column;
     width: 75%;
     align-self: center;
-    font-size: 100%;
+    font-size: 1.5vw;
     margin-left: 2%;
     color: #FEF6E5;
     line-height: 1.5;
@@ -74,7 +74,6 @@ li {
 }
 
 .description input {
-    width: 8%;
     text-align: center;
     font-size: 100%;
     padding: 5px;
@@ -96,6 +95,7 @@ li {
 .acquisti {
     display: flex;
     width: 100%;
+    font-size: 2vw;
     flex-direction: row;
     padding: 1%;
     margin-top: 20px;
@@ -103,7 +103,6 @@ li {
 
 .acquisti p {
     width: 100%;
-    font-size: 100%;
     color: #FEF6E6;
     text-align: center;
 }
@@ -176,7 +175,12 @@ li {
         align-self: center;
     }
     
-    .description a, .procedere a, .continua a {
+    .description a {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .procedere a, .continua a {
         width: 100%;
         margin-bottom: 10px;
     }
@@ -190,4 +194,5 @@ li {
         justify-content: center;
         padding: 10px 0;
     }
+
 }
