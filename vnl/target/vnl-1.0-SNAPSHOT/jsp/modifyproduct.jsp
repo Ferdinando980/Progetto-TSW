@@ -32,7 +32,7 @@
                             String imgSrc = (imgPath == null || imgPath.trim().isEmpty()) ? "assets/images/pictureplaceholder.jpg" : imgPath;
                         %>
                             
-                        <img src="<%= imgSrc %>">
+                        <img src="<%= imgSrc %>" alt="<%= product.getNomeVnl()%>">
             </div>
         <div class="product-details">
 

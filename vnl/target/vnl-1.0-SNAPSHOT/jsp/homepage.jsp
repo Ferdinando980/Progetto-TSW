@@ -21,9 +21,9 @@
 
     <div class="slideshow-container">
     <nav class="navbar">
-        <div class="nav-item" onclick="currentSlide(1)">Vinili</div>
-        <div class="nav-item" onclick="currentSlide(2)">CD</div>
-        <div class="nav-item" onclick="currentSlide(3)">Giradischi</div>
+        <div class="nav-item" role=button tabindex="0" onclick="currentSlide(1)">Vinili</div>
+        <div class="nav-item" role=button tabindex="0" onclick="currentSlide(2)">CD</div>
+        <div class="nav-item" role=button tabindex="0" onclick="currentSlide(3)">Giradischi</div>
     </nav> 
         
             <div class = "image-label">
@@ -32,21 +32,24 @@
         <div class="slide-fade">
             <a href="ListaProdotti">
                 <img src="assets/images/banner1.jpg" alt="Banner 1">
+                <span class="sr-only">Vai alla lista prodotti</span>
             </a>
         </div>
         <div class="slide-fade">
             <a href="ListaProdotti">
                 <img src="assets/images/banner2.jpg" alt="Banner 2">
+                <span class="sr-only">Vai alla lista prodotti</span>
             </a>
         </div>
         <div class="slide-fade">
             <a href="ListaProdotti">
                 <img src="assets/images/banner3.jpg" alt="Banner 3">
+                <span class="sr-only">Vai alla lista prodotti</span>
             </a>
         </div>
 
-        <a class="prev" onclick="moveSlideShow(-1)">&#10094;</a>
-        <a class="next" onclick="moveSlideShow(1)">&#10095;</a>
+        <a href="#" class="prev" onclick="moveSlideShow(-1)" aria-label="Slide Precedente">&#10094;</a>
+        <a href="#" class="next" onclick="moveSlideShow(1)"aria-label="Slide Successiva">&#10095;</a>
 
 
 

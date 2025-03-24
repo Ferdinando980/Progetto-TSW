@@ -43,3 +43,12 @@ nav[slideIndex-1].className += " navActive";
 
 
 }
+
+
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+          item.click();
+      }
+  });
+});

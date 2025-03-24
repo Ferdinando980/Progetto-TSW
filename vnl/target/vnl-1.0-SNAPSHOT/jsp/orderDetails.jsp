@@ -32,7 +32,8 @@
     <div class="update">
     <form action="UpdateStatus" method="post">
         <input type="hidden" name="id" value="<%= order.getId() %>">
-        <select name="status">
+        <label for="selectStato" class="sr-only">Cerca:</label>
+        <select name="status" id="selectStato">
             <option value="Elaborando">Elaborando</option>
             <option value="Spedito">Spedito</option>
             <option value="Consegnato">Consegnato</option>

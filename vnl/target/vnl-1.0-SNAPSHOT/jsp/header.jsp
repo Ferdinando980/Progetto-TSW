@@ -33,7 +33,8 @@
         </div>
           <div class="search-container">
                 <form action="Search" method="get">
-                    <input class="textbox" type="text" placeholder="Cerca.." name="search">
+                 <label for="searchbar" class="sr-only">Cerca:</label>
+                    <input class="textbox" id="searchbar" type="text" placeholder="Cerca.." name="search">
                 </form>
             </div>
 
