@@ -44,7 +44,7 @@
                        <span id="birthDateError" class="error-message"></span>
                         <label for="DataDiNascita">Data di nascita:</label><br>
                         <input type="date" id="DataDiNascita" value="${userData.dataDiNascita}" name="DataDiNascita"
-                            class="input"><br>
+                            class="input" tabindex=0><br>
                 
 
                         <div class="phoneGroup">
@@ -86,19 +86,27 @@
  
     <script>
 
-    var errorMessages = JSON.parse('${errorMessagesJson}');
-            if (errorMessages.length > 0) {
-        errorMessages.forEach(function (error) {
-            if (error.includes("Username")) {
-                document.getElementById("Username").style.border = "2px solid red";
-                document.getElementById("usernameError").textContent = error;
+       var errorMessagesJson = '${errorMessagesJson}';
+        try {
+            if (errorMessagesJson && errorMessagesJson.trim() !== "") {
+                var errorMessages = JSON.parse(errorMessagesJson);
+                if (Array.isArray(errorMessages) && errorMessages.length > 0) {
+                    errorMessages.forEach(function (error) {
+                        if (error.includes("Username")) {
+                            document.getElementById("Username").style.border = "2px solid red";
+                            document.getElementById("usernameError").textContent = error;
+                        }
+                        if (error.includes("Email")) {
+                            document.getElementById("Email").style.border = "2px solid red";
+                            document.getElementById("emailError").textContent = error;
+                        }
+                    });
+                }
             }
-            if (error.includes("Email")) {
-                document.getElementById("Email").style.border = "2px solid red";
-                document.getElementById("emailError").textContent = error;
-            }
-        });
-    }
+        } catch (e) {
+            console.error("Errore nel parsing di errorMessagesJson:", e);
+        }
+    
     </script>
 
 
