@@ -44,7 +44,7 @@
                        <span id="birthDateError" class="error-message"></span>
                         <label for="DataDiNascita">Data di nascita:</label><br>
                         <input type="date" id="DataDiNascita" value="${userData.dataDiNascita}" name="DataDiNascita"
-                            class="input" tabindex=0><br>
+                            class="input" ><br>
                 
 
                         <div class="phoneGroup">

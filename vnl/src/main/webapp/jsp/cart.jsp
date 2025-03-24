@@ -22,8 +22,9 @@
         <%
             List<OrderItems> cart = (List<OrderItems>) session.getAttribute("cart");
             if (cart != null && !cart.isEmpty()) {
+                        ProductDao productDao = new ProductDao();
                 for (OrderItems orderItems : cart) {
-                    ProductDao productDao = new ProductDao();
+            
                     Product product=productDao.doRetrieveById(Integer.parseInt(orderItems.getProdotto()));
                     %>
                     <li>
@@ -32,7 +33,7 @@
                             String imgSrc = (imgPath == null || imgPath.trim().isEmpty()) ? "assets/images/pictureplaceholder.jpg" : imgPath;
                         %>
                         <div class="image">
-                            <img src="<%= imgSrc %>">
+                            <img src="<%= imgSrc %>" alt="Immagine Prodotto">
                         </div>
                         <div class="description">
                             <a href="Prodotto?id=<%= product.getId() %>">
@@ -40,13 +41,16 @@
 
                             </a>
                             <p>Prezzo: </p>&euro;<%= orderItems.getPrezzo() %>
-                            <p>Quantit&agrave;: </p>
-                            <form action="Cart" method="POST">
-                                <input type="hidden" name="action" value="update">
-                                <input type="hidden" name="productID" value="<%= product.getId() %>">
-                                <input type="number" name="quantity" value="<%= orderItems.getQuantita() %>" min="1" max="100">
-                                <input type="submit" value="Aggiorna">
-                            </form>
+                  <form action="Cart" method="POST">
+                    <input type="hidden" name="action" value="update">
+                    <input type="hidden" name="productID" value="<%= product.getId() %>">
+    
+
+                    <label for="quantity_<%= product.getId() %>">Quantit&agrave;:</label>
+                    <input type="number" name="quantity" value="<%= orderItems.getQuantita() %>" min="1" max="100" tabindex="0" id="quantity_<%= product.getId() %>">
+    
+                    <input type="submit" value="Aggiorna">
+                  </form>
                         </div>
 
                         <div class="remove">
