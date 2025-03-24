@@ -25,19 +25,19 @@
 
     <form action="AddProduct" id="addproductform" method="post" enctype="multipart/form-data">
 
-        <div id="NomeAlbumModello" name="nome">
-        <label>Nome Album/Modello Giradischi:</label>
-            <input type="text" name="nomeVnl">
-        </div>
+        
+        <label for="nomeVnl">Nome Album/Modello Giradischi:</label>
+        <input type="text" id="nomeVnl" name="nomeVnl">
+        
 
-        <label>Artista:</label>
-        <input type="text" name="artista">
+        <label for="artista">Artista:</label>
+        <input type="text" id="artista" name="artista">
 
-        <label>Genere:</label>
-        <input type="text" name="genere">
+        <label for="genere">Genere:</label>
+        <input type="text" id="genere" name="genere">
 
 
-        <label>Tipo di Prodotto:</label>
+        <label for="tipo">Tipo di Prodotto:</label>
         <select id="tipo" name="tipo" required>
             <option value="">Seleziona Tipo</option>
             <option value="giradischi">Giradischi</option>
@@ -45,13 +45,13 @@
             <option value="cd">CD</option>
         </select>
         
-        <label>Prezzo:</label>
-        <input type="number" name="prezzo" step="0.01" required>
+        <label for="prezzo">Prezzo:</label>
+        <input type="number" id="prezzo" name="prezzo" step="0.01" required>
 
-        <label>Descrizione:</label>
-        <textarea name="descrizione" required></textarea>
+        <label for="descrizione">Descrizione:</label>
+        <textarea name="descrizione" id="descrizione" required></textarea>
 
-        <label>Condizione:</label>
+        <label for="condizione">Condizione:</label>
             <select id="condizione" name="condizione" required>
             <option value="">Seleziona Condizione</option>
             <option value="Nuovo">Nuovo</option>
@@ -59,14 +59,13 @@
          
         </select>
 
-        <label>Marca:</label>
-        <input type="text" name="marca">
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca">
         
         <div id="drop-area">
         <p>Trascina un immagine qui</p>
-        <p> oppure </p>
-        <label for="fileElem">carica file</label>
-        <input type="file" id="fileElem" name="img" accept="image/*" onchange="handleFiles(this.files)">
+        <label for="fileElem" role="button" tabindex="0" aria-label="Carica un'immagine">Carica file</label>
+        <input type="file" id="fileElem" name="img" accept="image/*" onchange="handleFiles(this.files)" aria-label="Carica un file immagine" tabindex="0">
         <div id="preview" name="img-preview"></div>
         </div>
 

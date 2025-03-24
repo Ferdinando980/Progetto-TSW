@@ -51,9 +51,9 @@
                             String imgSrc = (imgPath == null || imgPath.trim().isEmpty()) ? "assets/images/pictureplaceholder.jpg" : imgPath;
                         %>
                         <a href="Prodotto?id=<%= product.getId() %>">
-                            <img src="<%= imgSrc %>">
+                            <img src="<%= imgSrc %>" alt="<%=product.getNomeVnl()%>">
                         </a>
-                        <a href="Prodotto?id=<%= product.getId() %>">
+                        <a href="Prodotto?id=<%= product.getId() %>" aria-label="Visualizza dettagli di <%= product.getNomeVnl() %>">
                             <strong><%= product.getNomeVnl() %></strong>
                         </a> - &euro;<%= product.getPrezzo() %>
                     </li>
